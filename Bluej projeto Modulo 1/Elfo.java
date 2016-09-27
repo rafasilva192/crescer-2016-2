@@ -18,7 +18,9 @@ public class Elfo
     public String getNome(){
         return nome;
     }
-
+public Item getArco(){
+        return arco;
+    }
     public void atirarFlecha(){
         flechas.setQuantidade(flechas.getQuantidade()-1);
         experiencia++;
