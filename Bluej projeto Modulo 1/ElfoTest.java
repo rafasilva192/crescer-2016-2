@@ -157,4 +157,16 @@ public class ElfoTest
         elfo1.atirarFlecha();
         assertEquals("Frechina possui 995 flechas e 5 níveis de experiência.", elfo1.toString());
     }
+    
+    @Test
+    public void criarElfoInformandoFlechaNegativa(){
+        Elfo elfo1 = new Elfo("Frechina", -56);
+        assertEquals(42,elfo1.getFlechas().getQuantidade());
+    }
+    
+    @Test
+    public void criarElfoInformando0Flechas(){
+        Elfo elfo1 = new Elfo("Frechina", 0);
+        assertEquals(0,elfo1.getFlechas().getQuantidade());
+    }
 }
