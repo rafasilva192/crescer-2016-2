@@ -37,4 +37,21 @@ public class ElfoTest
         elfoDoTestFlecha.atirarFlecha();
         assertEquals(41,elfoDoTestFlecha.getFlechas().getQuantidade());
     }
+    
+    @Test
+    public void elfoAtiraVariasFlechas(){
+        Elfo elfoDoTestFlecha = new Elfo("Frechina");
+        int Test = 0;
+        while(Test < 10){
+            elfoDoTestFlecha.atirarFlecha();
+            Test++;
+        }
+        assertEquals(32,elfoDoTestFlecha.getFlechas().getQuantidade());
+    }
+    
+    @Test
+    public void elfoNaoAtiraFlecha(){
+        Elfo elfoDoTestFlecha = new Elfo("Frechina");
+        assertEquals(42,elfoDoTestFlecha.getFlechas().getQuantidade());
+    }
 }
