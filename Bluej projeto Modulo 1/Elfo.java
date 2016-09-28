@@ -34,7 +34,11 @@ public class Elfo
     }
     
     public String toString(){
-        return getNome() + " possui " + flechas.getQuantidade() + " flechas e " + experiencia + " níveis de experiência.";
+        
+        boolean flechaNoSingular = this.flechas.getQuantidade() == 1;
+        boolean nivelNoSingular = this.experiencia == 1;
+        return String.format("%s possui %d %s e %d %s de experiência.", this.nome,this.flechas.getQuantidade(), flechaNoSingular ? "flecha" : "flechas", this.experiencia, nivelNoSingular ? "nível" : "níveis");
+        //return this.nome + " possui " + this.fle chas.getQuantidade() + " flechas e " + this.experiencia + " níveis de experiência.";
     }
 
     public void atirarFlecha(){
