@@ -36,6 +36,7 @@ public class ElfoTest
         //Assert
         elfoDoTestFlecha.atirarFlecha();
         assertEquals(41,elfoDoTestFlecha.getFlechas().getQuantidade());
+        assertEquals(1,elfoDoTestFlecha.getExperiencia());
     }
     
     @Test
@@ -47,11 +48,13 @@ public class ElfoTest
             Test++;
         }
         assertEquals(0,elfoDoTestFlecha.getFlechas().getQuantidade());
+        assertEquals(42,elfoDoTestFlecha.getExperiencia());
     }
     
     @Test
-    public void elfoNaoAtiraFlecha(){
+    public void elfoNasceComFlecha(){
         Elfo elfoDoTestFlecha = new Elfo("Frechina");
+        assertEquals("Flechas",elfoDoTestFlecha.getFlechas().getDescricao());
         assertEquals(42,elfoDoTestFlecha.getFlechas().getQuantidade());
     }
     
@@ -61,5 +64,7 @@ public class ElfoTest
         elfoDoTestDwarf.atirarFlechaNoDwarf();
         assertEquals(100,elfoDoTestDwarf.getVida().getVida());
         assertEquals(41,elfoDoTestDwarf.getFlechas().getQuantidade());
+        assertEquals(1,elfoDoTestDwarf.getExperiencia());
     }
+   
 }

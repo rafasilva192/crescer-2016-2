@@ -24,6 +24,10 @@ public class Elfo
         return arco;
     }
 
+    public int getExperiencia(){
+        return experiencia;
+    }
+
     public Item getFlechas(){
         return flechas;
     }

@@ -1,28 +1,26 @@
 public class CestoDeLembas
 {
     // instance variables - replace the example below with your own
-    private int lembas;
+    private int numeroLembas;
 
     /**
      * Constructor for objects of class CestoDeLembas
      */
-    public CestoDeLembas(int qtd){
-       lembas = qtd;
+    public CestoDeLembas(int numeroLembas){
+        this.numeroLembas = numeroLembas;
     }
-    public void setLembas(int qtd){
-        lembas = qtd;
+
+    public void setLembas(int numeroLembas){
+        this.numeroLembas = numeroLembas;
     }
+
     public int getLembas(){
-        return lembas;
+        return numeroLembas;
     }
+
     public boolean podeDividirEmPares(){
-        int divisao = lembas/2;
-        divisao = divisao % 2;
-        if(divisao == 0){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return numeroLembas> 2 && numeroLembas % 2 == 0 && numeroLembas <= 100;
     }
+    
 }
+

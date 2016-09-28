@@ -8,13 +8,23 @@ import org.junit.Test;
 public class CestoDeLembasTest
 {
     @Test
-    public void lembasSoSeDivideEmPares(){
-        CestoDeLembas OitoComGluten = new CestoDeLembas(8);
-        assertEquals(true, OitoComGluten.podeDividirEmPares());
+    public void lembasSoSeDivideEmEntre4(){
+        CestoDeLembas OitoComGluten = new CestoDeLembas(4);
+        assertTrue(OitoComGluten.podeDividirEmPares());
     }
     @Test
-    public void lembasNaoSeDivideEmImpares(){
+    public void lembasNaoSeDivideEmCom3(){
         CestoDeLembas TresComGluten = new CestoDeLembas(3);
-        assertEquals(false, TresComGluten.podeDividirEmPares());
+        assertFalse(TresComGluten.podeDividirEmPares());
+    }
+    @Test
+    public void lembasNaoSeDivideEmCom1(){
+        CestoDeLembas TresComGluten = new CestoDeLembas(1);
+        assertFalse(TresComGluten.podeDividirEmPares());
+    }
+    @Test
+    public void lembasNaoSeDivideSeTemMaisDe100(){
+        CestoDeLembas TresComGluten = new CestoDeLembas(101);
+        assertFalse(TresComGluten.podeDividirEmPares());
     }
 }
