@@ -11,7 +11,7 @@ public class ElfoTest
         //Arrange
         String nomeEsperado = "Bruce Wayne";
         //Act
-        Elfo brucewayne = new Elfo(nomeEsperado);
+        Elfo brucewayne = new Elfo(nomeEsperado, 0);
         //Assert
         assertEquals(nomeEsperado,brucewayne.getNome());
     }
@@ -21,7 +21,7 @@ public class ElfoTest
         //Arrange
         
         //Act
-        Elfo elfoDoTest = new Elfo("Elrond");
+        Elfo elfoDoTest = new Elfo("Elrond", 42);
         //Assert
         assertEquals("Arco",elfoDoTest.getArco().getDescricao());
         assertEquals(1,elfoDoTest.getArco().getQuantidade());
@@ -32,52 +32,133 @@ public class ElfoTest
         //Arrange
         
         //Act
-        Elfo elfoDoTestFlecha = new Elfo("Frechina");
+        Elfo elfoDoTest = new Elfo("Elrond", 42);
         //Assert
-        elfoDoTestFlecha.atirarFlecha();
-        assertEquals(41,elfoDoTestFlecha.getFlechas().getQuantidade());
-        assertEquals(1,elfoDoTestFlecha.getExperiencia());
+        elfoDoTest.atirarFlecha();
+        assertEquals(41,elfoDoTest.getFlechas().getQuantidade());
+        assertEquals(1,elfoDoTest.getExperiencia());
     }
     
     @Test
     public void elfoAtiraVariasFlechas(){
-        Elfo elfoDoTestFlecha = new Elfo("Frechina");
+        Elfo elfoDoTest = new Elfo("Elrond", 42);
         int Test = 0;
         while(Test < 50){
-            elfoDoTestFlecha.atirarFlecha();
+            elfoDoTest.atirarFlecha();
             Test++;
         }
-        assertEquals(0,elfoDoTestFlecha.getFlechas().getQuantidade());
-        assertEquals(42,elfoDoTestFlecha.getExperiencia());
+        assertEquals(0,elfoDoTest.getFlechas().getQuantidade());
+        assertEquals(42,elfoDoTest.getExperiencia());
     }
     
     @Test
     public void elfoNasceComFlecha(){
-        Elfo elfoDoTestFlecha = new Elfo("Frechina");
-        assertEquals("Flechas",elfoDoTestFlecha.getFlechas().getDescricao());
-        assertEquals(42,elfoDoTestFlecha.getFlechas().getQuantidade());
+        Elfo elfoDoTest = new Elfo("Elrond", 42);
+        assertEquals("Flechas",elfoDoTest.getFlechas().getDescricao());
+        assertEquals(42,elfoDoTest.getFlechas().getQuantidade());
     }
     
     @Test
     public void elfoCacaDwarfs(){
-        Elfo elfoDoTestDwarf = new Elfo("Frechina");
+        Elfo elfoDoTest = new Elfo("Elrond", 42);
         Dwarf dwarf = new Dwarf();
-        elfoDoTestDwarf.atirarFlechaNoDwarf(dwarf);
+        elfoDoTest.atirarFlechaNoDwarf(dwarf);
         assertEquals(100,dwarf.getVida());
-        assertEquals(41,elfoDoTestDwarf.getFlechas().getQuantidade());
-        assertEquals(1,elfoDoTestDwarf.getExperiencia());
+        assertEquals(41,elfoDoTest.getFlechas().getQuantidade());
+        assertEquals(1,elfoDoTest.getExperiencia());
     }
     @Test
     public void elfoCaca2Dwarfs(){
-        Elfo elfoDoTestDwarf = new Elfo("Frechina");
+        Elfo elfoDoTest = new Elfo("Elrond", 42);
         Dwarf dwarf = new Dwarf();
         Dwarf muradin = new Dwarf();
-        elfoDoTestDwarf.atirarFlechaNoDwarf(dwarf);
-        elfoDoTestDwarf.atirarFlechaNoDwarf(muradin);
+        elfoDoTest.atirarFlechaNoDwarf(dwarf);
+        elfoDoTest.atirarFlechaNoDwarf(muradin);
         assertEquals(100,dwarf.getVida());
         assertEquals(100,muradin.getVida());
-        assertEquals(40,elfoDoTestDwarf.getFlechas().getQuantidade());
-        assertEquals(2,elfoDoTestDwarf.getExperiencia());
+        assertEquals(40,elfoDoTest.getFlechas().getQuantidade());
+        assertEquals(2,elfoDoTest.getExperiencia());
     }
-   
+    @Test
+    public void elfoInformaçõesSobreArcoFlechaEExperiencia(){
+        Elfo elfo1 = new Elfo("Frechina", 42);
+        assertEquals("Frechina possui 42 flechas e 0 níveis de experiência.", elfo1.toString());
+    }
+    @Test
+    public void elfoInformaçõesSobreArcoFlechaEExperienciaAtirando1Flecha(){
+        Elfo elfo1 = new Elfo("Frechina", 42);
+        elfo1.atirarFlecha();
+        assertEquals("Frechina possui 41 flechas e 1 níveis de experiência.", elfo1.toString());
+    }
+    @Test
+    public void elfoInformaçõesSobreArcoFlechaEExperienciaAtirando50Flecha(){
+        Elfo elfo1 = new Elfo("Frechina", 42);
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        assertEquals("Frechina possui 0 flechas e 42 níveis de experiência.", elfo1.toString());
+    }
+    @Test
+    public void elfoQueNasceCom100Flechas(){
+        Elfo elfo1 = new Elfo("Frechina", 100);
+        assertEquals("Frechina possui 100 flechas e 0 níveis de experiência.", elfo1.toString());
+    }
+    @Test
+    public void elfoQueNasceCom1000FlechasEDepoisAtira5(){
+        Elfo elfo1 = new Elfo("Frechina", 1000);
+        assertEquals("Frechina possui 1000 flechas e 0 níveis de experiência.", elfo1.toString());
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        elfo1.atirarFlecha();
+        assertEquals("Frechina possui 995 flechas e 5 níveis de experiência.", elfo1.toString());
+    }
 }
