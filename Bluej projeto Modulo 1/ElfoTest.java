@@ -19,11 +19,22 @@ public class ElfoTest
     @Test
     public void elfoNasceComArco(){
         //Arrange
-        Item arco = new Item("Arco", 1);
+        
         //Act
         Elfo elfoDoTest = new Elfo("Elrond");
         //Assert
-        assertEquals(arco.getDescricao(),elfoDoTest.getArco().getDescricao());
-        assertEquals(arco.getQuantidade(),elfoDoTest.getArco().getQuantidade());
+        assertEquals("Arco",elfoDoTest.getArco().getDescricao());
+        assertEquals(1,elfoDoTest.getArco().getQuantidade());
+    }
+    
+    @Test
+    public void elfoAtiraUmaFlecha(){
+        //Arrange
+        
+        //Act
+        Elfo elfoDoTestFlecha = new Elfo("Frechina");
+        //Assert
+        elfoDoTestFlecha.atirarFlecha();
+        assertEquals(41,elfoDoTestFlecha.getFlechas().getQuantidade());
     }
 }
