@@ -4,12 +4,10 @@ public class Elfo
     private Item arco;
     private Item flechas;
     private int experiencia;
-    private Dwarf vida;
     public Elfo(String n){
         nome = n;
         arco = new Item("Arco", 1);
         flechas = new Item("Flechas", 42);
-        vida = new Dwarf();
     }
 
     public void setNome(String n){
@@ -32,27 +30,18 @@ public class Elfo
         return flechas;
     }
 
-    public Dwarf getVida(){
-        return vida;
-    }
-
     public void atirarFlecha(){
-        if(flechas.getQuantidade() == 0){     
-        }
-        else{
+        if(flechas.getQuantidade() > 0){     
             flechas.setQuantidade(flechas.getQuantidade()-1);
             experiencia++;
         }
     }
 
-    public void atirarFlechaNoDwarf(){
+    public void atirarFlechaNoDwarf(Dwarf dwarf){
         if(flechas.getQuantidade() > 0){
             flechas.setQuantidade(flechas.getQuantidade()-1);
-
-            if(vida.getVida() > 0){
-                vida.setVida(vida.getVida()-10);
-                experiencia++;
-            }
+            dwarf.perderVida();
+            experiencia++;
         }   
     }
 }

@@ -61,10 +61,23 @@ public class ElfoTest
     @Test
     public void elfoCacaDwarfs(){
         Elfo elfoDoTestDwarf = new Elfo("Frechina");
-        elfoDoTestDwarf.atirarFlechaNoDwarf();
-        assertEquals(100,elfoDoTestDwarf.getVida().getVida());
+        Dwarf dwarf = new Dwarf();
+        elfoDoTestDwarf.atirarFlechaNoDwarf(dwarf);
+        assertEquals(100,dwarf.getVida());
         assertEquals(41,elfoDoTestDwarf.getFlechas().getQuantidade());
         assertEquals(1,elfoDoTestDwarf.getExperiencia());
+    }
+    @Test
+    public void elfoCaca2Dwarfs(){
+        Elfo elfoDoTestDwarf = new Elfo("Frechina");
+        Dwarf dwarf = new Dwarf();
+        Dwarf muradin = new Dwarf();
+        elfoDoTestDwarf.atirarFlechaNoDwarf(dwarf);
+        elfoDoTestDwarf.atirarFlechaNoDwarf(muradin);
+        assertEquals(100,dwarf.getVida());
+        assertEquals(100,muradin.getVida());
+        assertEquals(40,elfoDoTestDwarf.getFlechas().getQuantidade());
+        assertEquals(2,elfoDoTestDwarf.getExperiencia());
     }
    
 }
