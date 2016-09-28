@@ -26,8 +26,12 @@ public class Elfo
         return flechas;
     }
     public void atirarFlecha(){
+        if(flechas.getQuantidade() == 0){     
+        }
+        else{
         flechas.setQuantidade(flechas.getQuantidade()-1);
         experiencia++;
+    }
     }
 
     /*public void atirarFlechaRefactory(){

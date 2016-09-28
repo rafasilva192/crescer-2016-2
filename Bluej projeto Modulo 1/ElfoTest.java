@@ -42,11 +42,11 @@ public class ElfoTest
     public void elfoAtiraVariasFlechas(){
         Elfo elfoDoTestFlecha = new Elfo("Frechina");
         int Test = 0;
-        while(Test < 10){
+        while(Test < 50){
             elfoDoTestFlecha.atirarFlecha();
             Test++;
         }
-        assertEquals(32,elfoDoTestFlecha.getFlechas().getQuantidade());
+        assertEquals(0,elfoDoTestFlecha.getFlechas().getQuantidade());
     }
     
     @Test
