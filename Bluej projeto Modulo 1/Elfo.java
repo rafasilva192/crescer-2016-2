@@ -23,34 +23,37 @@ public class Elfo
     public Item getArco(){
         return arco;
     }
+
     public Item getFlechas(){
         return flechas;
     }
+
     public Dwarf getVida(){
         return vida;
     }
+
     public void atirarFlecha(){
         if(flechas.getQuantidade() == 0){     
         }
         else{
-        flechas.setQuantidade(flechas.getQuantidade()-1);
-        experiencia++;
-    }
-    }
-     public void atirarFlechaNoDwarf(){
-        if(flechas.getQuantidade() == 0){}
-        else{
-        flechas.setQuantidade(flechas.getQuantidade()-1);
-        if(vida.getVida() == 0){}
-        else{
-        vida.setVida(vida.getVida()-10);
-        experiencia++;
-    }
-    }
+            flechas.setQuantidade(flechas.getQuantidade()-1);
+            experiencia++;
+        }
     }
 
-    /*public void atirarFlechaRefactory(){
-    experiencia++;
-    flechas.setQuantidade(flechas.getQuantidade()-1);
-    }*/
+    public void atirarFlechaNoDwarf(){
+        if(flechas.getQuantidade() > 0){
+            flechas.setQuantidade(flechas.getQuantidade()-1);
+
+            if(vida.getVida() > 0){
+                vida.setVida(vida.getVida()-10);
+                experiencia++;
+            }
+        }   
+    }
 }
+
+/*public void atirarFlechaRefactory(){
+experiencia++;
+flechas.setQuantidade(flechas.getQuantidade()-1);
+}*/
