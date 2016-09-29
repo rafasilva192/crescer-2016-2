@@ -4,6 +4,7 @@ public class Elfo
     private Item arco;
     private Item flechas;
     private int experiencia;
+    private Status status;
 
     public Elfo(String n){
         //chamando construtor de baixo
@@ -14,6 +15,11 @@ public class Elfo
         this.nome = nome;
         arco = new Item("Arco", 1);
         flechas = new Item("Flechas", quantidadeFlechas >= 0 ? quantidadeFlechas : 42);
+        status = Status.VIVO;    
+    }
+    
+    public Status getStatus(){
+        return status;
     }
 
     public void setNome(String n){

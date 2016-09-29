@@ -167,4 +167,10 @@ public class ElfoTest
         assertEquals(1,elfoDoTest.getExperiencia());
         assertEquals(0,dwarf.getExperiencia());
     }
+    
+    @Test
+    public void elfoNasceVivo(){
+        Elfo elfoDoTest = new Elfo("Elrond", 42);
+        assertEquals(Status.VIVO,elfoDoTest.getStatus());
+    }
 }
