@@ -96,47 +96,10 @@ public class ElfoTest
     @Test
     public void elfoInformaçõesSobreArcoFlechaEExperienciaAtirando41Flechas(){
         Elfo elfo1 = new Elfo("Frechina", 42);
+        int x=0;
+        while(x++ < 41){
         elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
-        elfo1.atirarFlecha();
+    }
         assertEquals("Frechina possui 1 flecha e 41 níveis de experiência.", elfo1.toString());
     }
 
@@ -157,41 +120,43 @@ public class ElfoTest
         elfo1.atirarFlecha();
         assertEquals("Frechina possui 995 flechas e 5 níveis de experiência.", elfo1.toString());
     }
-    
+
     @Test
     public void criarElfoInformandoFlechaNegativa(){
         Elfo elfo1 = new Elfo("Frechina", -56);
         assertEquals(42,elfo1.getFlechas().getQuantidade());
     }
-    
+
     @Test
     public void criarElfoInformando0Flechas(){
         Elfo elfo1 = new Elfo("Frechina", 0);
         assertEquals(0,elfo1.getFlechas().getQuantidade());
     }
+
     @Test
     public void elfoAtiraEmDwarfGetSorte33(){
         Elfo elfoDoTest = new Elfo("Elrond", 42);
-        Dwarf dwarf = new Dwarf("Meireles", 1,1,399);
+        DataTerceiraEra dataNascimento = new DataTerceiraEra(1,1,399);
+        Dwarf dwarf = new Dwarf("Meireles", dataNascimento);
         elfoDoTest.atirarFlechaNoDwarf(dwarf);
         assertEquals(110,dwarf.getVida());
         assertEquals(41,elfoDoTest.getFlechas().getQuantidade());
         assertEquals(1,elfoDoTest.getExperiencia());
         assertEquals(0,dwarf.getExperiencia());
     }
+
     @Test
     public void elfoAtiraEmDwarfGetSorteMenos3333(){
         Elfo elfoDoTest = new Elfo("Elrond", 42);
-        Dwarf dwarf = new Dwarf("Meireles", 1,1,400);
-        dwarf.perderVida();
-        dwarf.perderVida();
-        dwarf.perderVida();
+        DataTerceiraEra dataNascimento = new DataTerceiraEra(1,1,400);
+        Dwarf dwarf = new Dwarf("Meireles", dataNascimento);
         elfoDoTest.atirarFlechaNoDwarf(dwarf);
-        assertEquals(80,dwarf.getVida());
+        assertEquals(100,dwarf.getVida());
         assertEquals(41,elfoDoTest.getFlechas().getQuantidade());
         assertEquals(1,elfoDoTest.getExperiencia());
-        assertEquals(2,dwarf.getExperiencia());
+        assertEquals(0,dwarf.getExperiencia());
     }
+
     @Test
     public void elfoAtiraEmDwarfGetSorteMenos101(){
         Elfo elfoDoTest = new Elfo("Elrond", 42);
