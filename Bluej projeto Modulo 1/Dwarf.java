@@ -17,17 +17,17 @@ public class Dwarf
 
     public double getNumeroSorte(){
         double numeroSorte = 101;
-        if(dataNascimento.ehBissexto() == true){
-            if(80 <= vida){
-                if(vida <= 90){
-                    numeroSorte *= -33;
-                }
+        if(dataNascimento.ehBissexto()){
+            if(80 <= vida && vida <= 90){
+
+                numeroSorte *= -33;
+
             }
         }
         else{
             if(nome == "Seixas" || nome == "Meireles"){
-                numeroSorte *= 33;
-                numeroSorte %= 100;
+                numeroSorte = numeroSorte * 33 % 100;
+
             } 
         }
         return numeroSorte;
@@ -36,10 +36,11 @@ public class Dwarf
     public String getNome(){
         return nome;
     }
-    
+
     public void ganhaExperiencia(){
         experiencia += 2;
     }
+
     public int getExperiencia(){
         return experiencia;
     }
