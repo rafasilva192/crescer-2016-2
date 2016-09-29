@@ -33,9 +33,9 @@ public class DwarfTest
         Dwarf dwarf = new Dwarf();
         int x=0;
         while(x++ < 20){
-        dwarf.perderVida();
-    }
-        assertEquals(-90, dwarf.getVida());
+            dwarf.perderVida();
+        }
+        assertEquals(0, dwarf.getVida());
     }
 
     @Test
@@ -87,5 +87,32 @@ public class DwarfTest
         DataTerceiraEra dataNascimento = new DataTerceiraEra(1,1,400);
         Dwarf dwarf = new Dwarf("Meireles", dataNascimento);
         assertTrue(dwarf.getNumeroSorte() == 101);
+    }
+
+    @Test
+    public void dwarfNasceVivo(){
+        Dwarf dwarf = new Dwarf("Meireles",new DataTerceiraEra(1,1,400));
+        assertEquals(Status.VIVO,dwarf.getStatus());
+    }
+    
+    @Test
+    public void dwarfMorre(){
+        Dwarf dwarf = new Dwarf();
+        int x=0;
+        while(x++ < 20){
+            dwarf.perderVida();
+        }
+        assertEquals(Status.MORTO,dwarf.getStatus());
+    }
+    
+    @Test
+    public void dwarfNaoDeveVida(){
+        
+        Dwarf dwarf = new Dwarf();
+        int x=0;
+        while(x++ < 20){
+            dwarf.perderVida();
+        }
+        assertEquals(0,dwarf.getVida());
     }
 }
