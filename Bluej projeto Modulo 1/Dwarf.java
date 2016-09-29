@@ -45,18 +45,18 @@ public class Dwarf
     }
 
     public void perderVida(){
-        double numeroSorte = getNumeroSorte();
-        if(numeroSorte < 0){
-            experiencia += 2;
-        }
-        if(numeroSorte > 100){
-            if(this.vida > 0){
-                this.vida -= 10;
+        if(Status.VIVO.equals(status)){
+            double numeroSorte = this.getNumeroSorte();
+            if(numeroSorte < 0){
+                experiencia += 2;
             }
-            else if (vida <= 0){
-                status = Status.MORTO;
-            this.vida = 0;
-        }
+            if(numeroSorte > 100){
+                this.vida -= 10;
+                if (this.vida <= 0){
+                    this.vida = 0;
+                    status = Status.MORTO;
+                }
+            }         
         }
 
     }
