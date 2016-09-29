@@ -4,7 +4,6 @@ public class Elfo
     private Item arco;
     private Item flechas;
     private int experiencia;
-   
 
     public Elfo(String n){
         //chamando construtor de baixo
@@ -55,9 +54,16 @@ public class Elfo
     public void atirarFlechaNoDwarf(Dwarf dwarf){
         if(flechas.getQuantidade() > 0){
             flechas.setQuantidade(flechas.getQuantidade()-1);
-            dwarf.perderVida();
             experiencia++;
-        }   
+            if(dwarf.getNumeroSorte() < 0){
+                dwarf.ganhaExperiencia();
+            }
+            else if(dwarf.getNumeroSorte() >= 0 && dwarf.getNumeroSorte() <= 100){  
+            }
+            else{
+                dwarf.perderVida();
+            }
+        }
     }
 }
 

@@ -52,4 +52,42 @@ public class DwarfTest
         Lifeless.perderVida();
         assertEquals(-90, Lifeless.getVida());
     }
+    @Test
+    public void dwarfNumeroSorteAnoNaoBissexto(){
+        Dwarf Lifeless = new Dwarf();
+        assertTrue(Lifeless.getNumeroSorte() == 101);
+    }
+    @Test
+    public void dwarfNumeroSorteAnoÉBissexto(){
+        Dwarf Lifeless = new Dwarf("Batima",1,1,400);
+        assertTrue(Lifeless.getNumeroSorte() == 101);
+    } 
+    @Test
+    public void dwarfNumeroSorteAnoÉBissextoEPerdeuVida(){
+        Dwarf Lifeless = new Dwarf("Batima",1,1,400);
+        Lifeless.perderVida();
+        Lifeless.perderVida();
+        Lifeless.perderVida();
+        assertTrue(Lifeless.getNumeroSorte() == -3333);
+    }
+    @Test
+    public void dwarfSeixasGetSorteNaoBissexto(){
+        Dwarf Lifeless = new Dwarf("Seixas",1,1,401);
+        assertTrue(Lifeless.getNumeroSorte() == 33);
+    }
+    @Test
+    public void dwarfSeixasGetSorteÉBissexto(){
+        Dwarf Lifeless = new Dwarf("Seixas",1,1,400);
+        assertTrue(Lifeless.getNumeroSorte() == 101);
+    }
+    @Test
+    public void dwarfMeirelesGetSorteNaoBissexto(){
+        Dwarf Lifeless = new Dwarf("Meireles",1,1,401);
+        assertTrue(Lifeless.getNumeroSorte() == 33);
+    }
+    @Test
+    public void dwarfMeirelesGetSorteÉBissexto(){
+        Dwarf Lifeless = new Dwarf("Meireles",1,1,400);
+        assertTrue(Lifeless.getNumeroSorte() == 101);
+    }
 }

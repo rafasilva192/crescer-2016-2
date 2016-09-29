@@ -25,7 +25,7 @@ public class DataTerceiraEra
     }
 
     public boolean ehBissexto(){
-        float testBissext = ano;
+        double testBissext = ano;
         return testBissext%400 == 0 || testBissext % 4 == 0 && ano % 100!=0;
     }
 
