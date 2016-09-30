@@ -5,8 +5,7 @@ public class Elfo
     private Inventario inventarioElfo;
     private int experiencia;
     private Status status;
-    private Item item;
-
+    
     public Elfo(String n){
         //chamando construtor de baixo
         this(n, 42);
@@ -18,6 +17,10 @@ public class Elfo
         inventarioElfo.adicionarItem("Arco",1);
         inventarioElfo.adicionarItem("Flechas",quantidadeFlechas >= 0 ? quantidadeFlechas : 42);
         status = Status.VIVO;    
+    }
+    
+    public Inventario getInventario(){
+        return inventarioElfo;
     }
     
     public Status getStatus(){
@@ -32,16 +35,8 @@ public class Elfo
         return nome;
     }
 
-    public String getArco(){
-        return inventarioElfo.getItens().get(0).getDescricao();
-    }
-
     public int getExperiencia(){
         return experiencia;
-    }
-
-    public int getFlechas(){
-        return inventarioElfo.getItens().get(1).getQuantidade();
     }
 
     public String toString(){
@@ -54,14 +49,14 @@ public class Elfo
 
     public void atirarFlecha(){
         if(inventarioElfo.getItens().get(1).getQuantidade() > 0){     
-            inventarioElfo.removendoUmaUnidade("Flechas");
+            inventarioElfo.removendoUnidades("Flechas", 1);
             experiencia++;
         }
     }
 
     public void atirarFlechaNoDwarf(Dwarf dwarf){
         if(inventarioElfo.getItens().get(1).getQuantidade() > 0){
-            inventarioElfo.removendoUmaUnidade("Flechas");
+            inventarioElfo.removendoUnidades("Flechas",1 );
             experiencia++;
             dwarf.perderVida();
             }

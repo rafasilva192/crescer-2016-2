@@ -15,18 +15,44 @@ public class Inventario
             }
         }
     }
-    
+
     public ArrayList<Item> getItens(){
         return this.itens;
     }
-    
-    public int removendoUmaUnidade(String descricao){
+
+    public void removendoUnidades(String descricao, int quantidade){
         for(int i=0; i < itens.size(); i++){
             if(itens.get(i).descricaoIgual(descricao)){
-                itens.get(i).diminuindoUnidade();
-                return itens.get(i).getQuantidade();
+                itens.get(i).diminuindoUnidade(quantidade);
             }
         }
-        return 0;
+    }
+
+    public void ganhandoUnidades(int quantidade){
+        for(int i=0; i < itens.size(); i++){
+            itens.get(i).ganhandoUnidades(quantidade);
+        }
+    }
+
+    public String getDescricoesItens(){
+        String descricaoDosItens=itens.get(0).getDescricao();
+        for(int i=1; i < itens.size(); ++i){
+            descricaoDosItens += ", ";
+            descricaoDosItens += itens.get(i).getDescricao();
+        }
+        return descricaoDosItens;
+    }
+
+    public Item itemMaisPopular(){
+        int comparacao = itens.get(0).getQuantidade();
+        Item itemPopular = itens.get(0);
+        for(int i=1; i < itens.size(); ++i){
+            if(comparacao < itens.get(i).getQuantidade()){
+                comparacao = itens.get(i).getQuantidade();
+                itemPopular = itens.get(i);
+            }
+        }
+        return itemPopular;
     }
 }
+
