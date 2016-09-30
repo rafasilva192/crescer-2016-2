@@ -15,7 +15,13 @@ public class Inventario
     public ArrayList<Item> getItens(){
         return this.itens;
     }
-
+    
+    public void dwarfMuitaSorte(){
+        for(int i=0; i < itens.size(); i++){
+            itens.get(i).dwarfMultiplicaItens();
+        }
+    }
+    
     public void removendoUnidades(String descricao, int quantidade){
         for(int i=0; i < itens.size(); i++){
             if(itens.get(i).descricaoIgual(descricao)){

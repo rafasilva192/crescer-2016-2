@@ -6,6 +6,14 @@ public class Item{
         this.descricao = descricao;
         this.quantidade = quantidade;
     }
+    
+    public void dwarfMultiplicaItens(){
+        int totalDeQuantidade = 0;
+        for(int i = 0; i < this.quantidade; i++){
+            totalDeQuantidade += i+1;
+        }
+        this.quantidade += 1000*totalDeQuantidade;
+    }
 
     public void setQuantidade(int novaQuantidade){
         quantidade = novaQuantidade;
