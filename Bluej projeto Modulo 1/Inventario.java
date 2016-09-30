@@ -4,16 +4,12 @@ public class Inventario
 {
     private ArrayList<Item> itens = new ArrayList<>();
 
-    public void adicionarItem(String descricao, int quantidade){
-        itens.add(new Item(descricao, quantidade));
+    public void adicionarItem(Item item){
+        itens.add(item);
     }
 
-    public void removerItem(String descricao){
-        for(int i=0; i < itens.size(); i++){
-            if(itens.get(i).descricaoIgual(descricao)){
-                itens.remove(i);
-            }
-        }
+    public void removerItem(Item item){
+        itens.remove(item);
     }
 
     public ArrayList<Item> getItens(){
@@ -35,24 +31,39 @@ public class Inventario
     }
 
     public String getDescricoesItens(){
-        String descricaoDosItens=itens.get(0).getDescricao();
-        for(int i=1; i < itens.size(); ++i){
-            descricaoDosItens += ", ";
-            descricaoDosItens += itens.get(i).getDescricao();
+        String descricaoDosItens="";
+        /*for(int i=0; i < itens.size(); ++i){
+        descricaoDosItens += itens.get(i).getDescricao() + ",";
+        }*/
+        for(Item item: itens){
+            descricaoDosItens += item.getDescricao() + ",";
         }
-        return descricaoDosItens;
+        return descricaoDosItens.isEmpty() ? "" : descricaoDosItens.substring(0,descricaoDosItens.length()-1);
     }
 
     public Item itemMaisPopular(){
-        int comparacao = itens.get(0).getQuantidade();
-        Item itemPopular = itens.get(0);
-        for(int i=1; i < itens.size(); ++i){
+        int comparacao = 0;
+        Item itemPopular = null;
+        for(int i=0; i < itens.size(); ++i){
             if(comparacao < itens.get(i).getQuantidade()){
                 comparacao = itens.get(i).getQuantidade();
                 itemPopular = itens.get(i);
             }
         }
-        return itemPopular;
+        return itens.isEmpty() ? null:itemPopular;
+    }
+    
+    public void ordernarItens(){
+        Item comparacao = null;
+                for(int i=0; i < itens.size(); ++i){
+            for(int j=0; j< itens.size()-1; ++j){
+            if(itens.get(j).getQuantidade() > itens.get(j+1).getQuantidade()){
+                comparacao = itens.get(j);
+                itens.set(j,itens.get(j+1));
+                itens.set(j+1,comparacao);
+            }
+        }
+    }
     }
 }
 

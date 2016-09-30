@@ -57,12 +57,12 @@ public class Dwarf
         }
     }
     
-    public void adicionarItem(String descricao, int quantidade){
-        inventarioDwarf.adicionarItem(descricao,quantidade);
+    public void adicionarItem(Item item){
+        inventarioDwarf.adicionarItem(item);
     }
     
-    public void perderItem(String descricao){
-        inventarioDwarf.removerItem(descricao);
+    public void perderItem(Item item){
+        inventarioDwarf.removerItem(item);
     }
 
     public void perderVida(){

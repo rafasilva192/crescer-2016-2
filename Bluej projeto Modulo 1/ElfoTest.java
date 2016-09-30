@@ -19,11 +19,12 @@ public class ElfoTest
     public void elfoNasceComArco(){
 
         //Act
-        Elfo elfoDoTest = new Elfo("Elrond", 42);
         Inventario inventarioElfo = new Inventario();
+        Elfo elfoDoTest = new Elfo("Elrond", 42);
+        
         //Assert
-        assertEquals("Arco",elfoDoTest.getInventario().getItens().get(0).getDescricao());
-        assertEquals(1,elfoDoTest.getInventario().getItens().get(0).getQuantidade());
+        assertEquals("Arco",elfoDoTest.getArco().getDescricao());
+        assertEquals(1,elfoDoTest.getArco().getQuantidade());
     }
 
     @Test
@@ -35,7 +36,7 @@ public class ElfoTest
         Elfo elfoDoTest = new Elfo("Elrond", 42);
         //Assert
         elfoDoTest.atirarFlecha();
-        assertEquals(41,elfoDoTest.getInventario().getItens().get(1).getQuantidade());
+        assertEquals(41,elfoDoTest.getFlechas().getQuantidade());
         assertEquals(1,elfoDoTest.getExperiencia());
     }
 
@@ -48,7 +49,7 @@ public class ElfoTest
             elfoDoTest.atirarFlecha();
             Test++;
         }
-        assertEquals(0,elfoDoTest.getInventario().getItens().get(1).getQuantidade());
+        assertEquals(0,elfoDoTest.getFlechas().getQuantidade());
         assertEquals(42,elfoDoTest.getExperiencia());
     }
 
@@ -56,8 +57,8 @@ public class ElfoTest
     public void elfoNasceComFlecha(){
         Elfo elfoDoTest = new Elfo("Elrond", 42);
         Inventario inventarioElfo = new Inventario();
-        assertEquals("Flechas",elfoDoTest.getInventario().getItens().get(1).getDescricao());
-        assertEquals(42,elfoDoTest.getInventario().getItens().get(1).getQuantidade());
+        assertEquals("Flechas",elfoDoTest.getFlechas().getDescricao());
+        assertEquals(42,elfoDoTest.getFlechas().getQuantidade());
     }
 
     @Test
@@ -126,14 +127,14 @@ public class ElfoTest
     public void criarElfoInformandoFlechaNegativa(){
         Elfo elfoDoTest = new Elfo("Frechina", -56);
         Inventario inventarioElfo = new Inventario();
-        assertEquals(42,elfoDoTest.getInventario().getItens().get(1).getQuantidade());
+        assertEquals(42,elfoDoTest.getFlechas().getQuantidade());
     }
 
     @Test
     public void criarElfoInformando0Flechas(){
         Elfo elfoDoTest = new Elfo("Frechina", 0);
         Inventario inventarioElfo = new Inventario();
-        assertEquals(0,elfoDoTest.getInventario().getItens().get(1).getQuantidade());
+        assertEquals(0,elfoDoTest.getFlechas().getQuantidade());
     }
 
     @Test

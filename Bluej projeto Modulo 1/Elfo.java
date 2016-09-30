@@ -14,8 +14,8 @@ public class Elfo
     public Elfo(String nome, int quantidadeFlechas){
         inventarioElfo = new Inventario();
         this.nome = nome;
-        inventarioElfo.adicionarItem("Arco",1);
-        inventarioElfo.adicionarItem("Flechas",quantidadeFlechas >= 0 ? quantidadeFlechas : 42);
+        inventarioElfo.adicionarItem(new Item("Arco", 1));
+        inventarioElfo.adicionarItem(new Item ("Flechas",quantidadeFlechas >= 0 ? quantidadeFlechas : 42));
         status = Status.VIVO;    
     }
     
@@ -25,6 +25,14 @@ public class Elfo
     
     public Status getStatus(){
         return status;
+    }
+    
+    public Item getArco(){
+        return this.inventarioElfo.getItens().get(0);
+    }
+    
+    public Item getFlechas(){
+        return this.inventarioElfo.getItens().get(1);
     }
 
     public void setNome(String n){
@@ -43,19 +51,19 @@ public class Elfo
 
         boolean flechaNoSingular = this.inventarioElfo.getItens().get(1).getQuantidade() == 1;
         boolean nivelNoSingular = this.experiencia == 1;
-        return String.format("%s possui %d %s e %d %s de experiência.", this.nome,this.inventarioElfo.getItens().get(1).getQuantidade(), flechaNoSingular ? "flecha" : "flechas", this.experiencia, nivelNoSingular ? "nível" : "níveis");
+        return String.format("%s possui %d %s e %d %s de experiência.", this.nome,getFlechas().getQuantidade(), flechaNoSingular ? "flecha" : "flechas", this.experiencia, nivelNoSingular ? "nível" : "níveis");
         //return this.nome + " possui " + this.fle chas.getQuantidade() + " flechas e " + this.experiencia + " níveis de experiência.";
     }
 
     public void atirarFlecha(){
-        if(inventarioElfo.getItens().get(1).getQuantidade() > 0){     
+        if(getFlechas().getQuantidade() > 0){     
             inventarioElfo.removendoUnidades("Flechas", 1);
             experiencia++;
         }
     }
 
     public void atirarFlechaNoDwarf(Dwarf dwarf){
-        if(inventarioElfo.getItens().get(1).getQuantidade() > 0){
+        if(getFlechas().getQuantidade() > 0){
             inventarioElfo.removendoUnidades("Flechas",1 );
             experiencia++;
             dwarf.perderVida();
