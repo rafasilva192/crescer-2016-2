@@ -42,9 +42,19 @@ public class Dwarf
     public int getExperiencia(){
         return experiencia;
     }
+    
+    public Inventario getInventario(){
+        return inventarioDwarf;
+    }
 
     public Status getStatus(){
         return status;
+    }
+    
+    public void tentarSorte(){
+        if(this.getNumeroSorte()== -3333.0){
+            inventarioDwarf.ganhandoUnidades(1000);
+        }
     }
     
     public void adicionarItem(String descricao, int quantidade){
