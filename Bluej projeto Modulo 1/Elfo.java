@@ -1,10 +1,11 @@
+import java.util.ArrayList;
 public class Elfo
 {
     private String nome;
-    private Item arco;
-    private Item flechas;
+    private Inventario inventarioElfo;
     private int experiencia;
     private Status status;
+    private Item item;
 
     public Elfo(String n){
         //chamando construtor de baixo
@@ -12,9 +13,10 @@ public class Elfo
     }
 
     public Elfo(String nome, int quantidadeFlechas){
+        inventarioElfo = new Inventario();
         this.nome = nome;
-        arco = new Item("Arco", 1);
-        flechas = new Item("Flechas", quantidadeFlechas >= 0 ? quantidadeFlechas : 42);
+        inventarioElfo.adicionarItem("Arco",1);
+        inventarioElfo.adicionarItem("Flechas",quantidadeFlechas >= 0 ? quantidadeFlechas : 42);
         status = Status.VIVO;    
     }
     
@@ -30,36 +32,36 @@ public class Elfo
         return nome;
     }
 
-    public Item getArco(){
-        return arco;
+    public String getArco(){
+        return inventarioElfo.getItens().get(0).getDescricao();
     }
 
     public int getExperiencia(){
         return experiencia;
     }
 
-    public Item getFlechas(){
-        return flechas;
+    public int getFlechas(){
+        return inventarioElfo.getItens().get(1).getQuantidade();
     }
 
     public String toString(){
 
-        boolean flechaNoSingular = this.flechas.getQuantidade() == 1;
+        boolean flechaNoSingular = this.inventarioElfo.getItens().get(1).getQuantidade() == 1;
         boolean nivelNoSingular = this.experiencia == 1;
-        return String.format("%s possui %d %s e %d %s de experiência.", this.nome,this.flechas.getQuantidade(), flechaNoSingular ? "flecha" : "flechas", this.experiencia, nivelNoSingular ? "nível" : "níveis");
+        return String.format("%s possui %d %s e %d %s de experiência.", this.nome,this.inventarioElfo.getItens().get(1).getQuantidade(), flechaNoSingular ? "flecha" : "flechas", this.experiencia, nivelNoSingular ? "nível" : "níveis");
         //return this.nome + " possui " + this.fle chas.getQuantidade() + " flechas e " + this.experiencia + " níveis de experiência.";
     }
 
     public void atirarFlecha(){
-        if(flechas.getQuantidade() > 0){     
-            flechas.setQuantidade(flechas.getQuantidade()-1);
+        if(inventarioElfo.getItens().get(1).getQuantidade() > 0){     
+            inventarioElfo.removendoUmaUnidade("Flechas");
             experiencia++;
         }
     }
 
     public void atirarFlechaNoDwarf(Dwarf dwarf){
-        if(flechas.getQuantidade() > 0){
-            flechas.setQuantidade(flechas.getQuantidade()-1);
+        if(inventarioElfo.getItens().get(1).getQuantidade() > 0){
+            inventarioElfo.removendoUmaUnidade("Flechas");
             experiencia++;
             dwarf.perderVida();
             }

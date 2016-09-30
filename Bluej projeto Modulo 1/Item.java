@@ -10,9 +10,19 @@ public class Item{
     public void setQuantidade(int novaQuantidade){
         quantidade = novaQuantidade;
     }
+    
+    public void diminuindoUnidade(){
+        if(quantidade > 0)quantidade -= 1;
+            }
+    
     public int getQuantidade(){
         return quantidade;
     }
+    
+    public boolean descricaoIgual(String descricao){
+     return this.descricao.equals(descricao);
+    }
+    
     public String getDescricao(){
         return descricao;
     }

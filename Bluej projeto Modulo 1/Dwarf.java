@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class Dwarf
 {
     // instance variables - replace the example below with your own
@@ -6,12 +7,14 @@ public class Dwarf
     private int experiencia;
     private DataTerceiraEra dataNascimento;
     private Status status;
+    private Inventario inventarioDwarf;
 
     public Dwarf(){
         this(null,new DataTerceiraEra(1,1,1));
     }
 
     public Dwarf(String nome, DataTerceiraEra data){
+        inventarioDwarf = new Inventario();
         this.nome = nome;
         dataNascimento = new DataTerceiraEra(data.getDia(), data.getMes(), data.getAno());
         status = Status.VIVO;
@@ -42,6 +45,14 @@ public class Dwarf
 
     public Status getStatus(){
         return status;
+    }
+    
+    public void adicionarItem(String descricao, int quantidade){
+        inventarioDwarf.adicionarItem(descricao,quantidade);
+    }
+    
+    public void perderItem(String descricao){
+        inventarioDwarf.removerItem(descricao);
     }
 
     public void perderVida(){
