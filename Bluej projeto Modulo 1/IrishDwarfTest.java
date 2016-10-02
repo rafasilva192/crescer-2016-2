@@ -62,4 +62,28 @@ public class IrishDwarfTest
         dwarf.tentarMuitaSorte();
         assertEquals(3, dwarf.getInventario().getItens().get(0).getQuantidade());
     }
+    
+    @Test
+    public void irishDwarfMuitaSorteComQuantidadeMenosTres(){
+        DataTerceiraEra dataNascimento = new DataTerceiraEra(1,1,400);
+        IrishDwarf dwarf = new IrishDwarf("Moira",dataNascimento);
+        dwarf.perderVida();
+        dwarf.perderVida();
+        dwarf.perderVida();
+        dwarf.adicionarItem(new Item("Item de teste", -3));
+        dwarf.tentarMuitaSorte();
+        assertEquals(5997, dwarf.getInventario().getItens().get(0).getQuantidade());
+    }
+    
+    @Test
+    public void irishDwarfMuitaSorteComQuantidadeMenosSeis(){
+        DataTerceiraEra dataNascimento = new DataTerceiraEra(1,1,400);
+        IrishDwarf dwarf = new IrishDwarf("Moira",dataNascimento);
+        dwarf.perderVida();
+        dwarf.perderVida();
+        dwarf.perderVida();
+        dwarf.adicionarItem(new Item("Item de teste", -6));
+        dwarf.tentarMuitaSorte();
+        assertEquals(20994, dwarf.getInventario().getItens().get(0).getQuantidade());
+    }
 }
