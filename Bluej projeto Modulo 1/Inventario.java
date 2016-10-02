@@ -15,13 +15,13 @@ public class Inventario
     public ArrayList<Item> getItens(){
         return this.itens;
     }
-    
+
     public void dwarfMuitaSorte(){
         for(int i=0; i < itens.size(); i++){
             itens.get(i).dwarfMultiplicaItens();
         }
     }
-    
+
     public void removendoUnidades(String descricao, int quantidade){
         for(int i=0; i < itens.size(); i++){
             if(itens.get(i).descricaoIgual(descricao)){
@@ -58,18 +58,37 @@ public class Inventario
         }
         return itens.isEmpty() ? null:itemPopular;
     }
-    
+
     public void ordernarItens(){
         Item comparacao = null;
-                for(int i=0; i < itens.size(); ++i){
+        for(int i=0; i < itens.size(); ++i){
             for(int j=0; j< itens.size()-1; ++j){
-            if(itens.get(j).getQuantidade() > itens.get(j+1).getQuantidade()){
-                comparacao = itens.get(j);
-                itens.set(j,itens.get(j+1));
-                itens.set(j+1,comparacao);
+                if(itens.get(j).getQuantidade() > itens.get(j+1).getQuantidade()){
+                    comparacao = itens.get(j);
+                    itens.set(j,itens.get(j+1));
+                    itens.set(j+1,comparacao);
+                }
             }
         }
     }
+
+    public void tipoOrdenacao(String ordenacao){
+        Item comparacao = null;
+        if(ordenacao.equals("ASCENDENTE")){
+            ordernarItens();
+        }
+
+        if(ordenacao.equals("DESCENDENTE")){
+            for(int i=0; i < itens.size(); ++i){
+                for(int j=0; j< itens.size()-1; ++j){
+                    if(itens.get(j).getQuantidade() < itens.get(j+1).getQuantidade()){
+                        comparacao = itens.get(j);
+                        itens.set(j,itens.get(j+1));
+                        itens.set(j+1,comparacao);
+                    }
+                }
+            }
+        }
     }
 }
 
