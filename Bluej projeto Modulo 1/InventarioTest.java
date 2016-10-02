@@ -129,7 +129,7 @@ public class InventarioTest
         inventario.adicionarItem(Torre);
         inventario.adicionarItem(Arco);
         inventario.adicionarItem(Espada);
-        inventario.ordernarItens();
+        inventario.ordernarItens(TipoOrdenacao.ASCENDENTE);
         assertEquals(Espada,inventario.getItens().get(0));
         assertEquals(Escudo,inventario.getItens().get(1));
         assertEquals(Arco,inventario.getItens().get(2));
@@ -139,7 +139,7 @@ public class InventarioTest
     @Test
     public void inventarioOrganizarListaVaziaModoAscendente(){
         Inventario inventario = new Inventario();
-        inventario.ordernarItens();
+        inventario.ordernarItens(TipoOrdenacao.ASCENDENTE);
         assertTrue(inventario.getItens().isEmpty());
     }
     
@@ -154,7 +154,7 @@ public class InventarioTest
         inventario.adicionarItem(Torre);
         inventario.adicionarItem(Arco);
         inventario.adicionarItem(Espada);
-        inventario.tipoOrdenacao("ASCENDENTE");
+        inventario.ordernarItens(TipoOrdenacao.ASCENDENTE);
         assertEquals(Espada,inventario.getItens().get(0));
         assertEquals(Escudo,inventario.getItens().get(1));
         assertEquals(Arco,inventario.getItens().get(2));
@@ -172,7 +172,7 @@ public class InventarioTest
         inventario.adicionarItem(Torre);
         inventario.adicionarItem(Arco);
         inventario.adicionarItem(Espada);
-        inventario.tipoOrdenacao("DESCENDENTE");
+        inventario.ordernarItens(TipoOrdenacao.DESCENDENTE);
         assertEquals(Torre,inventario.getItens().get(0));
         assertEquals(Arco,inventario.getItens().get(1));
         assertEquals(Escudo,inventario.getItens().get(2));
@@ -182,14 +182,14 @@ public class InventarioTest
     @Test
     public void inventarioVazioTipoOrdenacaoOrganizarModoDescendente(){
         Inventario inventario = new Inventario();
-        inventario.tipoOrdenacao("DESCENDENTE");
+        inventario.ordernarItens(TipoOrdenacao.DESCENDENTE);
         assertTrue(inventario.getItens().isEmpty());
     }
     
     @Test
     public void inventarioVazioTipoOrdenacaoOrganizarModoAscendente(){
         Inventario inventario = new Inventario();
-        inventario.tipoOrdenacao("ASCENDENTE");
+        inventario.ordernarItens(TipoOrdenacao.ASCENDENTE);
         assertTrue(inventario.getItens().isEmpty());
     }
 }

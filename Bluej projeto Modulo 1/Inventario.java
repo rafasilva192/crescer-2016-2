@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class Inventario
 {
     private ArrayList<Item> itens = new ArrayList<>();
+    private TipoOrdenacao ordenacao;
 
     public void adicionarItem(Item item){
         itens.add(item);
@@ -59,26 +60,20 @@ public class Inventario
         return itens.isEmpty() ? null:itemPopular;
     }
 
-    public void ordernarItens(){
+    public void ordernarItens(TipoOrdenacao ordenacao){
         Item comparacao = null;
-        for(int i=0; i < itens.size(); ++i){
-            for(int j=0; j< itens.size()-1; ++j){
-                if(itens.get(j).getQuantidade() > itens.get(j+1).getQuantidade()){
-                    comparacao = itens.get(j);
-                    itens.set(j,itens.get(j+1));
-                    itens.set(j+1,comparacao);
+        if(TipoOrdenacao.ASCENDENTE.equals(ordenacao)){
+            for(int i=0; i < itens.size(); ++i){
+                for(int j=0; j< itens.size()-1; ++j){
+                    if(itens.get(j).getQuantidade() > itens.get(j+1).getQuantidade()){
+                        comparacao = itens.get(j);
+                        itens.set(j,itens.get(j+1));
+                        itens.set(j+1,comparacao);
+                    }
                 }
             }
         }
-    }
-
-    public void tipoOrdenacao(String ordenacao){
-        Item comparacao = null;
-        if(ordenacao.equals("ASCENDENTE")){
-            ordernarItens();
-        }
-
-        if(ordenacao.equals("DESCENDENTE")){
+        if(TipoOrdenacao.DESCENDENTE.equals(ordenacao)){
             for(int i=0; i < itens.size(); ++i){
                 for(int j=0; j< itens.size()-1; ++j){
                     if(itens.get(j).getQuantidade() < itens.get(j+1).getQuantidade()){
