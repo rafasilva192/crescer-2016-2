@@ -10,8 +10,9 @@ public class HobbitContadorTest
     @Test
     public void multiplicaoDoisNumeros(){
         HobbitContador contador = new HobbitContador();
+        contador.adicionarPar(15, 18);
         contador.adicionarPar(4,5);
-        int diferenca = contador.calcularDiferenca();
-        assertEquals(20, diferenca);
+        contador.adicionarPar(12,60);
+        assertEquals(840, contador.calcularDiferenca());
     }
 }
