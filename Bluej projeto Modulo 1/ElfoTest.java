@@ -17,10 +17,11 @@ public class ElfoTest
 
     @Test
     public void elfoNasceComArco(){
-        //Arrange
 
         //Act
+        Inventario inventarioElfo = new Inventario();
         Elfo elfoDoTest = new Elfo("Elrond", 42);
+        
         //Assert
         assertEquals("Arco",elfoDoTest.getArco().getDescricao());
         assertEquals(1,elfoDoTest.getArco().getQuantidade());
@@ -31,6 +32,7 @@ public class ElfoTest
         //Arrange
 
         //Act
+        Inventario inventarioElfo = new Inventario();
         Elfo elfoDoTest = new Elfo("Elrond", 42);
         //Assert
         elfoDoTest.atirarFlecha();
@@ -41,6 +43,7 @@ public class ElfoTest
     @Test
     public void elfoAtiraVariasFlechas(){
         Elfo elfoDoTest = new Elfo("Elrond", 42);
+        Inventario inventarioElfo = new Inventario();
         int Test = 0;
         while(Test < 50){
             elfoDoTest.atirarFlecha();
@@ -53,6 +56,7 @@ public class ElfoTest
     @Test
     public void elfoNasceComFlecha(){
         Elfo elfoDoTest = new Elfo("Elrond", 42);
+        Inventario inventarioElfo = new Inventario();
         assertEquals("Flechas",elfoDoTest.getFlechas().getDescricao());
         assertEquals(42,elfoDoTest.getFlechas().getQuantidade());
     }
@@ -63,7 +67,6 @@ public class ElfoTest
         Dwarf dwarf = new Dwarf();
         elfoDoTest.atirarFlechaNoDwarf(dwarf);
         assertEquals(100,dwarf.getVida());
-        assertEquals(41,elfoDoTest.getFlechas().getQuantidade());
         assertEquals(1,elfoDoTest.getExperiencia());
     }
 
@@ -76,7 +79,6 @@ public class ElfoTest
         elfoDoTest.atirarFlechaNoDwarf(muradin);
         assertEquals(100,dwarf.getVida());
         assertEquals(100,muradin.getVida());
-        assertEquals(40,elfoDoTest.getFlechas().getQuantidade());
         assertEquals(2,elfoDoTest.getExperiencia());
     }
 
@@ -123,14 +125,16 @@ public class ElfoTest
 
     @Test
     public void criarElfoInformandoFlechaNegativa(){
-        Elfo elfo1 = new Elfo("Frechina", -56);
-        assertEquals(42,elfo1.getFlechas().getQuantidade());
+        Elfo elfoDoTest = new Elfo("Frechina", -56);
+        Inventario inventarioElfo = new Inventario();
+        assertEquals(42,elfoDoTest.getFlechas().getQuantidade());
     }
 
     @Test
     public void criarElfoInformando0Flechas(){
-        Elfo elfo1 = new Elfo("Frechina", 0);
-        assertEquals(0,elfo1.getFlechas().getQuantidade());
+        Elfo elfoDoTest = new Elfo("Frechina", 0);
+        Inventario inventarioElfo = new Inventario();
+        assertEquals(0,elfoDoTest.getFlechas().getQuantidade());
     }
 
     @Test
@@ -140,7 +144,6 @@ public class ElfoTest
         Dwarf dwarf = new Dwarf("Meireles", dataNascimento);
         elfoDoTest.atirarFlechaNoDwarf(dwarf);
         assertEquals(110,dwarf.getVida());
-        assertEquals(41,elfoDoTest.getFlechas().getQuantidade());
         assertEquals(1,elfoDoTest.getExperiencia());
         assertEquals(0,dwarf.getExperiencia());
     }
@@ -152,7 +155,6 @@ public class ElfoTest
         Dwarf dwarf = new Dwarf("Meireles", dataNascimento);
         elfoDoTest.atirarFlechaNoDwarf(dwarf);
         assertEquals(100,dwarf.getVida());
-        assertEquals(41,elfoDoTest.getFlechas().getQuantidade());
         assertEquals(1,elfoDoTest.getExperiencia());
         assertEquals(0,dwarf.getExperiencia());
     }
@@ -163,7 +165,6 @@ public class ElfoTest
         Dwarf dwarf = new Dwarf();
         elfoDoTest.atirarFlechaNoDwarf(dwarf);
         assertEquals(100,dwarf.getVida());
-        assertEquals(41,elfoDoTest.getFlechas().getQuantidade());
         assertEquals(1,elfoDoTest.getExperiencia());
         assertEquals(0,dwarf.getExperiencia());
     }

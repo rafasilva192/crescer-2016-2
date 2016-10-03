@@ -1,20 +1,17 @@
-public class Dwarf
+import java.util.ArrayList;
+public class Dwarf extends Personagem
 {
     // instance variables - replace the example below with your own
-    private String nome;
-    private int vida = 110;
-    private int experiencia;
-    private DataTerceiraEra dataNascimento;
-    private Status status;
+    protected int vida = 110;    
+    protected DataTerceiraEra dataNascimento; 
 
     public Dwarf(){
         this(null,new DataTerceiraEra(1,1,1));
     }
 
     public Dwarf(String nome, DataTerceiraEra data){
-        this.nome = nome;
+        super(nome);
         dataNascimento = new DataTerceiraEra(data.getDia(), data.getMes(), data.getAno());
-        status = Status.VIVO;
     }
 
     public double getNumeroSorte(){
@@ -32,16 +29,18 @@ public class Dwarf
         return numeroSorte;
     }
 
-    public String getNome(){
-        return nome;
+    public void tentarSorte(){
+        if(this.getNumeroSorte()== -3333.0){
+            inventario.ganhandoUnidades(1000);
+        }
     }
 
-    public int getExperiencia(){
-        return experiencia;
+    public void adicionarItem(Item item){
+        inventario.adicionarItem(item);
     }
 
-    public Status getStatus(){
-        return status;
+    public void perderItem(Item item){
+        inventario.removerItem(item);
     }
 
     public void perderVida(){

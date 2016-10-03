@@ -1,5 +1,6 @@
 
 public enum Status
 {
-        VIVO, MORTO
+        VIVO, 
+        MORTO;
 }

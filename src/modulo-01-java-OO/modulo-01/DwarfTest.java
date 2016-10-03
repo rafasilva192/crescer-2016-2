@@ -2,6 +2,7 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import java.util.ArrayList;
 
 public class DwarfTest
 {
@@ -166,5 +167,92 @@ public class DwarfTest
         assertEquals(100, dwarf.getVida(), .0);
         assertEquals(0, dwarf.getExperiencia());
     }
+
+    @Test
+    public void adicionarItemNoInventario() {
+        Dwarf dwarf = new Dwarf();
+        Item espadaZ = new Item("Espada Z", 1);
+        dwarf.adicionarItem(espadaZ);
+        assertTrue(dwarf.getInventario().getItens().contains(espadaZ));
+    }
+
+    @Test
+    public void inventarioSemAdicionarItem() {
+        Dwarf dwarf = new Dwarf();
+        Item espadaZ = new Item("Espada Z", 1);
+        assertFalse(dwarf.getInventario().getItens().contains(espadaZ));
+    }
+
+    @Test
+    public void adicionarDoisItensNoInventario() {
+        Dwarf dwarf = new Dwarf();
+        Item espadaZ = new Item("Espada Z", 1);
+        Item botasDeFerro = new Item("Iron Boots", 1);
+        dwarf.adicionarItem(espadaZ);
+        dwarf.adicionarItem(botasDeFerro);
+        assertTrue(dwarf.getInventario().getItens().contains(espadaZ));
+        assertTrue(dwarf.getInventario().getItens().contains(botasDeFerro));
+    }
+
+    @Test
+    public void adicionarCincoItensNoInventario() {
+        Dwarf dwarf = new Dwarf();
+        Item espadaZ = new Item("Espada Z", 1);
+        Item botasDeFerro = new Item("Iron Boots", 1);
+        dwarf.adicionarItem(espadaZ);
+        dwarf.adicionarItem(botasDeFerro);
+        dwarf.adicionarItem(botasDeFerro);
+        dwarf.adicionarItem(botasDeFerro);
+        dwarf.adicionarItem(botasDeFerro);
+        assertTrue(dwarf.getInventario().getItens().contains(espadaZ));
+        assertTrue(dwarf.getInventario().getItens().contains(botasDeFerro));
+        assertEquals(5, dwarf.getInventario().getItens().size());
+    }
+
+    @Test
+    public void adicionarItemNoInventarioEDepoisRemovelo() {
+        Dwarf dwarf = new Dwarf();
+        Item espadaZ = new Item("Espada Z", 1);
+        dwarf.adicionarItem(espadaZ);
+        dwarf.perderItem(espadaZ);
+        assertFalse(dwarf.getInventario().getItens().contains(espadaZ));
+    }
+
+    @Test
+    public void adicionarDoisItensNoInventarioERemoverApenasUm() {
+        Dwarf dwarf = new Dwarf();
+        Item espadaZ = new Item("Espada Z", 1);
+        Item bastaoMagico = new Item("Bastão Mágico", 1);
+        dwarf.adicionarItem(espadaZ);
+        dwarf.adicionarItem(bastaoMagico);
+        dwarf.perderItem(espadaZ);
+        assertFalse(dwarf.getInventario().getItens().contains(espadaZ));
+        assertTrue(dwarf.getInventario().getItens().contains(bastaoMagico));
+    }
+
+    @Test
+    public void removerItemSemAdicionaloAntes() {
+        Dwarf dwarf = new Dwarf();
+        Item espadaZ = new Item("Espada Z", 1);
+        dwarf.perderItem(espadaZ);
+        assertFalse(dwarf.getInventario().getItens().contains(espadaZ));
+    }
+
+    @Test
+    public void aumentar1000Unidades3Itens() {
+        Dwarf dwarf = new Dwarf("Sortudo", new DataTerceiraEra(1, 1, 2016));
+        dwarf.perderVida();
+        dwarf.perderVida();
+        dwarf.perderVida();
+        dwarf.adicionarItem(new Item("Espada de aço", 2));
+        dwarf.adicionarItem(new Item("Poção polissuco", 45));
+        dwarf.adicionarItem(new Item("Lucky egg", 3));
+        dwarf.tentarSorte();
+        ArrayList<Item> itens = dwarf.getInventario().getItens();
+        assertEquals(1002, itens.get(0).getQuantidade());
+        assertEquals(1045, itens.get(1).getQuantidade());
+        assertEquals(1003, itens.get(2).getQuantidade());
+    }
 }
+
 
