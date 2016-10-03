@@ -2,6 +2,7 @@ import java.util.*;
 public class HobbitContador
 {
     private ArrayList<ArrayList<Integer>> arrayDePares = new ArrayList<>();
+    private int[] MMCDosPares;
 
     public void adicionarPar(int  primeiroPar, int segundoPar){
         arrayDePares.add(new ArrayList<>(Arrays.asList(primeiroPar,segundoPar)));
@@ -12,33 +13,40 @@ public class HobbitContador
     }
 
     public int calcularDiferenca(){
-        int multiplicacao =0;
-        int valorTotalMultiplicao = 0;
         int diferencaEntreMMCeMultiplicao = 0;
-        produtoDosPares();
+        int valorTotalMultiplicao = produtoDosPares();
         MMCDosProdutos();
         for(int i = 0; i < arrayDePares.size(); i++){
-            diferencaEntreMMCeMultiplicao += arrayDePares.get(i).get(1);
+            diferencaEntreMMCeMultiplicao += MMCDosPares[i];
         }
         return valorTotalMultiplicao - diferencaEntreMMCeMultiplicao;
     }
 
-    private void produtoDosPares(){
+    public int produtoDosPares(){
+        int valorTotalMultiplicao =0;
+        MMCDosPares = new int[arrayDePares.size()];
         for(int i = 0; i < arrayDePares.size(); i++){
-            arrayDePares.get(i).set(0,arrayDePares.get(i).get(0) * arrayDePares.get(i).get(1));
-            arrayDePares.get(i).set(1,1);
+            valorTotalMultiplicao += arrayDePares.get(i).get(0) * arrayDePares.get(i).get(1);
+            MMCDosPares[i] = 1;
         }
+        return valorTotalMultiplicao;
     }
 
     private void MMCDosProdutos(){
         int MDCdoArray = 0;
+        boolean naoMultiplicarMMCDosPares = false; 
         while(!MMCCalculado()){
             MDCdoArray = calcularMDCDosProdutos();
             for(int i = 0; i < arrayDePares.size(); i++){
-                if((arrayDePares.get(i).get(0)%MDCdoArray)==0 && arrayDePares.get(i).get(0) > 1){
+                if(((arrayDePares.get(i).get(0)%MDCdoArray)==0) && arrayDePares.get(i).get(0) > 1){
+                    MMCDosPares[i] *= MDCdoArray;
+                    naoMultiplicarMMCDosPares = true;
                     arrayDePares.get(i).set(0,arrayDePares.get(i).get(0)/MDCdoArray);
-                    arrayDePares.get(i).set(1,arrayDePares.get(i).get(1)*MDCdoArray);
+                }if(((arrayDePares.get(i).get(1)%MDCdoArray)==0) && arrayDePares.get(i).get(1) > 1){
+                    if(!naoMultiplicarMMCDosPares)MMCDosPares[i] *= MDCdoArray;
+                    arrayDePares.get(i).set(1,arrayDePares.get(i).get(1)/MDCdoArray);
                 }
+                naoMultiplicarMMCDosPares = false;
             }
         }
     }
@@ -46,49 +54,56 @@ public class HobbitContador
     private boolean MMCCalculado(){
         int MMCTodosValoresIgualAUm = 1;
         for(int i = 0; i < arrayDePares.size(); i++){
-            MMCTodosValoresIgualAUm *= arrayDePares.get(i).get(0);
+            MMCTodosValoresIgualAUm *= arrayDePares.get(i).get(0) * arrayDePares.get(i).get(1);
         }
         return MMCTodosValoresIgualAUm == 1? true:false;    
     }
 
     private int calcularMDCDosProdutos(){
         int primeiroNumeroMDC = maiorIndice();
-        int segundoNumeroMDC = 0;
+        int segundoNumeroMDC = menorIndice(primeiroNumeroMDC);
         int numeroMDCFinal = 0;
-        int primeiroMaiorQueSegundo = 0;
         for(int i = 0; i < arrayDePares.size(); i++){
-            segundoNumeroMDC = arrayDePares.get(i).get(0);
             if(segundoNumeroMDC > 1){
                 do{
                     if(primeiroNumeroMDC >= segundoNumeroMDC){
-                        primeiroMaiorQueSegundo = 1;
                         if(segundoNumeroMDC == 1){
                             return primeiroNumeroMDC;
                         }
                         numeroMDCFinal = primeiroNumeroMDC % segundoNumeroMDC;
                         primeiroNumeroMDC = segundoNumeroMDC;
                         segundoNumeroMDC = numeroMDCFinal;
-                    }else{
-                        primeiroMaiorQueSegundo = 0;
-                        if(primeiroNumeroMDC == 1){
-                            return segundoNumeroMDC;
-                        }
-                        numeroMDCFinal = segundoNumeroMDC % primeiroNumeroMDC;
-                        segundoNumeroMDC = primeiroNumeroMDC;
-                        primeiroNumeroMDC = numeroMDCFinal;
                     }
                 }while(numeroMDCFinal!=0);
             }
         }
-        return primeiroMaiorQueSegundo == 1? primeiroNumeroMDC:segundoNumeroMDC;
+        return primeiroNumeroMDC;
     }
 
     private int maiorIndice(){
         int maiorValor = 0;
         for(int i = 0; i < arrayDePares.size(); i++){
-            if(arrayDePares.get(i).get(0) > maiorValor) maiorValor = arrayDePares.get(i).get(0);
+            if(arrayDePares.get(i).get(0) > maiorValor) maiorValor = arrayDePares.get(i).get(0);        
+        }
+        for(int i = 0; i < arrayDePares.size(); i++){
+            if(arrayDePares.get(i).get(1) > maiorValor) maiorValor = arrayDePares.get(i).get(1);        
         }
         return maiorValor;
+    }
+
+    private int menorIndice(int maiorValor){
+        int menorValor = maiorValor;
+        for(int i = 0; i < arrayDePares.size(); i++){
+            if(arrayDePares.get(i).get(0) < menorValor && arrayDePares.get(i).get(0) != 1){
+                menorValor = arrayDePares.get(i).get(0);
+            }
+        }
+        for(int i = 0; i < arrayDePares.size(); i++){
+            if(arrayDePares.get(i).get(1) < menorValor && arrayDePares.get(i).get(1) != 1){ 
+                menorValor = arrayDePares.get(i).get(1);
+            }        
+        }
+        return menorValor;
     }
 }
 
