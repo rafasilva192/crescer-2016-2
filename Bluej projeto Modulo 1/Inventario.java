@@ -60,30 +60,27 @@ public class Inventario
         return itens.isEmpty() ? null:itemPopular;
     }
 
+    public void ordernarItensAscendente(){
+        this.ordernarItens(TipoOrdenacao.ASCENDENTE);
+    }
+
     public void ordernarItens(TipoOrdenacao ordenacao){
         Item comparacao = null;
-        if(TipoOrdenacao.ASCENDENTE.equals(ordenacao)){
-            for(int i=0; i < itens.size(); ++i){
-                for(int j=0; j< itens.size()-1; ++j){
-                    if(itens.get(j).getQuantidade() > itens.get(j+1).getQuantidade()){
-                        comparacao = itens.get(j);
-                        itens.set(j,itens.get(j+1));
-                        itens.set(j+1,comparacao);
-                    }
+        boolean ascendente = ordenacao == TipoOrdenacao.ASCENDENTE;
+        for(int i=0; i < itens.size(); ++i){
+            for(int j=0; j< itens.size()-1; ++j){
+                Item itemAtual = this.itens.get(j);
+                Item proximo = this.itens.get(j + 1);
+                //TO-DO Fazer logica pra decrescente
+                boolean precisaTrocar = ascendente ? 
+                        itemAtual.getQuantidade() > proximo.getQuantidade() : itemAtual.getQuantidade() < proximo.getQuantidade();
+                if(precisaTrocar){
+                    itens.set(j,proximo);
+                    itens.set(j+1,itemAtual);
                 }
             }
         }
-        if(TipoOrdenacao.DESCENDENTE.equals(ordenacao)){
-            for(int i=0; i < itens.size(); ++i){
-                for(int j=0; j< itens.size()-1; ++j){
-                    if(itens.get(j).getQuantidade() < itens.get(j+1).getQuantidade()){
-                        comparacao = itens.get(j);
-                        itens.set(j,itens.get(j+1));
-                        itens.set(j+1,comparacao);
-                    }
-                }
-            }
-        }
+
     }
 }
 

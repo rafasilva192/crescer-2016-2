@@ -9,17 +9,11 @@ public class Item{
 
     public void dwarfMultiplicaItens(){
         int totalDeQuantidade = 0;
-        if(this.quantidade > 0){
-            for(int i = 0; i < this.quantidade; i++){
-                totalDeQuantidade += i+1;
-            }
+        if(quantidade >= 0){
+            totalDeQuantidade = (((quantidade - (quantidade - 1)) + quantidade)*quantidade)/2;
         }
-        else{
-            for(int i = 0; i > this.quantidade; i--){
-                totalDeQuantidade += -i+1;
-            }
-        }
-        this.quantidade += 1000*totalDeQuantidade;
+        else totalDeQuantidade = (((quantidade - (quantidade + 1)) + quantidade)*quantidade)/2;
+        this.quantidade += Math.abs(1000*totalDeQuantidade);
     }
 
     public void setQuantidade(int novaQuantidade){

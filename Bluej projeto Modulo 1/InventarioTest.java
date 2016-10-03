@@ -160,25 +160,7 @@ public class InventarioTest
         assertEquals(Arco,inventario.getItens().get(2));
         assertEquals(Torre,inventario.getItens().get(3));
     }
-    
-    @Test
-    public void inventarioTipoOrdenacaoOrganizarModoDescendente(){
-        Inventario inventario = new Inventario();
-        Item Espada = new Item("Espada", 3);
-        Item Escudo = new Item("Escudo", 5);
-        Item Arco = new Item("Arco", 8);
-        Item Torre = new Item("Torre", 9);
-        inventario.adicionarItem(Escudo);
-        inventario.adicionarItem(Torre);
-        inventario.adicionarItem(Arco);
-        inventario.adicionarItem(Espada);
-        inventario.ordernarItens(TipoOrdenacao.DESCENDENTE);
-        assertEquals(Torre,inventario.getItens().get(0));
-        assertEquals(Arco,inventario.getItens().get(1));
-        assertEquals(Escudo,inventario.getItens().get(2));
-        assertEquals(Espada,inventario.getItens().get(3));
-    }
-    
+        
     @Test
     public void inventarioVazioTipoOrdenacaoOrganizarModoDescendente(){
         Inventario inventario = new Inventario();
