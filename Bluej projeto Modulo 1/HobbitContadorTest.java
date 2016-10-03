@@ -59,4 +59,13 @@ public class HobbitContadorTest
         contador.adicionarPar(4,5);
         assertEquals(0, contador.calcularDiferenca());
     }
+    
+    @Test
+    public void calculoDaDiferencaComCemPares(){
+        HobbitContador contador = new HobbitContador();
+        for(int i=0; i < 100; i++){
+        contador.adicionarPar(4,5);
+    }
+        assertEquals(0, contador.calcularDiferenca());
+    }
 }
