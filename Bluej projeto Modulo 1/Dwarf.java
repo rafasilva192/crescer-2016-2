@@ -35,14 +35,6 @@ public class Dwarf extends Personagem
         }
     }
 
-    public void adicionarItem(Item item){
-        inventario.adicionarItem(item);
-    }
-
-    public void perderItem(Item item){
-        inventario.removerItem(item);
-    }
-
     public void perderVida(){
         if(Status.VIVO.equals(status)){
             double numeroSorte = this.getNumeroSorte();

@@ -21,7 +21,7 @@ public class ElfoTest
         //Act
         Inventario inventarioElfo = new Inventario();
         Elfo elfoDoTest = new Elfo("Elrond", 42);
-        
+
         //Assert
         assertEquals("Arco",elfoDoTest.getArco().getDescricao());
         assertEquals(1,elfoDoTest.getArco().getQuantidade());
@@ -100,8 +100,8 @@ public class ElfoTest
         Elfo elfo1 = new Elfo("Frechina", 42);
         int x=0;
         while(x++ < 41){
-        elfo1.atirarFlecha();
-    }
+            elfo1.atirarFlecha();
+        }
         assertEquals("Frechina possui 1 flecha e 41 níveis de experiência.", elfo1.toString());
     }
 
@@ -168,10 +168,41 @@ public class ElfoTest
         assertEquals(1,elfoDoTest.getExperiencia());
         assertEquals(0,dwarf.getExperiencia());
     }
-    
+
     @Test
     public void elfoNasceVivo(){
         Elfo elfoDoTest = new Elfo("Elrond", 42);
         assertEquals(Status.VIVO,elfoDoTest.getStatus());
+    }
+
+    @Test
+    public void elfoAdicionaItem(){        
+        Elfo elfo = new Elfo("TESTE");
+        elfo.adicionarItem(new Item("Item de teste", 66));
+        assertEquals("Item de teste", elfo.getInventario().getItens().get(2).getDescricao());
+        assertEquals(66, elfo.getInventario().getItens().get(2).getQuantidade());
+    }
+
+    @Test
+    public void elfoAdicionaTresItens(){        
+        Elfo elfo = new Elfo("TESTE");
+        elfo.adicionarItem(new Item("Item de teste", 66));
+        elfo.adicionarItem(new Item("Item de teste", 66));
+        elfo.adicionarItem(new Item("Item de teste", 66));
+        assertEquals("Item de teste", elfo.getInventario().getItens().get(2).getDescricao());
+        assertEquals("Item de teste", elfo.getInventario().getItens().get(3).getDescricao());
+        assertEquals("Item de teste", elfo.getInventario().getItens().get(4).getDescricao());
+        assertEquals(66, elfo.getInventario().getItens().get(2).getQuantidade());
+        assertEquals(66, elfo.getInventario().getItens().get(3).getQuantidade());
+        assertEquals(66, elfo.getInventario().getItens().get(4).getQuantidade());
+    }
+
+    @Test
+    public void elfoRemoveItem(){        
+        Elfo elfo = new Elfo("TESTE");
+        Item item = new Item("Item de teste", 1);
+        elfo.adicionarItem(item);
+        elfo.perderItem(item);
+        assertFalse(elfo.getInventario().getItens().contains(item));
     }
 }

@@ -5,11 +5,19 @@ public class Personagem
     protected Inventario inventario;
     protected int experiencia;
     protected Status status;
-    
+
     public Personagem(String nome){
         this.nome = nome;
         this.status = Status.VIVO;
         this.inventario = new Inventario();
+    }
+
+    public void adicionarItem(Item item){
+        inventario.adicionarItem(item);
+    }
+
+    public void perderItem(Item item){
+        inventario.removerItem(item);
     }
 
     public void setNome(String n){
