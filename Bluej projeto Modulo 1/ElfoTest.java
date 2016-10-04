@@ -65,7 +65,7 @@ public class ElfoTest
     public void elfoCacaDwarfs(){
         Elfo elfoDoTest = new Elfo("Elrond", 42);
         Dwarf dwarf = new Dwarf();
-        elfoDoTest.atirarFlechaNoDwarf(dwarf);
+        elfoDoTest.atirarFlecha(dwarf);
         assertEquals(100,dwarf.getVida(),.0);
         assertEquals(1,elfoDoTest.getExperiencia());
     }
@@ -75,8 +75,8 @@ public class ElfoTest
         Elfo elfoDoTest = new Elfo("Elrond", 42);
         Dwarf dwarf = new Dwarf();
         Dwarf muradin = new Dwarf();
-        elfoDoTest.atirarFlechaNoDwarf(dwarf);
-        elfoDoTest.atirarFlechaNoDwarf(muradin);
+        elfoDoTest.atirarFlecha(dwarf);
+        elfoDoTest.atirarFlecha(muradin);
         assertEquals(100,dwarf.getVida(),.0);
         assertEquals(100,muradin.getVida(),.0);
         assertEquals(2,elfoDoTest.getExperiencia());
@@ -142,7 +142,7 @@ public class ElfoTest
         Elfo elfoDoTest = new Elfo("Elrond", 42);
         DataTerceiraEra dataNascimento = new DataTerceiraEra(1,1,399);
         Dwarf dwarf = new Dwarf("Meireles", dataNascimento);
-        elfoDoTest.atirarFlechaNoDwarf(dwarf);
+        elfoDoTest.atirarFlecha(dwarf);
         assertEquals(110,dwarf.getVida(),.0);
         assertEquals(1,elfoDoTest.getExperiencia());
         assertEquals(0,dwarf.getExperiencia());
@@ -153,7 +153,7 @@ public class ElfoTest
         Elfo elfoDoTest = new Elfo("Elrond", 42);
         DataTerceiraEra dataNascimento = new DataTerceiraEra(1,1,400);
         Dwarf dwarf = new Dwarf("Meireles", dataNascimento);
-        elfoDoTest.atirarFlechaNoDwarf(dwarf);
+        elfoDoTest.atirarFlecha(dwarf);
         assertEquals(100,dwarf.getVida(),.0);
         assertEquals(1,elfoDoTest.getExperiencia());
         assertEquals(0,dwarf.getExperiencia());
@@ -163,7 +163,7 @@ public class ElfoTest
     public void elfoAtiraEmDwarfGetSorteMenos101(){
         Elfo elfoDoTest = new Elfo("Elrond", 42);
         Dwarf dwarf = new Dwarf();
-        elfoDoTest.atirarFlechaNoDwarf(dwarf);
+        elfoDoTest.atirarFlecha(dwarf);
         assertEquals(100,dwarf.getVida(),.0);
         assertEquals(1,elfoDoTest.getExperiencia());
         assertEquals(0,dwarf.getExperiencia());

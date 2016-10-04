@@ -9,19 +9,19 @@ public class ElfoNoturno extends Elfo
         if(status.equals(Status.VIVO)){
             int quantidade = getFlechas().getQuantidade();
             if(quantidade > 0){     
-                getFlechas().setQuantidade(quantidade - 1);
-                //O Elfo Não ira morrer pois ele perde 5% do total atual e não do máximo!!
+                super.atirarFlecha();
+                //O Elfo Não ira morrer pois ele perde 5% do total atual
                 //vida = getVida() - (getVida())*5/100;
-                this.vida = getVida() - 5;
-                experiencia += 3;
+                this.vida -= getVida()*5/100;
+                experiencia += 2;
             }
-            if(getVida() <= 0){
+            if((int)this.vida == 0){
                 this.status = Status.MORTO;
             }
         }
     }
 
-    public void atirarFlechaNoDwarf(Dwarf dwarf){
+    public void atirarFlecha(Dwarf dwarf){
         if(getFlechas().getQuantidade() > 0){
             atirarFlecha();
             dwarf.perderVida();

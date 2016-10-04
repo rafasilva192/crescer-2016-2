@@ -1,25 +1,42 @@
+import java.util.*;
 
 public class ElfoVerde extends Elfo
 {
     public ElfoVerde(String Nome,int quantidade){
         super(Nome);
-        inventario.getItens().set(0,new Item("Espada de aço valiriano",1));
-        inventario.getItens().set(1,new Item("Arco e Flecha de Vidro", quantidade));
+    }
 
+    public void adicionarItem(Item item){
+        //if(item.getDescricao().equals("Espada de aço valiriano") || item.getDescricao().equals("Arco e Flecha de Vidro")){
+        String[] validas = getNomesValidos();
+        boolean podeAdicionar = item != null && new ArrayList<>(Arrays.asList(validas)).contains(item.getDescricao());
+
+        if (podeAdicionar) {
+            super.adicionarItem(item);
+        }
+        //}
     }
 
     public void atirarFlecha(){
         int quantidade = getFlechas().getQuantidade();
         if(quantidade > 0){     
-            getFlechas().setQuantidade(quantidade - 1);
-            experiencia += 2;
+            super.atirarFlecha();
+            experiencia++;
         }
     }
 
-    public void atirarFlechaNoDwarf(Dwarf dwarf){
+    public void atirarFlecha(Dwarf dwarf){
         if(getFlechas().getQuantidade() > 0){
             atirarFlecha();
             dwarf.perderVida();
         }
     }
+
+    private String[] getNomesValidos(){
+        return new String[] { 
+            "Espada de aço valiriano", 
+            "Arco e Flecha de Vidro"
+        };
+    }
+
 }

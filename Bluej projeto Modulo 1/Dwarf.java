@@ -10,7 +10,7 @@ public class Dwarf extends Personagem
 
     public Dwarf(String nome, DataTerceiraEra data){
         super(nome);
-        vida = 110;
+        this.vida = 110;
         dataNascimento = new DataTerceiraEra(data.getDia(), data.getMes(), data.getAno());
     }
 

@@ -8,7 +8,7 @@ public class Elfo extends Personagem
 
     public Elfo(String nome, int quantidadeFlechas){
         super(nome);
-        vida = 100;
+        this.vida = 100;
         inventario.adicionarItem(new Item("Arco", 1));
         inventario.adicionarItem(new Item ("Flechas",quantidadeFlechas >= 0 ? quantidadeFlechas : 42));
     }
@@ -35,11 +35,18 @@ public class Elfo extends Personagem
             experiencia++;
         }
     }
-
-    public void atirarFlechaNoDwarf(Dwarf dwarf){
+    
+    protected void atirarFlechas(Dwarf dwarf, int fatorExp){
         if(getFlechas().getQuantidade() > 0){
-            inventario.removendoUnidades("Flechas",1 );
-            experiencia++;
+            inventario.removendoUnidades("Flechas", 1);
+            experiencia += 1 * fatorExp;
+            dwarf.perderVida();
+        }
+    }
+
+    public void atirarFlecha(Dwarf dwarf){
+        if(getFlechas().getQuantidade() > 0){
+            atirarFlecha();
             dwarf.perderVida();
         }
     }
