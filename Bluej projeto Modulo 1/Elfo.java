@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 public class Elfo extends Personagem
 {
+
     public Elfo(String n){
         //chamando construtor de baixo
         this(n, 42);
@@ -12,7 +13,7 @@ public class Elfo extends Personagem
         inventario.adicionarItem(new Item("Arco", 1));
         inventario.adicionarItem(new Item ("Flechas",quantidadeFlechas >= 0 ? quantidadeFlechas : 42));
     }
-    
+
     public Item getArco(){
         return this.inventario.getItens().get(0);
     }
@@ -35,7 +36,7 @@ public class Elfo extends Personagem
             experiencia++;
         }
     }
-    
+
     protected void atirarFlechas(Dwarf dwarf, int fatorExp){
         if(getFlechas().getQuantidade() > 0){
             inventario.removendoUnidades("Flechas", 1);

@@ -16,12 +16,12 @@ public class ElfoVerdeTest
 
     @Test
     public void elfoVerdeAtira50FlechasEGanhaEXP(){
-        ElfoVerde elfo = new ElfoVerde("Test", 42);
+        ElfoVerde elfo = new ElfoVerde("Test", 50);
         for(int i = 0; i < 50; i++){
             elfo.atirarFlecha();
         }
         assertEquals(0, elfo.getFlechas().getQuantidade());
-        assertEquals(84, elfo.getExperiencia());
+        assertEquals(100, elfo.getExperiencia());
     }
     
     @Test

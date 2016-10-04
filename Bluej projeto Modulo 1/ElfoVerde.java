@@ -2,8 +2,12 @@ import java.util.*;
 
 public class ElfoVerde extends Elfo
 {
+    {
+        getArco().setDescricao("Arco de Vidro");
+        getFlechas().setDescricao("Flecha de Vidro");
+    }
     public ElfoVerde(String Nome,int quantidade){
-        super(Nome);
+        super(Nome, quantidade);
     }
 
     public void adicionarItem(Item item){
@@ -20,8 +24,8 @@ public class ElfoVerde extends Elfo
     public void atirarFlecha(){
         int quantidade = getFlechas().getQuantidade();
         if(quantidade > 0){     
-            super.atirarFlecha();
-            experiencia++;
+            getFlechas().setQuantidade(quantidade-1);
+            experiencia += 2;
         }
     }
 
@@ -35,7 +39,8 @@ public class ElfoVerde extends Elfo
     private String[] getNomesValidos(){
         return new String[] { 
             "Espada de aço valiriano", 
-            "Arco e Flecha de Vidro"
+            "Arco de Vidro",
+            "Flecha de Vidro"
         };
     }
 

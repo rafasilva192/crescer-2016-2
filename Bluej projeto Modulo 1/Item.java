@@ -20,6 +20,10 @@ public class Item{
         quantidade = novaQuantidade;
     }
 
+    public void setDescricao(String novaDescricao){
+        descricao = novaDescricao;
+    }
+
     public void ganhandoUnidades(int quantidade){
         this.quantidade += quantidade;
     }
@@ -38,5 +42,11 @@ public class Item{
 
     public String getDescricao(){
         return descricao;
+    }
+
+    @Override
+    public boolean equals(Object obj){
+                Item item = (Item)obj;
+                return this.descricao.equals(item.descricao) && this.quantidade == item.quantidade;
     }
 }
