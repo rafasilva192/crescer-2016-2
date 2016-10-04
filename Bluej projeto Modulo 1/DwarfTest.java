@@ -9,14 +9,14 @@ public class DwarfTest
     @Test
     public void dwarfNasceCom110Vida(){
         Dwarf dwarf = new Dwarf();
-        assertEquals(110, dwarf.getVida());
+        assertEquals(110, dwarf.getVida(),.0);
     }
 
     @Test
     public void dwarfPerde10DeVidaPorFlecha(){
         Dwarf dwarf = new Dwarf();
         dwarf.perderVida();
-        assertEquals(100, dwarf.getVida());
+        assertEquals(100, dwarf.getVida(),.0);
     }
 
     @Test
@@ -35,7 +35,7 @@ public class DwarfTest
         while(x++ < 20){
             dwarf.perderVida();
         }
-        assertEquals(0, dwarf.getVida());
+        assertEquals(0, dwarf.getVida(),.0);
     }
 
     @Test
@@ -113,7 +113,7 @@ public class DwarfTest
         while(x++ < 20){
             dwarf.perderVida();
         }
-        assertEquals(0,dwarf.getVida());
+        assertEquals(0,dwarf.getVida(),.0);
     }
 
     @Test
@@ -124,7 +124,7 @@ public class DwarfTest
             dwarf.perderVida();
         }
         assertEquals(Status.MORTO,dwarf.getStatus());
-        assertEquals(0,dwarf.getVida());
+        assertEquals(0,dwarf.getVida(),.0);
     }
 
     @Test

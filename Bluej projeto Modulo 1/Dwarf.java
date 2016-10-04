@@ -1,8 +1,7 @@
 import java.util.ArrayList;
 public class Dwarf extends Personagem
 {
-    // instance variables - replace the example below with your own
-    protected int vida = 110;    
+    // instance variables - replace the example below with your own  
     protected DataTerceiraEra dataNascimento; 
 
     public Dwarf(){
@@ -11,6 +10,7 @@ public class Dwarf extends Personagem
 
     public Dwarf(String nome, DataTerceiraEra data){
         super(nome);
+        vida = 110;
         dataNascimento = new DataTerceiraEra(data.getDia(), data.getMes(), data.getAno());
     }
 
@@ -50,9 +50,5 @@ public class Dwarf extends Personagem
             }         
         }
 
-    }
-
-    public int getVida(){
-        return vida;
     }
 }

@@ -66,7 +66,7 @@ public class ElfoTest
         Elfo elfoDoTest = new Elfo("Elrond", 42);
         Dwarf dwarf = new Dwarf();
         elfoDoTest.atirarFlechaNoDwarf(dwarf);
-        assertEquals(100,dwarf.getVida());
+        assertEquals(100,dwarf.getVida(),.0);
         assertEquals(1,elfoDoTest.getExperiencia());
     }
 
@@ -77,8 +77,8 @@ public class ElfoTest
         Dwarf muradin = new Dwarf();
         elfoDoTest.atirarFlechaNoDwarf(dwarf);
         elfoDoTest.atirarFlechaNoDwarf(muradin);
-        assertEquals(100,dwarf.getVida());
-        assertEquals(100,muradin.getVida());
+        assertEquals(100,dwarf.getVida(),.0);
+        assertEquals(100,muradin.getVida(),.0);
         assertEquals(2,elfoDoTest.getExperiencia());
     }
 
@@ -143,7 +143,7 @@ public class ElfoTest
         DataTerceiraEra dataNascimento = new DataTerceiraEra(1,1,399);
         Dwarf dwarf = new Dwarf("Meireles", dataNascimento);
         elfoDoTest.atirarFlechaNoDwarf(dwarf);
-        assertEquals(110,dwarf.getVida());
+        assertEquals(110,dwarf.getVida(),.0);
         assertEquals(1,elfoDoTest.getExperiencia());
         assertEquals(0,dwarf.getExperiencia());
     }
@@ -154,7 +154,7 @@ public class ElfoTest
         DataTerceiraEra dataNascimento = new DataTerceiraEra(1,1,400);
         Dwarf dwarf = new Dwarf("Meireles", dataNascimento);
         elfoDoTest.atirarFlechaNoDwarf(dwarf);
-        assertEquals(100,dwarf.getVida());
+        assertEquals(100,dwarf.getVida(),.0);
         assertEquals(1,elfoDoTest.getExperiencia());
         assertEquals(0,dwarf.getExperiencia());
     }
@@ -164,7 +164,7 @@ public class ElfoTest
         Elfo elfoDoTest = new Elfo("Elrond", 42);
         Dwarf dwarf = new Dwarf();
         elfoDoTest.atirarFlechaNoDwarf(dwarf);
-        assertEquals(100,dwarf.getVida());
+        assertEquals(100,dwarf.getVida(),.0);
         assertEquals(1,elfoDoTest.getExperiencia());
         assertEquals(0,dwarf.getExperiencia());
     }
