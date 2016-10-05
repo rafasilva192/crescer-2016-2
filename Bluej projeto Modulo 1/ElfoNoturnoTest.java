@@ -6,6 +6,11 @@ import org.junit.Test;
 
 public class ElfoNoturnoTest
 {
+    @After
+    public void tearDown(){
+        System.gc();
+    }
+    
     @Test
     public void elfoNoturnoPerdeVida(){
         ElfoNoturno elfo = new ElfoNoturno("Malfurion", 20);

@@ -1,28 +1,28 @@
 import java.util.ArrayList;
-public class ExercitoDeElfo extends Exercito
-{
+public class ExercitoDeElfo{
     private ArrayList<Elfo> exercitoDeElfo = new ArrayList<>();
-    
     public void exercitoDeElfo(Elfo elfo){
         if(elfo instanceof ElfoVerde || elfo instanceof ElfoNoturno){
             exercitoDeElfo.add(elfo);
         }
     }
 
-    public ArrayList<Personagem> buscarPorStatus(Status status){
-        ArrayList<Personagem> elfosStatus = new ArrayList<Personagem>();
-        for(int i = 0; i < exercitoDeElfo.size() ; i++){
-            if(exercitoDeElfo.get(i).getStatus().equals(status)){
-                elfosStatus.add(exercitoDeElfo.get(i));
+    public ArrayList<Elfo> buscarPorStatus(Status status){
+        ArrayList<Elfo> elfosStatus = new ArrayList<Elfo>();
+        for(Elfo elfo : exercitoDeElfo){
+            if(elfo.getStatus().equals(status)){
+                elfosStatus.add(elfo);
             }
         }
         return elfosStatus;
     }
 
     public Elfo buscarNoExercito(String Nome){
-        for(int i = 0; i < exercitoDeElfo.size() ; i++){
-            if(exercitoDeElfo.get(i).getNome().equals(Nome))
-                return exercitoDeElfo.get(i);
+        for(Elfo elfo : exercitoDeElfo){
+            if(Nome.equals(elfo.getNome())){
+                return elfo;
+            }
+
         }
         return null;
     }

@@ -6,6 +6,11 @@ import org.junit.Test;
 
 public class ElfoVerdeTest
 {
+    @After
+    public void tearDown(){
+        System.gc();
+    }
+    
     @Test
     public void elfoVerdeAtiraUmaFlechaEGanha2DeEXP(){
         ElfoVerde elfo = new ElfoVerde("Test", 42);

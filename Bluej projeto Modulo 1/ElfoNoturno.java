@@ -20,6 +20,7 @@ public class ElfoNoturno extends Elfo
             }
         }
     }
+    
 
     public void atirarFlecha(Dwarf dwarf){
         if(getFlechas().getQuantidade() > 0){

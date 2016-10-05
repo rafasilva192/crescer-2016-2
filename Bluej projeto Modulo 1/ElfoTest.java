@@ -5,6 +5,11 @@ import org.junit.Test;
 
 public class ElfoTest
 {
+    @After
+    public void tearDown(){
+        System.gc();
+    }
+    
     @Test
     public void elfoNasceComNome(){
         //Arrange
@@ -205,4 +210,20 @@ public class ElfoTest
         elfo.perderItem(item);
         assertFalse(elfo.getInventario().getItens().contains(item));
     }
-}
+    
+    @Test
+    public void elfoIncrementaContador(){
+        Elfo elfo = new Elfo("TESTE");
+        assertEquals(1, Elfo.getContadorDeElfo());
+    }
+    
+    @Test
+    public void elfoIncrementaContadorComNormalVerdeENoturno(){
+        Elfo elfo = new Elfo("TESTE");
+        assertEquals(1, Elfo.getContadorDeElfo());
+        ElfoVerde elfo1 = new ElfoVerde("TESTE2", 1);
+        assertEquals(2, Elfo.getContadorDeElfo());
+        ElfoNoturno elfo2 = new ElfoNoturno("TESTE2", 1);
+        assertEquals(3, Elfo.getContadorDeElfo());
+    }    
+    }

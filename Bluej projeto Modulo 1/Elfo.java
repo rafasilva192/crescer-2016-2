@@ -1,7 +1,7 @@
 
 public class Elfo extends Personagem
 {
-    
+    private static int contadorDeElfo = 0;
     public Elfo(String n){
         //chamando construtor de baixo
         this(n, 42);
@@ -9,9 +9,20 @@ public class Elfo extends Personagem
 
     public Elfo(String nome, int quantidadeFlechas){
         super(nome);
+        Elfo.contadorDeElfo++;
         this.vida = 100;
         inventario.adicionarItem(new Item("Arco", 1));
         inventario.adicionarItem(new Item ("Flechas",quantidadeFlechas >= 0 ? quantidadeFlechas : 42));
+    }
+    
+    protected void finalize()throws Throwable{
+        super.finalize();
+        Elfo.contadorDeElfo--;
+    }
+    
+    public static int getContadorDeElfo(){
+        int resultado = Elfo.contadorDeElfo;
+        return resultado;
     }
 
     public Item getArco(){
