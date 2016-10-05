@@ -48,38 +48,4 @@ public class ElfoNoturnoTest
         assertEquals(3,elfo.getExperiencia());
     }
 
-    @Test
-    public void elfoNoturnoEntraNoExercito(){
-        ElfoNoturno elfo = new ElfoNoturno("Malfurion", 40);
-        elfo.exercitoDeElfo(elfo);
-        assertEquals("Malfurion", elfo.buscarNoExercito("Malfurion").getNome());
-    }
-
-    @Test
-    public void tresElfosNoturnosEntramNoExercito(){
-        ElfoNoturno elfo = new ElfoNoturno("Malfurion", 40);
-        ElfoNoturno elfo1 = new ElfoNoturno("Illidan", 40);
-        ElfoNoturno elfo2 = new ElfoNoturno("Tyrande", 40);
-        elfo.exercitoDeElfo(elfo);
-        elfo1.exercitoDeElfo(elfo1);
-        elfo2.exercitoDeElfo(elfo2);
-        assertEquals("Malfurion", elfo.buscarNoExercito("Malfurion").getNome());
-        assertEquals("Illidan", elfo1.buscarNoExercito("Illidan").getNome());
-        assertEquals("Tyrande", elfo2.buscarNoExercito("Tyrande").getNome());
-    }
-
-    @Test
-    public void buscarNoExercitoPorStatus(){
-        ElfoNoturno elfo = new ElfoNoturno("Malfurion", 40);
-        ElfoNoturno elfo1 = new ElfoNoturno("Illidan", 40);
-        ElfoNoturno elfo2 = new ElfoNoturno("Tyrande", 40);
-        elfo.exercitoDeElfo(elfo);
-        elfo1.exercitoDeElfo(elfo1);
-        elfo2.exercitoDeElfo(elfo2);
-        
-        for(int i = 0; i < elfo.buscarPorStatus(Status.VIVO).size(); i++){
-            assertEquals(Status.VIVO, elfo.buscarPorStatus(Status.VIVO).get(i).getStatus());
-        }
-    }      
-
 }

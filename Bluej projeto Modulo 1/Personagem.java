@@ -44,7 +44,4 @@ public abstract class Personagem
     public Status getStatus(){
         return status;
     }
-    
-    abstract void exercitoDeElfo(Elfo elfo);
-
 }

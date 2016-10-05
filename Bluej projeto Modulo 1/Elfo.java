@@ -1,8 +1,7 @@
-import java.util.ArrayList;
+
 public class Elfo extends Personagem
 {
-    private ArrayList<Elfo> exercitoDeElfo = new ArrayList<>();
-    private ArrayList<Elfo> buscar = new ArrayList<>();
+    
     public Elfo(String n){
         //chamando construtor de baixo
         this(n, 42);
@@ -53,26 +52,7 @@ public class Elfo extends Personagem
         }
     }
 
-    public ArrayList<Elfo> buscarPorStatus(Status status){
-        for(int i = 0; i < exercitoDeElfo.size() ; i++){
-            if(getStatus().equals(status)){
-                buscar.add(exercitoDeElfo.get(i));
-            }
-        }
-        return buscar;
-    }
-
-    public Elfo buscarNoExercito(String Nome){
-        for(int i = 0; i < exercitoDeElfo.size() ; i++){
-            if(getNome().equals(Nome))
-                return exercitoDeElfo.get(i);
-        }
-        return null;
-    }
-
-    public void exercitoDeElfo(Elfo elfo){
-        exercitoDeElfo.add(elfo);
-    }
+    
 }
 
 /*public void atirarFlechaRefactory(){

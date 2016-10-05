@@ -51,8 +51,4 @@ public class Dwarf extends Personagem
         }
 
     }
-    
-    public void exercitoDeElfo(Elfo elfo){
-        
-    }
 }
