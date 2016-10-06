@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class ExercitoDeElfo{
+public class ExercitoDeElfo implements Exercito{
     private ArrayList<Elfo> exercitoDeElfo = new ArrayList<>();
     public void exercitoDeElfo(Elfo elfo){
         if(elfo instanceof ElfoVerde || elfo instanceof ElfoNoturno){
@@ -25,5 +25,9 @@ public class ExercitoDeElfo{
 
         }
         return null;
+    }
+    
+    public Elfo[] getContigente(){
+        return exercitoDeElfo.toArray(new Elfo[exercitoDeElfo.size()]);
     }
 }
