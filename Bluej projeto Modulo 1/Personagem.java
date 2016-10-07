@@ -12,7 +12,6 @@ public abstract class Personagem
         this.status = Status.VIVO;
         this.inventario = new Inventario();
     }
-    
     public double getVida(){
         return vida;
     }

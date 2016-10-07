@@ -13,14 +13,14 @@ public class ExercitoDeElfoTest
     }
 
     @Test
-    public void elfoNoturnoEntraNoExercito(){
+    public void elfoNoturnoEntraNoExercito()throws NaoPodeAlistarException{
         ExercitoDeElfo test = new ExercitoDeElfo();
         test.exercitoDeElfo(new ElfoNoturno("Malfurion", 1));
         assertEquals("Malfurion", test.buscarNoExercito("Malfurion").getNome());
     }
 
     @Test
-    public void elfoNoturnoEElfoVerdeEntramNoExercito(){
+    public void elfoNoturnoEElfoVerdeEntramNoExercito()throws NaoPodeAlistarException{
         ExercitoDeElfo test = new ExercitoDeElfo();
         test.exercitoDeElfo(new ElfoNoturno("Malfurion", 1));
         test.exercitoDeElfo(new ElfoVerde("Valeera", 1));
@@ -29,7 +29,7 @@ public class ExercitoDeElfoTest
     }
 
     @Test
-    public void tresElfosNoturnosEntramNoExercito(){
+    public void tresElfosNoturnosEntramNoExercito()throws NaoPodeAlistarException{
         ExercitoDeElfo test = new ExercitoDeElfo();
         test.exercitoDeElfo(new ElfoNoturno("Malfurion", 1));
         test.exercitoDeElfo(new ElfoNoturno("Illidan", 1));
@@ -39,15 +39,15 @@ public class ExercitoDeElfoTest
         assertEquals("Tyrande", test.buscarNoExercito("Tyrande").getNome());
     }
 
-    @Test
-    public void elfoNormalNaoEntraNoExercito(){
+    @Test(expected=NaoPodeAlistarException.class)
+    public void elfoNormalNaoEntraNoExercito()throws NaoPodeAlistarException{
         ExercitoDeElfo test = new ExercitoDeElfo();
         test.exercitoDeElfo(new Elfo("Legolas", 1));
         assertNull(test.buscarNoExercito("Legolas"));
     }
 
     @Test
-    public void buscarPorStatusVivo(){
+    public void buscarPorStatusVivo()throws NaoPodeAlistarException{
         ExercitoDeElfo test = new ExercitoDeElfo();
         Elfo recruta1 = new ElfoNoturno("Malfurion", 1);
         Elfo recruta2 = new ElfoNoturno("Illidan", 1);
@@ -62,7 +62,7 @@ public class ExercitoDeElfoTest
     }
 
     @Test
-    public void buscarPorStatusVivoNenhumVivo(){
+    public void buscarPorStatusVivoNenhumVivo()throws NaoPodeAlistarException{
         ExercitoDeElfo test = new ExercitoDeElfo();
         Elfo recruta1 = new ElfoNoturno("Malfurion", 200);
         test.exercitoDeElfo(recruta1);
@@ -74,7 +74,7 @@ public class ExercitoDeElfoTest
     }
 
     @Test
-    public void buscarPorStatusMorto(){
+    public void buscarPorStatusMorto()throws NaoPodeAlistarException{
         ExercitoDeElfo test = new ExercitoDeElfo();
         Elfo recruta1 = new ElfoNoturno("Malfurion", 200);
         test.exercitoDeElfo(recruta1);
@@ -86,7 +86,7 @@ public class ExercitoDeElfoTest
     }
 
     @Test
-    public void buscarPorStatusMortoNenhumMorto(){
+    public void buscarPorStatusMortoNenhumMorto()throws NaoPodeAlistarException{
         ExercitoDeElfo test = new ExercitoDeElfo();
         Elfo recruta1 = new ElfoNoturno("Malfurion", 200);
         test.exercitoDeElfo(recruta1);
