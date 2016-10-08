@@ -1,19 +1,16 @@
 import java.util.*;
-public class AtaqueIntercalado
+public class AtaqueIntercalado implements Estrategia
 {
-    private int elfosNaLista = 0;
     public List<Elfo> getOrdemDeAtaque(List<Elfo> atacantes)throws ContingenteDesproporcionalException{
         List<Elfo> listaDeElfos = new ArrayList<Elfo>();
-        listaDeElfos.addAll(buscarPorStatus(atacantes));
-        if (elfosNaLista != 0){
-            throw new ContingenteDesproporcionalException();
-        }
+        listaDeElfos.addAll(buscarPorStatus(atacantes));        
         ordernarElfos(listaDeElfos);
         return listaDeElfos;
     }
 
-    public List<Elfo> buscarPorStatus(List<Elfo> atacantes){
+    public List<Elfo> buscarPorStatus(List<Elfo> atacantes)throws ContingenteDesproporcionalException{
         List<Elfo> elfosStatus = new ArrayList<Elfo>();
+        int elfosNaLista = 0;
         for(Elfo elfo : atacantes){
             if(elfo.getStatus().equals(Status.VIVO)){
                 elfosStatus.add(elfo);
@@ -24,6 +21,9 @@ public class AtaqueIntercalado
                     elfosNaLista--;
                 }
             }
+        }
+        if (elfosNaLista != 0){
+            throw new ContingenteDesproporcionalException();
         }
         return elfosStatus;
     }
