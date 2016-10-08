@@ -12,8 +12,7 @@ public class AtaqueIntercaladoTest
         AtaqueIntercalado estrategia = new AtaqueIntercalado();
         List<Elfo> lista = new ArrayList<Elfo>();
         List<Elfo> ordemDeAtaque = new ArrayList<Elfo>();
-        lista.addAll(listaParaTestes(5));
-        estrategia.ordernarElfos(lista);
+        lista.addAll(listaParaTestes(5));//adiciona 10 elfos verdes e depois 10 noturnos
         ordemDeAtaque.addAll(estrategia.getOrdemDeAtaque(lista));
         for(int i = 0; i < 20; i++){
             assertTrue(ordemDeAtaque.get(i) instanceof ElfoVerde);
@@ -29,8 +28,7 @@ public class AtaqueIntercaladoTest
         AtaqueIntercalado estrategia = new AtaqueIntercalado();
         List<Elfo> lista = new ArrayList<Elfo>();List<Elfo> ordemDeAtaque = new ArrayList<Elfo>();
         List<Elfo> ordemDeAtaque2 = new ArrayList<Elfo>();
-        lista.addAll(listaParaTestes(6));
-        estrategia.ordernarElfos(lista);
+        lista.addAll(listaParaTestes(6));//adiciona 10 elfos noturnos e depois 10 verdes
         ordemDeAtaque.addAll(estrategia.getOrdemDeAtaque(lista));
         for(int i = 0; i < 20; i++){
             assertTrue(ordemDeAtaque.get(i) instanceof ElfoNoturno);
@@ -44,8 +42,7 @@ public class AtaqueIntercaladoTest
         AtaqueIntercalado estrategia = new AtaqueIntercalado();
         List<Elfo> lista = new ArrayList<Elfo>();List<Elfo> ordemDeAtaque = new ArrayList<Elfo>();
         List<Elfo> ordemDeAtaque2 = new ArrayList<Elfo>();
-        lista.addAll(listaParaTestes(7));
-        estrategia.ordernarElfos(lista);
+        lista.addAll(listaParaTestes(7));//adiciona de forma 'aleatoria' 50 noturnos e 50 verdes
         ordemDeAtaque.addAll(estrategia.getOrdemDeAtaque(lista));
         for(int i = 0; i < ordemDeAtaque.size(); i++){
             assertTrue(ordemDeAtaque.get(i) instanceof ElfoNoturno);
@@ -59,8 +56,7 @@ public class AtaqueIntercaladoTest
         AtaqueIntercalado estrategia = new AtaqueIntercalado();
         List<Elfo> lista = new ArrayList<Elfo>();List<Elfo> ordemDeAtaque = new ArrayList<Elfo>();
         List<Elfo> ordemDeAtaque2 = new ArrayList<Elfo>();
-        lista.addAll(listaParaTestes(4));
-        estrategia.ordernarElfos(lista);
+        lista.addAll(listaParaTestes(4)); //adiciona 1 noturno e 19 verdes
         ordemDeAtaque.addAll(estrategia.getOrdemDeAtaque(lista));
     }
 

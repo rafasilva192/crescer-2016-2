@@ -1,6 +1,5 @@
-
-public abstract class Personagem
-{
+import java.util.*;
+public abstract class Personagem{
     protected double vida;
     protected String nome;
     protected Inventario inventario;
@@ -12,6 +11,7 @@ public abstract class Personagem
         this.status = Status.VIVO;
         this.inventario = new Inventario();
     }
+
     public double getVida(){
         return vida;
     }
@@ -43,4 +43,5 @@ public abstract class Personagem
     public Status getStatus(){
         return status;
     }
+
 }

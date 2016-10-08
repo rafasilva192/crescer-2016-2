@@ -13,7 +13,7 @@ public class EstrategiaLittleMumuTest
         EstrategiaLittleMumu estrategia = new EstrategiaLittleMumu();
         List<Elfo> lista = new ArrayList<Elfo>();
         List<Elfo> ordemDeAtaque = new ArrayList<Elfo>();
-        lista.addAll(listaParaTestes(5));
+        lista.addAll(listaParaTestes(5)); //adiciona 10 elfos verdes e depois 10 noturnos
         ordemDeAtaque.addAll(estrategia.getOrdemDeAtaque(lista));
         for(int i = 0; i < 10; i++){
             assertTrue(ordemDeAtaque.get(i) instanceof ElfoVerde);
@@ -28,7 +28,7 @@ public class EstrategiaLittleMumuTest
         EstrategiaLittleMumu estrategia = new EstrategiaLittleMumu();
         List<Elfo> lista = new ArrayList<Elfo>();
         List<Elfo> ordemDeAtaque = new ArrayList<Elfo>();
-        lista.addAll(listaParaTestes(0));
+        lista.addAll(listaParaTestes(0));//adiciona 4 elfos verdes sem flechas e depois 12 verdes e noturnos com flechas
         ordemDeAtaque.addAll(estrategia.getOrdemDeAtaque(lista));
         for(int i = 0; i < 12; i++){
             assertTrue(ordemDeAtaque.get(i) instanceof ElfoVerde);
@@ -43,7 +43,7 @@ public class EstrategiaLittleMumuTest
         EstrategiaLittleMumu estrategia = new EstrategiaLittleMumu();
         List<Elfo> lista = new ArrayList<Elfo>();
         List<Elfo> ordemDeAtaque = new ArrayList<Elfo>();
-        lista.addAll(listaParaTestes(10));
+        lista.addAll(listaParaTestes(10)); //nao existe, chama uma lista vazia
         ordemDeAtaque.addAll(estrategia.getOrdemDeAtaque(lista));
         assertTrue(ordemDeAtaque.isEmpty());
     }
@@ -53,7 +53,7 @@ public class EstrategiaLittleMumuTest
         EstrategiaLittleMumu estrategia = new EstrategiaLittleMumu();
         List<Elfo> lista = new ArrayList<Elfo>();
         List<Elfo> ordemDeAtaque = new ArrayList<Elfo>();
-        lista.addAll(listaParaTestes(2));
+        lista.addAll(listaParaTestes(2));// adiciona 20 noturnos
         ordemDeAtaque.addAll(estrategia.getOrdemDeAtaque(lista));
         assertTrue(ordemDeAtaque.isEmpty());
     }
@@ -63,7 +63,7 @@ public class EstrategiaLittleMumuTest
         EstrategiaLittleMumu estrategia = new EstrategiaLittleMumu();
         List<Elfo> lista = new ArrayList<Elfo>();
         List<Elfo> ordemDeAtaque = new ArrayList<Elfo>();
-        lista.addAll(listaParaTestes(8));
+        lista.addAll(listaParaTestes(8));//adiciona 10 noturnos e depois 10 verdes com quantidades de flechas variadas
         ordemDeAtaque.addAll(estrategia.getOrdemDeAtaque(lista));
         for(int i = 0; i < ordemDeAtaque.size()-1; i++){
             assertTrue(ordemDeAtaque.get(i).getFlechas().getQuantidade() > ordemDeAtaque.get(i+1).getFlechas().getQuantidade());
@@ -75,7 +75,7 @@ public class EstrategiaLittleMumuTest
         EstrategiaLittleMumu estrategia = new EstrategiaLittleMumu();
         List<Elfo> lista = new ArrayList<Elfo>();
         List<Elfo> ordemDeAtaque = new ArrayList<Elfo>();
-        lista.addAll(listaParaTestes(3));
+        lista.addAll(listaParaTestes(3));//adiciona 20 elfos verdes
         ordemDeAtaque.addAll(estrategia.getOrdemDeAtaque(lista));
         assertEquals(20, ordemDeAtaque.size());
     }

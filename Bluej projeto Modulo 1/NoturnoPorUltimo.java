@@ -8,7 +8,7 @@ public class NoturnoPorUltimo implements Estrategia
         return listaDeElfos;
     }
 
-    public List<Elfo> buscarPorStatus(List<Elfo> atacantes){
+    private List<Elfo> buscarPorStatus(List<Elfo> atacantes){
         List<Elfo> elfosStatus = new ArrayList<Elfo>();
         for(Elfo elfo : atacantes){
             if(elfo.getStatus().equals(Status.VIVO)){
@@ -18,7 +18,7 @@ public class NoturnoPorUltimo implements Estrategia
         return elfosStatus;
     }
 
-    public void ordernarElfos(List<Elfo> atacantes){
+    private void ordernarElfos(List<Elfo> atacantes){
         for(Elfo elfo : atacantes){
             for(int i = 0; i < atacantes.size()-1; i++){
                 boolean ehUmElfoVerde = atacantes.get(i+1) instanceof ElfoVerde;

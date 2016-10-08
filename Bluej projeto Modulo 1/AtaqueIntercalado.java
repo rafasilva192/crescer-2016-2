@@ -8,7 +8,7 @@ public class AtaqueIntercalado implements Estrategia
         return listaDeElfos;
     }
 
-    public List<Elfo> buscarPorStatus(List<Elfo> atacantes)throws ContingenteDesproporcionalException{
+    private List<Elfo> buscarPorStatus(List<Elfo> atacantes)throws ContingenteDesproporcionalException{
         List<Elfo> elfosStatus = new ArrayList<Elfo>();
         int elfosNaLista = 0;
         for(Elfo elfo : atacantes){
@@ -28,7 +28,7 @@ public class AtaqueIntercalado implements Estrategia
         return elfosStatus;
     }
 
-    public void ordernarElfos(List<Elfo> atacantes){
+    private void ordernarElfos(List<Elfo> atacantes){
         for(Elfo elfo : atacantes){
             for(int i = 0; i < atacantes.size()-2; i++){
                 boolean ehOMesmoTipo = atacantes.get(i).getClass().equals(atacantes.get(i+1).getClass());
@@ -44,16 +44,5 @@ public class AtaqueIntercalado implements Estrategia
                 }
             }
         }
-
-        /*
-         * boolean ehUmElfoVerde = atacantes.get(i+1) instanceof ElfoVerde;
-        boolean ehUmElfoNoturno = atacantes.get(i) instanceof ElfoNoturno;
-        if(ehUmElfoVerde && ehUmElfoNoturno){
-        Elfo trocaDeLugar = atacantes.get(i+1);
-        atacantes.set(i+1,atacantes.get(i));
-        atacantes.set(i,trocaDeLugar);
-        }
-         * 
-         */
     }
 }

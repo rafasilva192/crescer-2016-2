@@ -1,4 +1,4 @@
-
+import java.util.*;
 public class Elfo extends Personagem
 {
     private static int contadorDeElfo = 0;
@@ -14,12 +14,12 @@ public class Elfo extends Personagem
         inventario.adicionarItem(new Item("Arco", 1));
         inventario.adicionarItem(new Item ("Flechas",quantidadeFlechas >= 0 ? quantidadeFlechas : 42));
     }
-    
+
     protected void finalize()throws Throwable{
         super.finalize();
         Elfo.contadorDeElfo--;
     }
-    
+
     public static int getContadorDeElfo(){
         int resultado = Elfo.contadorDeElfo;
         return resultado;
@@ -62,11 +62,19 @@ public class Elfo extends Personagem
             dwarf.perderVida();
         }
     }
-
-    
+    static class ComparadorDeFlechas implements Comparator<Elfo>
+    {
+        public int compare(Elfo elfo, Elfo proximoElfo){
+            int flechasElfo = elfo.getFlechas().getQuantidade();
+            int flechasProximoElfo = proximoElfo.getFlechas().getQuantidade();
+            if(flechasElfo == flechasProximoElfo){
+                return 0;
+            }
+            if(flechasElfo > flechasProximoElfo){
+                return -1;
+            }
+            else return 1;   
+        }
+    }
 }
 
-/*public void atirarFlechaRefactory(){
-experiencia++;
-flechas.setQuantidade(flechas.getQuantidade()-1);
-}*/

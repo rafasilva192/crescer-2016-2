@@ -11,13 +11,15 @@ public class NoturnoPorUltimoTest
     public void buscarElfosPorStatus(){
         NoturnoPorUltimo estrategia = new NoturnoPorUltimo();
         List<Elfo> lista = new ArrayList<Elfo>();
-        lista.addAll(listaParaTestes(1));
+        List<Elfo> ordemDeAtaque = new ArrayList<Elfo>();
+        lista.addAll(listaParaTestes(1));//adiciona 10 verdes e 10 noturnos intercalando
         Elfo recruta21 = new ElfoNoturno("Suiçida", 100);
         for(int i = 0; i < 100; i++){
             recruta21.atirarFlecha();
         }
         lista.add(recruta21);
-        assertEquals(20, estrategia.buscarPorStatus(lista).size());
+        ordemDeAtaque.addAll(estrategia.getOrdemDeAtaque(lista));
+        assertEquals(20, ordemDeAtaque.size());
     }
 
     @Test
@@ -25,7 +27,7 @@ public class NoturnoPorUltimoTest
         NoturnoPorUltimo estrategia = new NoturnoPorUltimo();
         List<Elfo> lista = new ArrayList<Elfo>();
         List<Elfo> ordemDeAtaque = new ArrayList<Elfo>();
-        lista.addAll(listaParaTestes(1));
+        lista.addAll(listaParaTestes(1));//adiciona 10 verdes e 10 noturnos intercalando
         ordemDeAtaque.addAll(estrategia.getOrdemDeAtaque(lista));
         for(int i = 0; i < 10; i++){
             assertTrue(ordemDeAtaque.get(i) instanceof ElfoVerde);
@@ -39,7 +41,7 @@ public class NoturnoPorUltimoTest
         NoturnoPorUltimo estrategia = new NoturnoPorUltimo();
         List<Elfo> lista = new ArrayList<Elfo>();
         List<Elfo> ordemDeAtaque = new ArrayList<Elfo>();
-        lista.addAll(listaParaTestes(2));
+        lista.addAll(listaParaTestes(2));//adiciona 20 noturnos
         ordemDeAtaque.addAll(estrategia.getOrdemDeAtaque(lista));
         for(int i = 0; i < 20; i++){
             assertTrue(ordemDeAtaque.get(i) instanceof ElfoNoturno);
@@ -51,7 +53,7 @@ public class NoturnoPorUltimoTest
         NoturnoPorUltimo estrategia = new NoturnoPorUltimo();
         List<Elfo> lista = new ArrayList<Elfo>();
         List<Elfo> ordemDeAtaque = new ArrayList<Elfo>();
-        lista.addAll(listaParaTestes(3));
+        lista.addAll(listaParaTestes(3));//adiciona 20 verdes
         ordemDeAtaque.addAll(estrategia.getOrdemDeAtaque(lista));
         for(int i = 0; i < 20; i++){
             assertTrue(ordemDeAtaque.get(i) instanceof ElfoVerde);
@@ -63,7 +65,7 @@ public class NoturnoPorUltimoTest
         NoturnoPorUltimo estrategia = new NoturnoPorUltimo();
         List<Elfo> lista = new ArrayList<Elfo>();
         List<Elfo> ordemDeAtaque = new ArrayList<Elfo>();
-        lista.addAll(listaParaTestes(4));
+        lista.addAll(listaParaTestes(4));//adiciona 1 noturno e 19 verdes
         ordemDeAtaque.addAll(estrategia.getOrdemDeAtaque(lista));
         assertTrue(ordemDeAtaque.get(19) instanceof ElfoNoturno);
     }
