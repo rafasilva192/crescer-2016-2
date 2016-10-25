@@ -1,0 +1,61 @@
+/* Boxes*/
+.box-grande {
+    width: 200px;
+    height: 200px;
+    margin: 50px
+}
+
+.box-medio {
+    width: 50px;
+    height: 50px;
+}
+
+/* Cores */
+.verde {			
+    background-color: green;		
+}
+
+.vermelho {			
+    background-color: red;
+}
+
+.rosa {
+    background-color: pink;
+}
+
+.amarelo {
+    background-color: yellow;
+}
+
+.relativo {
+    position: relative;
+    top:-20px;
+    left:36px;
+    /*transition: all 1.5s;*/
+}
+
+/*.relativo:hover {
+    top:50px;
+    left:120px;
+    transform: rotate(480deg);
+}*/
+
+.absoluta {
+    position: absolute;
+    top: 15px;
+    left: 28px;
+    z-index: 1;
+}
+
+.spacing {
+    height: 250px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: aquamarine;
+}

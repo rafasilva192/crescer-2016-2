@@ -1,0 +1,36 @@
+@sucess: #73d173;
+@warning: #F44336;
+@info: rgba(0, 161, 255, 0.35); 
+
+.btn {
+    min-width: 80px;
+    min-height: 18px;
+    border-radius: 32px;
+    margin: 5px;
+    background-color: #eee;
+    display: inline-block;
+    padding: 5px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #555;
+    font-family: arial;
+    text-align: center;
+    border: 1px solid #eee;
+
+    &:hover {
+            cursor: pointer;
+        }
+
+    &.sucess {
+        background-color: @sucess;
+    }
+
+    &.warning {
+        background-color: @warning;
+        color: #393939;
+    }
+
+    &.info {
+        background-color: @info;
+    }            
+}        

@@ -1,0 +1,15 @@
+p:first-child {
+	color: deeppink;
+}
+
+p:last-child {
+	color: blue;
+}
+
+p:nth-of-type(4) {
+	background-color: yellow;
+}
+
+p + h2 + p {
+	background-color: red;
+}

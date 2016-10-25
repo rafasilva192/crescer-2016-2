@@ -1,0 +1,66 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+    	<meta charset="UTF-8">
+    	<title>Desafio seletores avançados</title>
+    	<style>
+    		.box {
+    			width: 280px;
+    			min-height: 350px;
+    			float: left;
+    			border: 2px dotted silver;
+    			margin: 10px;
+    			font-family: arial;
+    		}		
+    	</style>
+    	
+    	<link rel="stylesheet" href="desafio-seletor-avancado.css">
+    </head>
+    
+    <body>
+    	<div class="box">
+    		<p>parágrafo 1 (FONTE ROSA)</p>
+    		<p>parágrafo 2</p>
+    		<p>parágrafo 3</p>
+    		<div>
+    			<h1>Título Grande</h1>
+    			<h2>Título Médio</h2>
+    			<p>parágrafo 3.2 <span>SPAN<span></p>
+    		</div>
+    		<p>parágrafo 4 (FUNDO AMARELO)</p>
+    		<p>parágrafo 5 (FONTE AZUL)</p>
+    	</div>
+    
+    	<div class="box">
+    		<p>parágrafo 1 (FONTE ROSA)</p>
+    		<h2>Título Médio</h2>
+    		<p>parágrafo 2 (FUNDO VERMELHO)</p>
+    		<p>parágrafo 3</p>
+    		<p>parágrafo 4 (FUNDO AMARELO)</p>
+    		<p>parágrafo 5</p>
+    		<p>parágrafo 6 (FONTE AZUL)</p>
+    	</div>
+    
+    	<div class="box">
+    		<p>parágrafo 1 (FONTE ROSA)</p>
+    		<p>parágrafo 2</p>
+    		<p>parágrafo 3</p>
+    		<p>parágrafo 4 (FONTE AZUL, FUNDO AMARELO)</p>
+    	</div>
+    	
+    	<div class="box">
+    		<h1>Regras</h1>
+    		<ol>
+    			<li>Toda primeiro parágrafo deve ter a fonte <span style="color: deeppink;">rosa</span></li>
+    			<li>Toda último parágrafo deve ter a fonte <span style="color: blue;">azul</span></li>
+    			<li>Todo quarto parágrafo deve ter o fundo <span style="background-color: yellow;">amarelo</span></li>			
+    			<li>Todo parágrafo que sucede diretamente um H2 que por sua vez sucede um parágrafo, deve possuir o fundo <span style="background-color:red;">vermelho</span>
+    				
+    			</li>
+    		</ol>
+    	</div>
+    
+    </body>
+    
+    </html>    

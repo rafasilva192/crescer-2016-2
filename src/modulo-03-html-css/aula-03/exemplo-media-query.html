@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        @media screen and (max-width: 768px) {
+            p {
+                color: yellow;
+                font-size: 110px;
+            }
+        }
+
+        @media screen and (min-width: 769px) and (max-width: 992px) {
+            p {
+                color: blue;
+                font-size: 60px;
+            }
+        }
+
+        @media screen and (min-width: 993px) {
+            p {
+                color: red;
+                font-size: 27px;
+            }
+        }  
+
+        @media print {
+            .titulo {
+                display: none;
+            }
+        }      
+    </style>
+</head>
+<body>
+    <p class="titulo">Hello world</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus amet reiciendis optio, blanditiis accusantium sit alias perferendis sint veritatis, tempora iste ipsam beatae, rerum quos ipsum placeat pariatur reprehenderit ex.</p>
+</body>
+</html>

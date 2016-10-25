@@ -1,0 +1,31 @@
+#personagens {
+    background-color: greenyellow;
+    border: 1px solid black;
+    margin: 50px;
+}
+
+div.pessoas  li {
+    font-family: arial;
+    font-weight: bold;
+    list-style-type: none;
+}
+
+.pai > .filho {
+    background-color: yellow;
+}
+
+.pai:hover {
+    background-color: green;
+}
+
+.pai:hover > .filho {
+    background-color: green;
+}
+
+a:visited {
+    color: silver;
+}
+
+div:not(#personagens) {
+    font-size: 50px;
+}

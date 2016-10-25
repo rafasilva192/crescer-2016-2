@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .btn {
+            min-width: 80px;
+            min-height: 18px;
+            border-radius: 32px;
+            margin: 5px;
+            background-color: #eee;
+            display: inline-block;
+            padding: 5px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #555;
+            font-family: arial;
+            text-align: center;
+            border: 1px solid silver;            
+        }
+
+        .btn:hover {
+            cursor: pointer;
+        }
+
+        .btn.sucess {
+            background-color: #73d173;
+        }
+
+        .btn.warning {
+            background-color: #F44336;
+            color: #393939;
+        }
+
+        .info {
+            background-color: rgba(0, 161, 255, 0.35);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="btn sucess">Confirmar</div>
+    <div class="btn warning">Cancelar</div>
+    <div class="btn info">Ajuda</div>
+    <span class="btn">Span</span>
+    <a href="#" class="btn">Link</a>
+</body>
+</html>

@@ -7,3 +7,4 @@
 1. [Ementa](https://github.com/CWISoftware/crescer-2016-2/wiki/Ementa)
 2. [Lista de exercícios](https://github.com/CWISoftware/crescer-2016-2/wiki/Lista-de-exercícios)
 3. [Convenção de commits](https://github.com/CWISoftware/crescer-2016-2/wiki/Convenção-de-commits)
+4. [Softwares utilizados](https://github.com/CWISoftware/crescer-2016-2/wiki/Softwares-utilizados)
