@@ -1,0 +1,47 @@
+body {
+    background: url('../imagens/fundo.jpg') no-repeat center 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+    .menu {
+        margin: 250px auto 0;
+        display: table;
+        padding: 15px;
+        border: 1px solid silver;
+        border-radius: 10px;
+        background: rgba(140, 140, 140, .6);
+    }
+    
+        .menu > .item {
+            margin: 25px;
+        }
+            
+            .menu > .item > a {
+                color: #fff;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            
+    .conteudo {
+        margin: 70px auto;
+        width: 800px;
+        background: #eee;
+    }
+    
+        .conteudo .titulo {
+            padding: 1px 20px;
+            font-size: 14px;
+            background: #5a5a5a;
+            color: #eee;
+        }
+        
+        .conteudo .corpo {
+            padding: 15px;
+            min-height: 300px;
+            overflow: auto; /* hack pro elemento considerar os floats */
+        }
+
+        p > img {
+            float: left;
+            margin-right: 20px;
+        }

@@ -1,0 +1,28 @@
+.btn {
+  min-width: 80px;
+  min-height: 18px;
+  border-radius: 32px;
+  margin: 5px;
+  background-color: #eee;
+  display: inline-block;
+  padding: 5px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #555;
+  font-family: arial;
+  text-align: center;
+  border: 1px solid #eee;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.btn.sucess {
+  background-color: #73d173;
+}
+.btn.warning {
+  background-color: #F44336;
+  color: #393939;
+}
+.btn.info {
+  background-color: rgba(0, 161, 255, 0.35);
+}

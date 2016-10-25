@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		
+		header {
+			background-color: silver;
+			height: 95px;
+			padding: 10px;
+		}
+		
+		header .imagem {
+			width: 100px;
+			height: 70px;
+			background-color: yellow;
+			padding: 10px;
+			float: left;
+			margin-right: 15px;
+		}
+		
+		header h1 {
+			display: inline;
+		}
+		
+		header nav {
+			position: absolute;
+			right: 20px;
+			top: 32px;
+			font-weight: bold;
+		}
+		
+		@media screen and (max-width: 450px) {
+			header .imagem {
+				display: none;
+			}
+			
+			header h1 {
+				font-size: 25px;
+			}
+		}
+		
+		@media screen and (max-width: 700px) {
+			header nav {
+				display: none;
+			}
+			header p {
+				display: none;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<div class="imagem">
+			<div style="margin: auto">IMAGEM</div>
+		</div>
+		<h1>Caralivro</h1>
+		 
+		<p>Seja bem vindo a melhor rede social do Brasil.</p>
+
+		<nav>
+			<a href="#">Link 1</a>
+			<a href="#">Link 2</a>
+		</nav>		
+	</header>	
+</body>
+
+</html>

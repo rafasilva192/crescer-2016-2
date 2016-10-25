@@ -1,9 +1,8 @@
-public class Dwarf {
-    private int vida, experiencia;
-    private DataTerceiraEra dataNascimento;
-    private String nome;
-    private Status status; //= Status.VIVO;
-    private Inventario inventario;
+// Java: public final class
+// C#: public sealed class
+public class Dwarf extends Personagem {
+    private final DataTerceiraEra dataNascimento;
+    public final static double ALTURA_MAXIMA = 1.32;
 
     // java type initializer
     // vai ser replicado para cada construtor
@@ -17,10 +16,8 @@ public class Dwarf {
     }
 
     public Dwarf(String nome, DataTerceiraEra dataNascimento) {
-        this.nome = nome;
+        super(nome);
         this.dataNascimento = dataNascimento;
-        this.status = Status.VIVO;
-        this.inventario = new Inventario();
     }
 
     public void perderVida() {
@@ -35,7 +32,7 @@ public class Dwarf {
             this.experiencia += 2;
         }
         if (numero > 100) {
-            int vidaAposFlechada = this.vida - 10;
+            double vidaAposFlechada = this.vida - 10;
             if (vidaAposFlechada == 0) {
                 status = Status.MORTO;
             }
@@ -43,26 +40,6 @@ public class Dwarf {
                 vida = vidaAposFlechada;
             }
         }
-    }
-
-    public int getVida() {
-        return vida;
-    }
-
-    public int getExperiencia() {
-        return experiencia;
-    }
-
-    public String getNome() {
-        return this.nome;
-    }
-
-    public Status getStatus() {
-        return status;
-    }
-    
-    public Inventario getInventario() {
-        return inventario;
     }
 
     public DataTerceiraEra getDataNascimento() {
@@ -84,14 +61,6 @@ public class Dwarf {
         return resultado;
     }
     
-    public void adicionarItem(Item item) {
-        this.inventario.adicionarItem(item);
-    }
-    
-    public void perderItem(Item item) {
-        this.inventario.removerItem(item);
-    }
-    
     public void tentarSorte() {
         boolean temSorte = getNumeroSorte() == -3333;
         if (temSorte) {
@@ -99,4 +68,6 @@ public class Dwarf {
             inventario.aumentarUnidadesDosItens(1000);
         }
     }
+    
+    public void inicializarInventario(int quantidadeFlechas) { }
 }
