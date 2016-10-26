@@ -1,31 +1,16 @@
-describe('iguais()', function() {
-  it('comparando dois objetos iguais deve retornar true', function() {
-    var obj = { a: { a: 'a' }, b: 2 };
-    var resultado = iguais(obj, obj);
-    expect(resultado).toEqual(true);
+describe('subtrair()',function(){
+  it('Subtrair 2 - 1 deve retornar 1',function(){
+    var resultado = subtrair(2)(1);
+    expect(resultado).toEqual(1);
   });
 
-  it('comparando dois objetos diferentes deve retornar false', function() {
-    var obj = { a: { a: 'a' }, b: 2 };
-    var resultado = iguais(obj, { a: 1, b: 2 });
-    expect(resultado).toEqual(false);
+  it('Subtrair 0 - 0 deve retornar 0',function(){
+    var resultado = subtrair(0)(0);
+    expect(resultado).toEqual(0);
   });
 
-  it('Comparando objetos parecidos com uma pequena diferença return false', function() {
-    goku = {
-  nome: 'Goku',
-  nivel: 'SSJ4',
-  golpes: [
-    { nome: 'kamehameha', dano: 45 }, { nome: 'genki-dama', dano: 99 }
-  ]
-}, sonGoku = {
-  nome: 'Goku',
-  nivel: 'SSJ4',
-  golpes: [
-    { nome: 'genki-dama', dano: 99 }, { nome: 'kamehameha', dano: 45 }
-  ]
-};
-    var resultado = iguais(goku,sonGoku);
-    expect(resultado).toEqual(false);
+  it('Subtrair -1 - 2 deve retornar -3',function(){
+    var resultado = subtrair(-1)(2);
+    expect(resultado).toEqual(-3);
   });
 });
