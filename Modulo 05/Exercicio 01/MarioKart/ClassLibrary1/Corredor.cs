@@ -8,13 +8,23 @@ using System.Threading.Tasks;
 namespace Corredores
 {
 
-    public string[] Habilidade { get; }
 
-    public class Corredor(string[] habilidade)
+    public class Corredor
     {
-        this.Habilidade = 
+        public string Nome { get; }
+        public NivelDeHabilidade Habilidade;
 
-     }
+        public Corredor(string nome, NivelDeHabilidade habilidade = NivelDeHabilidade.Noob)
+        {
+            this.Nome = nome;
+            this.Habilidade = habilidade;
+        }
+
+    }
+      
+     
     
 }
+    
+
 
