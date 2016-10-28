@@ -42,6 +42,10 @@
   <ItemGroup>
     <Compile Include="Corredor.cs" />
     <Compile Include="Enums\NivelDeHabilidade.cs" />
+    <Compile Include="Itens\Motor a base de Lava.cs" />
+    <Compile Include="Itens\IEquipamentos.cs" />
+    <Compile Include="Itens\Pneus de Couro de Dragão.cs" />
+    <Compile Include="Karts\Kart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
