@@ -18,7 +18,7 @@ namespace MarioKart.Karts
             this.Equipamentos = new List<IEquipamentos>();
         }
 
-        public List<IEquipamentos> Equipamentos { get;  set; }
+        public List<IEquipamentos> Equipamentos { get; private set; }
         public Corredor Piloto { get; private set; }
         public int Velocidade
         {

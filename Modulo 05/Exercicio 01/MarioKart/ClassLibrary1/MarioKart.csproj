@@ -42,9 +42,11 @@
   <ItemGroup>
     <Compile Include="Corredor.cs" />
     <Compile Include="Enums\NivelDeHabilidade.cs" />
-    <Compile Include="Itens\Motor a base de Lava.cs" />
+    <Compile Include="Itens\FogueteDePlutonio.cs" />
+    <Compile Include="Itens\MotorABaseDeLava.cs" />
     <Compile Include="Itens\IEquipamentos.cs" />
-    <Compile Include="Itens\Pneus de Couro de Dragão.cs" />
+    <Compile Include="Itens\PneusDeCouroDeDragao.cs" />
+    <Compile Include="Itens\UltraPack.cs" />
     <Compile Include="Karts\Dinam.cs" />
     <Compile Include="Karts\Kart.cs" />
     <Compile Include="Karts\Light.cs" />

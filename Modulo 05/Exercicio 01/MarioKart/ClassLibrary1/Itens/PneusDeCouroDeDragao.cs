@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MarioKart.Itens
 {
-    public class Pneus_de_Couro_de_Dragão : IEquipamentos
+    public class PneusDeCouroDeDragao : IEquipamentos
     {
         public int BonusDeVelocidade
         {

@@ -23,7 +23,7 @@ namespace CorredorTest
         {
             var piloto = new Corredor("Mario", NivelDeHabilidade.Mediano);
             var kart = new Kart(piloto);
-            kart.Equipar(new Motor_a_base_de_Lava());
+            kart.Equipar(new MotorABaseDeLava());
             Assert.AreEqual(11, kart.Velocidade);
             Assert.AreEqual(piloto, kart.Piloto);
         }
@@ -32,7 +32,7 @@ namespace CorredorTest
         {
             var piloto = new Corredor("Mario", NivelDeHabilidade.Profissional);
             var kart = new Kart(piloto);
-            kart.Equipar(new Pneus_de_Couro_de_Dragão());
+            kart.Equipar(new PneusDeCouroDeDragao());
             Assert.AreEqual(12, kart.Velocidade);
             Assert.AreEqual(piloto, kart.Piloto);
         }
@@ -41,8 +41,8 @@ namespace CorredorTest
         {
             var piloto = new Corredor("Mario", NivelDeHabilidade.Profissional);
             var kart = new Kart(piloto);
-            kart.Equipar(new Pneus_de_Couro_de_Dragão());
-            kart.Equipar(new Motor_a_base_de_Lava());
+            kart.Equipar(new PneusDeCouroDeDragao());
+            kart.Equipar(new MotorABaseDeLava());
             Assert.AreEqual(16, kart.Velocidade);
             Assert.AreEqual(piloto, kart.Piloto);
         }
@@ -58,7 +58,7 @@ namespace CorredorTest
         {
             var piloto = new Corredor("Mario");
             var kart = new Sonnar(piloto);
-            kart.Equipar(new Pneus_de_Couro_de_Dragão());
+            kart.Equipar(new PneusDeCouroDeDragao());
             Assert.AreEqual(7, kart.Velocidade);
         }
         [TestMethod]
@@ -66,8 +66,8 @@ namespace CorredorTest
         {
             var piloto = new Corredor("Mario", NivelDeHabilidade.Profissional);
             var kart = new Sonnar(piloto);
-            kart.Equipar(new Pneus_de_Couro_de_Dragão());
-            kart.Equipar(new Motor_a_base_de_Lava());
+            kart.Equipar(new PneusDeCouroDeDragao());
+            kart.Equipar(new MotorABaseDeLava());
             Assert.AreEqual(15, kart.Velocidade);
         }
         [TestMethod]
@@ -82,7 +82,7 @@ namespace CorredorTest
         {
             var piloto = new Corredor("Mario", NivelDeHabilidade.Profissional);
             var kart = new Light(piloto);
-            kart.Equipar(new Motor_a_base_de_Lava());
+            kart.Equipar(new MotorABaseDeLava());
             Assert.AreEqual(9, kart.Velocidade);
         }
         [TestMethod]
@@ -104,8 +104,8 @@ namespace CorredorTest
         {
             var piloto = new Corredor("Mario", NivelDeHabilidade.Profissional);
             var kart = new Dinam(piloto);
-            kart.Equipar(new Pneus_de_Couro_de_Dragão());
-            kart.Equipar(new Motor_a_base_de_Lava());
+            kart.Equipar(new PneusDeCouroDeDragao());
+            kart.Equipar(new MotorABaseDeLava());
             Assert.AreEqual(21, kart.Velocidade);
         }
         [TestMethod]
