@@ -61,11 +61,11 @@ namespace CorredorTest
         [TestMethod]
         public void CorredorSoRecebeBonusDaUltraPack()
         {
-            var piloto = new Corredor("Mario", NivelDeHabilidade.Profissional);
-            var kart = new Kart(piloto);
-            var pack = new UltraPack(new UltraPack(new FogueteDePlutonio(5)));
-            kart.Equipar(pack);
-            Assert.AreEqual(18, kart.Velocidade);
+            var piloto = new Corredor("Mario", NivelDeHabilidade.Profissional); // 6 velocidade
+            var kart = new Kart(piloto); // 3 velocidade
+            var pack = new UltraPack(new UltraPack(new FogueteDePlutonio(5))); // 8 velocidade
+            kart.Equipar(pack); // 1 de velocidade profissional
+            Assert.AreEqual(18, kart.Velocidade); // 6 + 3 + 1 + 8 = 18
         }
     }
 }

@@ -115,5 +115,67 @@ namespace CorredorTest
             var kart = new Dinam(piloto);
             Assert.AreEqual(10, kart.Velocidade);
         }
+        [TestMethod]
+        public void SkyFusionComPilotoProfissionalTem9DeVelocidade()
+        {
+            var piloto = new Corredor("Mario", NivelDeHabilidade.Profissional);
+            var kart = new SkyFusion(piloto);
+            Assert.AreEqual(9, kart.Velocidade);
+        }
+        [TestMethod]
+        public void SkyFusionComPilotoProfissionalEFogueteNivel5Tem21DeVelocidade()
+        {
+            var piloto = new Corredor("Mario", NivelDeHabilidade.Profissional);
+            var kart = new SkyFusion(piloto);
+            var foguete = new FogueteDePlutonio(5);
+            kart.Equipar(foguete);
+            Assert.AreEqual(21, kart.Velocidade);
+        }
+        [TestMethod]
+        public void KartComPilotoProfissioanlComSkyFusionComPilotoProfissionalEFogueteNivel5Tem21DeVelocidade()
+        {
+            var piloto = new Corredor("Mario", NivelDeHabilidade.Profissional);
+            var kart = new SkyFusion(piloto);
+            var foguete = new FogueteDePlutonio(5);
+            kart.Equipar(foguete);
+            var kartComFusion = new Kart(piloto);
+            kartComFusion.Equipar(kart);
+            Assert.AreEqual(31, kartComFusion.Velocidade);
+        }
+        [TestMethod]
+        public void DinamCom4FusionsECadaFusionComVariosItensDistintosECorredoresDeHabilidadesDiferentes()
+        {
+            var pilotopro = new Corredor("Mario", NivelDeHabilidade.Profissional);
+            var pilotomedi = new Corredor("Mama Luigi", NivelDeHabilidade.Mediano);
+            var pilotonoob = new Corredor("Weege");
+
+            var fusion1 = new SkyFusion(pilotopro);
+            fusion1.Equipar(new FogueteDePlutonio(5));
+            fusion1.Equipar(new PneusDeCouroDeDragao());
+            Assert.AreEqual(25, fusion1.Velocidade);
+
+            var fusion2 = new SkyFusion(pilotomedi);
+            fusion2.Equipar(new UltraPack(new UltraPack(new FogueteDePlutonio(5))));
+            Assert.AreEqual(21, fusion2.Velocidade);
+
+            var fusion3 = new SkyFusion(pilotonoob);
+            fusion3.Equipar(new PneusDeCouroDeDragao());
+            fusion3.Equipar(new MotorABaseDeLava());
+            Assert.AreEqual(11, fusion3.Velocidade);
+
+            var fusion4 = new SkyFusion(pilotopro);
+            fusion4.Equipar(new PneusDeCouroDeDragao());
+            fusion4.Equipar(new PneusDeCouroDeDragao());
+            fusion4.Equipar(new PneusDeCouroDeDragao());
+            fusion4.Equipar(new PneusDeCouroDeDragao());
+            Assert.AreEqual(30, fusion4.Velocidade);
+
+            var dinam = new Dinam(pilotopro);
+            dinam.Equipar(fusion1);
+            dinam.Equipar(fusion2);
+            dinam.Equipar(fusion3);
+            dinam.Equipar(fusion4);
+            Assert.AreEqual(107, dinam.Velocidade);
+        }
     }
 }

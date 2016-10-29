@@ -20,7 +20,7 @@ namespace MarioKart.Karts
 
         public List<IEquipamentos> Equipamentos { get; private set; }
         public Corredor Piloto { get; private set; }
-        public int Velocidade
+        public virtual int Velocidade
         {
             get
             {
