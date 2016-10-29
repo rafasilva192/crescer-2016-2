@@ -11,13 +11,11 @@ namespace MarioKart.Karts
 {
     public class Kart
     {
-        private int velocidade;
 
-        public Kart(Corredor piloto)
+             public Kart(Corredor piloto)
         {
             this.Piloto = piloto;
             this.Equipamentos = new List<IEquipamentos>();
-            this.velocidade = 3;
         }
 
         public List<IEquipamentos> Equipamentos { get;  set; }
@@ -26,32 +24,40 @@ namespace MarioKart.Karts
         {
             get
             {
-                int velocidadePiloto = (int)Piloto.Habilidade;
-                bool pilotoEhProfissional = velocidadePiloto == 6;
-                velocidade += velocidadeDosEquipamentos(pilotoEhProfissional);
-                return velocidade + velocidadePiloto;
-            }
-            private set
-            {
-                this.velocidade = value;
+                return velocidadeDoKart + velocidade;
             }
         }
+
 
         public void Equipar(IEquipamentos equipamento)
         {
             this.Equipamentos.Add(equipamento);
         }
-  
 
-        private int velocidadeDosEquipamentos(bool pilotoEhProfissional)
+        protected virtual int velocidade
         {
-            int bonusVelocidade = 0;
-            foreach (IEquipamentos item in this.Equipamentos)
+            get
             {
-                if (pilotoEhProfissional) bonusVelocidade++;
-                 bonusVelocidade += item.BonusDeVelocidade;
+                return 3;
             }
-            return bonusVelocidade;
+        }
+
+        protected int velocidadeDoKart
+        {
+            get
+            {
+                int velocidadePiloto = (int)Piloto.Habilidade;
+                bool pilotoEhProfissional = velocidadePiloto == 6;
+                int bonusVelocidade = velocidadePiloto;
+
+                foreach (IEquipamentos item in this.Equipamentos)
+                {
+                    if (pilotoEhProfissional) bonusVelocidade++;
+                    bonusVelocidade += item.BonusDeVelocidade;
+
+                }
+                return bonusVelocidade;
+            }
         }
     }
 }
