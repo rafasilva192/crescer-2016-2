@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="helloAngular">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello Angular</title>
+  </head>
+  <body ng-controller="ExemploAngularController">
+    <input type="text" ng-model="busca" placeholder="Ex: Iron Man">
+    <ul>
+      <li ng-repeat="heroi in herois | filter: { name: busca }">
+        <span>Nome: {{ heroi.name }}</span><br>
+        <span>Data de modificação: {{ heroi.modified | date:'dd/MM/yyyy hh:mm:ss' }}</span>
+<img height="200" ng-src="{{ heroi.imgPath }}" />
+      </li>
+    </ul>
+
+
+
+    <script type="text/javascript" src="lib/angular.min.js"></script>
+    <script type="text/javascript" src="js/marvel.js"></script>
+    <script type="text/javascript" src="js/exemploAngularController.js"></script>
+  </body>
+</html>
