@@ -1,0 +1,117 @@
+body{
+  background-color: rgb(250,250,250);
+  background: url(Ryu.jpg) no-repeat;
+  background-position: center 0;
+  background-size: 1260px;
+}
+
+.corpo{
+  margin: 0 auto;
+  background-color: rgb(30,30,30);
+  color: rgb(255,255,255);
+  font-family: arial;
+  padding-top: 1;
+}
+
+
+.subtitulo{
+  width: 600;
+  height: 60;
+}
+
+div.cabecalho{
+  background-color: rgba(175,175,175,0.3);
+  border-radius: 15px;
+  border: rgba(255,255,255,0.3) solid 1px;
+  width: 450;
+  margin: 200 auto;
+  padding: 15 0;
+}
+
+div.cabecalho a{
+  color:rgb(255,255,255);
+  text-decoration: none;
+}
+
+div.cabecalho span:first-child{
+  color:rgb(255,255,255);
+  margin: 0 45 0 40px;
+}
+
+div.cabecalho span:nth-of-type(2){
+  color:rgb(255,255,255);
+  margin: 0 45 0 0;
+}
+
+div.cabecalho span:nth-of-type(3){
+  color:rgb(255,255,255);
+  margin: 0 0 0 0;
+}
+
+div.cabecalho span:last-child{
+  color:rgb(255,255,255);
+  margin: 0 40 0 45px;
+}
+
+
+h1, h2, h3, p, ul{
+  margin: 10;
+}
+
+div.corpotexto{
+  margin: 0 auto;
+  width: 600;
+  height: 1150;
+  background-color: rgb(150,150,150);
+  color: rgb(0,0,0);
+  font-family: arial;
+  padding-top: 1;
+}
+
+div.fichatecnica{
+  background: url(Imagens/Blanka.png) no-repeat;
+  background-size: 250px 450px;
+  background-position: 10 75;
+  margin: 0 auto;
+  width: 600;
+  height: 535;
+  background-color: rgb(150,150,150);
+  color: rgb(0,0,0);
+  font-family: arial;
+  padding-top: 1;
+}
+
+div.fichatecnica > h1{
+  margin: 30 10 10 10;
+}
+
+div.fichatecnica > h1 + div{
+  width: 340;
+  height: 450;
+  margin: 0 0 0 260;
+  font-size:15;
+}
+
+div.perfilsobre{
+  background: url(Imagens/Snippy.png) no-repeat;
+  background-size: 259px 384px;
+  background-position: 10 75;
+  margin: 0 auto;
+  width: 600;
+  height: 470;
+  background-color: rgb(150,150,150);
+  color: rgb(0,0,0);
+  font-family: arial;
+  padding-top: 1;
+}
+
+div.perfilsobre > h1{
+  margin: 17 10 10 10;
+}
+
+div.perfilsobre > h1+div{
+  width: 320;
+  height: 375;
+  margin: 25 0 0 280;
+  font-size:16;
+}

@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/estilos.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="cabecalho">
+        <span>
+            <a href="index.html">
+                Início
+            </a>
+        </span>
+        <span>
+            <a href="https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=Street+fighter&tbm=nws">
+                Noticias
+            </a>
+        </span>
+        <span>
+            <a href="ficha-tecnica.html">
+                Ficha Técnica
+            </a>
+        </span>
+        <span>
+            <a href="sobre.html">
+                Sobre
+            </a>
+        </span>
+    </div>
+
+
+    <div class="conteudo">
+    @RenderBody()
+    </div>
+</body>
+</html>
