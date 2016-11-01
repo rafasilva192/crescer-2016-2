@@ -151,8 +151,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\FichaTecnicaController.cs" />
-    <Compile Include="Models\SobreController.cs" />
+    <Compile Include="Models\FichaTecnicaModel.cs" />
+    <Compile Include="Models\SobreModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -160,8 +160,8 @@
     <Content Include="packages.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\StreetFighter\Index.cshtml" />
-    <Content Include="Views\FichaTecnicaModel\FichaTecnicaModel.cshtml" />
-    <Content Include="Views\FichaTecnicaModel\SobreModel.cshtml" />
+    <Content Include="Views\StreetFighter\FichaTecnicaModel.cshtml" />
+    <Content Include="Views\StreetFighter\SobreModel.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -171,6 +171,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\FichaTecnicaModel\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -10,22 +10,27 @@ body{
   background-color: rgb(30,30,30);
   color: rgb(255,255,255);
   font-family: arial;
-  padding-top: 1;
+  padding-top: 1px;
 }
 
 
 .subtitulo{
-  width: 600;
-  height: 60;
+      padding-top: 1px;
+  font-family: arial;
+  margin: 0 auto;
+  background-color: rgb(30,30,30);
+  color: rgb(255,255,255);
+  width: 600px;
+  height: 60px;
 }
 
 div.cabecalho{
   background-color: rgba(175,175,175,0.3);
   border-radius: 15px;
   border: rgba(255,255,255,0.3) solid 1px;
-  width: 450;
-  margin: 200 auto;
-  padding: 15 0;
+  width: 450px;
+  margin: 200px auto;
+  padding: 15px 0;
 }
 
 div.cabecalho a{
@@ -35,12 +40,12 @@ div.cabecalho a{
 
 div.cabecalho span:first-child{
   color:rgb(255,255,255);
-  margin: 0 45 0 40px;
+  margin: 0 45px 0 40px;
 }
 
 div.cabecalho span:nth-of-type(2){
   color:rgb(255,255,255);
-  margin: 0 45 0 0;
+  margin: 0 45px 0 0;
 }
 
 div.cabecalho span:nth-of-type(3){
@@ -50,68 +55,68 @@ div.cabecalho span:nth-of-type(3){
 
 div.cabecalho span:last-child{
   color:rgb(255,255,255);
-  margin: 0 40 0 45px;
+  margin: 0 40px 0 45px;
 }
 
 
 h1, h2, h3, p, ul{
-  margin: 10;
+  margin: 10px;
 }
 
 div.corpotexto{
   margin: 0 auto;
-  width: 600;
-  height: 1150;
+  width: 600px;
+  height: 1150px;
   background-color: rgb(150,150,150);
   color: rgb(0,0,0);
   font-family: arial;
-  padding-top: 1;
+  padding-top: 1px;
 }
 
 div.fichatecnica{
-  background: url(Imagens/Blanka.png) no-repeat;
+  background: url(blanka.png) no-repeat;
   background-size: 250px 450px;
-  background-position: 10 75;
+  background-position: 10px 75px;
   margin: 0 auto;
-  width: 600;
-  height: 535;
+  width: 600px;
+  height: 535px;
   background-color: rgb(150,150,150);
   color: rgb(0,0,0);
   font-family: arial;
-  padding-top: 1;
+  padding-top: 1px;
 }
 
 div.fichatecnica > h1{
-  margin: 30 10 10 10;
+  margin: 30px 10px 10px 10px;
 }
 
 div.fichatecnica > h1 + div{
-  width: 340;
-  height: 450;
-  margin: 0 0 0 260;
-  font-size:15;
+  width: 340px;
+  height: 450px;
+  margin: 0 0 0 260px;
+  font-size:15px;
 }
 
 div.perfilsobre{
-  background: url(Imagens/Snippy.png) no-repeat;
+  background: url(Snippy.png) no-repeat;
   background-size: 259px 384px;
-  background-position: 10 75;
+  background-position: 10px 75px;
   margin: 0 auto;
-  width: 600;
-  height: 470;
+  width: 600px;
+  height: 470px;
   background-color: rgb(150,150,150);
   color: rgb(0,0,0);
   font-family: arial;
-  padding-top: 1;
+  padding-top: 1px;
 }
 
 div.perfilsobre > h1{
-  margin: 17 10 10 10;
+  margin: 17px 10px 10px 10px;
 }
 
 div.perfilsobre > h1+div{
-  width: 320;
-  height: 375;
-  margin: 25 0 0 280;
-  font-size:16;
+  width: 320px;
+  height: 375px;
+  margin: 25px 0 0 280px;
+  font-size:16px;
 }

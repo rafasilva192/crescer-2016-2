@@ -41,10 +41,10 @@ namespace StreetFighter.Web.Controllers
             return View(model);
         }
 
-        public ActionResult Sobre()
+        public ActionResult SobreModel()
         {
             var model = new SobreModel();
-            model.Sobre = "Rafael Henrique da Silva é um trainee da empresa CWI, ele tem 21 anos e é formado como Técnico em Eletrônica na Fundação Liberato, este site foi feito como um treinamento em HTML e CSS."
+            model.Sobre = "Rafael Henrique da Silva é um trainee da empresa CWI, ele tem 21 anos e é formado como Técnico em Eletrônica na Fundação Liberato, este site foi feito como um treinamento em HTML e CSS.";
 
 
                 return View(model);
