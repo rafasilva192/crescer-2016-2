@@ -26,11 +26,6 @@ namespace StreetFighter.Web.Models
         public string SFA3Stage { get; set; }
         public string SF2Stafe { get; set; }
         public string GolpesEspeciais { get; set; }
-
-        // GET: FichaTecnicaModel
-        public ActionResult Index()
-        {
-            return View();
-        }
+        
     }
 }
