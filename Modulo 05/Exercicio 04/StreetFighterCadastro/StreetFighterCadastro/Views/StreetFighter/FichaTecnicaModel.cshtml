@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Ficha Técnica";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using System.Globalization
+
+<div class="subtitulo">
+
+    <h1>
+        <strong>
+            Ficha Técnica
+        </strong>
+    </h1>
+
+</div>
+<div class="fichatecnica">
+    <h1>@(Model.Nome)</h1>
+    <div class="imagemfundo">
+        <img src="@(Model.Imagem)" />
+    </div>
+    <div class="Texto">
+        <div>
+            <strong>Nascimento:</strong> @(String.Format("{0} de {1} de {2}.", Model.DataNascimento.Day, Model.DataNascimento.ToString("MMMM", new CultureInfo("pt-BR")), Model.DataNascimento.Year))
+        </div>
+        <div>
+            <strong>Altura:</strong> @(Model.Altura) cm
+        </div>
+        <div>
+            <strong>Peso:</strong> @(Model.Peso) kg
+        </div>
+        <div>
+            <strong>Origem:</strong> @(Model.Origem)
+        </div>
+        <div>
+            <strong>Golpes especiais famosos:</strong> @(Model.GolpesEspeciais)
+        </div>
+        <div>
+            <strong>Personagem Desbloqueado:</strong> @(Model.PersonagemOculto)
+        </div>
+    </div>
+</div>
