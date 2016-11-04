@@ -40,7 +40,7 @@ namespace StreetFighter.Web.Controllers
                 {
                     ModelState.AddModelError("","Ocorreu um erro inesperado, chama o Nunes");
                 }
-                return View("FichaTecnicaModel", model);
+                return View("Cadastro", model);
             }
             else
             {
