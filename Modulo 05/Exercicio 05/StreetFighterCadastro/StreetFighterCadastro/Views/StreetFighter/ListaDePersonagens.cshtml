@@ -2,17 +2,56 @@
     ViewBag.Title = "Lista De Personagens";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@using System.Globalization
 
-<div class="subtitulo">
+<div class="subtituloPersonagens">
 
     <h1>
         <strong>
             Lista De Personagens
         </strong>
     </h1>
-
 </div>
-<div class="fichatecnica">
+<div class="cadastrar">
+    <a href="~/StreetFighter/Cadastro">
+        <button type="button" id="cadastro" class="btn btn-link" >
+            Cadastro
+        </button>
+        </a>
+</div>
+<div class="Filtro">
+    @using (Html.BeginForm("ListaDePersonagens", "StreetFighter", FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+        <div class="form-group">
+            @Html.Label("", new { @class = "col-sm-2 control-label"})
+            <div class="col-sm-10">
+                @Html.TextBox("filtro","", new { @class = "form-control", placeholder = "Filtre por nome!" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Filtrar</button>
+            </div>
+        </div>
+    }
+</div>
+<div class="personagens">
+    <ul>
+       
+        @{
+            foreach (var personagem in Model)
+            {
+                <li class="listaPersonagens">
+                    <div class="imagemPersonagem">
+                        <img src="@personagem.Imagem" />
+                    </div>
+                    <a href="~/StreetFighter/FichaTecnica?Id=@personagem.Id">
+                    @personagem.Nome
+                    </a>
+                </li>
 
+            }
+        }
+
+    </ul>
+    
 </div>

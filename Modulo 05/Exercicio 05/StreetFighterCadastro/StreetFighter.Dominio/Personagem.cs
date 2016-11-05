@@ -28,7 +28,6 @@ namespace StreetFighter.Dominio
             if (nome.ToUpperInvariant().Contains("NUNES"))
                 throw new RegraNegocioException("Não é permetido cadastrar membros do Illuminati");
 
-            this.Imagem = imagem;
             this.Nome = nome;
             this.DataNascimento = datanascimento;
             this.Altura = altura;
@@ -36,6 +35,7 @@ namespace StreetFighter.Dominio
             this.Origem = origem;
             this.GolpesEspeciais = golpes;
             this.PersonagemOculto = personagemoculto;
+            this.Imagem = imagem;
 
         }
     }

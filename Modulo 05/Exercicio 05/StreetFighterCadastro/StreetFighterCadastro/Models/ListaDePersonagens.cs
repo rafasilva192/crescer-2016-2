@@ -10,6 +10,8 @@ namespace StreetFighterCadastro.Models
 {
     public class ListaDePersonagens
     {
+        public int Id { get; set; }
+
         public string Imagem { get; set; }
 
         [Required]

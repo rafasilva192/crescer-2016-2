@@ -13,6 +13,12 @@ body{
   padding-top: 1px;
 }
 
+.conteudo{
+    position: relative;
+    margin: 0 auto;
+    width: 60%;
+
+}
 
 .subtitulo{
       padding-top: 1px;
@@ -24,6 +30,74 @@ body{
   height: 60px;
 }
 
+.subtituloPersonagens{
+  position: relative;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  font-size: 20px;
+  padding-top: 1px;
+  font-family: arial;
+  background-color: rgb(30,30,30);
+  color: rgb(255,255,255);
+  height: 60px;
+}
+
+.Filtro{
+    position: absolute;
+    left: 80%;
+    bottom: 168px;
+}
+
+a{
+   text-decoration: none;
+   
+}
+
+.cadastrar{
+    position: absolute;
+    top:20px;
+    margin: auto 0 auto 15px;
+}
+
+
+#edit, #delete{
+    position: relative;
+    left: 80%;
+    bottom: 15px;
+    color: black;
+}
+
+.listaPersonagens{
+    position: relative;
+    list-style-type: none;
+    float: left;
+    text-align: center;
+    margin: 0;
+}
+
+.listaPersonagens:after{
+    clear: both;
+}
+
+.imagemPersonagem > img{
+    position: relative;
+    height: 150px;
+    width: 170px;
+
+}
+
+.conteudo > .personagens{
+
+  display: table-cell; 
+  background-color: rgb(150,150,150);
+  color: rgb(0,0,0);
+  font-family: arial;
+  padding-top: 1px;
+    width: 1500px;
+  height:auto;
+}
 
 div.cabecalho{
   background-color: rgba(175,175,175,0.3);

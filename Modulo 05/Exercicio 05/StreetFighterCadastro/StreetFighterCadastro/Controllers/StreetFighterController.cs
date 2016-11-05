@@ -19,9 +19,11 @@ namespace StreetFighter.Web.Controllers
 
         public ActionResult Cadastro()
         {
+            ListaDePersonagens personagem = new ListaDePersonagens();
             ListaOrigem();
-            return View();
+            return View(personagem);
         }
+
 
         public ActionResult Salvar(ListaDePersonagens model)
         {
@@ -32,7 +34,7 @@ namespace StreetFighter.Web.Controllers
                 {
                     var aplicativo = new PersonagemAplicativo();
 
-                    var personagem = new Personagem(model.Nome,model.DataNascimento,model.Altura,model.Peso,model.Origem,model.GolpesEspeciais,model.PersonagemOculto,model.Imagem);
+                    var personagem = new Personagem(model.Id, model.Nome,model.DataNascimento,model.Altura,model.Peso,model.Origem,model.GolpesEspeciais,model.PersonagemOculto,model.Imagem);
 
                     aplicativo.Salvar(personagem);
                 }
@@ -40,27 +42,53 @@ namespace StreetFighter.Web.Controllers
                 {
                     ModelState.AddModelError("","Ocorreu um erro inesperado, chama o Nunes");
                 }
-                return View("Cadastro", model);
+                return RedirectToAction("ListaDePersonagens");
             }
             else
             {
                 ModelState.AddModelError("", "Ocorreu um erro inesperado, entre em contato com o Nunes");
-                return View("Cadastro");
+                return View("Cadastro", model);
             }
         }
 
-        public ActionResult ListaDePersonagens()
+        public ActionResult FichaTecnica(int id)
         {
-            var model = new ListaDePersonagens();
-            model.Imagem = @"http://www.streetfighter.com.br/upload/editor/20120823194105_127.png";
-            model.Nome = "Blanka";
-            model.DataNascimento = new DateTime(1966,02,12);
-            model.Altura = 192;
-            model.Peso = 96;
-            model.Origem = "Brasil (lugar de nascença é provável como sendo Tailândia).";
-            model.GolpesEspeciais = "Electric Thunder, Rolling Attack.";
-            model.PersonagemOculto = false;
+            var aplicativo = new PersonagemAplicativo();
+            var model = aplicativo.ListarPersonagens().Where(p => p.Id == id).ToList().First();
             return View(model);
+        }
+
+        public ActionResult ListaDePersonagens(string filtro = null)
+        {
+            var aplicativo = new PersonagemAplicativo();
+            var model = aplicativo.ListarPersonagens(filtro);
+            return View(model);
+        }
+
+        public ActionResult Deletar(int id)
+        {
+            var aplicativo = new PersonagemAplicativo();
+            var personagem = aplicativo.ListarPersonagens().Where(p => p.Id == id).ToList().First();
+            aplicativo.Deletar(personagem);
+            return RedirectToAction("ListaDePersonagens");
+        }
+
+        public ActionResult Editar(int id)
+        {
+            ListaOrigem();
+            var aplicativo = new PersonagemAplicativo();
+            var model = aplicativo.ListarPersonagens().Where(p => p.Id == id).ToList().First();
+            ListaDePersonagens personagem = new ListaDePersonagens();
+            personagem.Id = model.Id;
+            personagem.Nome = model.Nome;
+            personagem.DataNascimento = model.DataNascimento;
+            personagem.Altura = model.Altura;
+            personagem.Peso = model.Peso;
+            personagem.Origem = model.Origem;
+            personagem.GolpesEspeciais = model.GolpesEspeciais;
+            personagem.PersonagemOculto = model.PersonagemOculto;
+            personagem.Imagem = model.Imagem;
+            return View("Cadastro", personagem);
         }
 
         public ActionResult SobreModel()
@@ -86,6 +114,7 @@ namespace StreetFighter.Web.Controllers
                 new SelectListItem() { Value = "MBQ", Text = "Moçambique" },
                 new SelectListItem() { Value = "FRN", Text = "França" },
                 new SelectListItem() { Value = "KRA", Text = "Korea" },
+                new SelectListItem() { Value = "MDP", Text = "Morro da Pedra" },
                 new SelectListItem() { Value = "CND", Text = "Canada" }
             };
         }

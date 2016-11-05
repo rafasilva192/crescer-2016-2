@@ -1,3 +1,4 @@
-1;;TesteDeveTerID2;10/11/2015 12:00:00 AM;123;312;BRA;a;True;
-2;;TesteDeveTerID1;10/11/2015 12:00:00 AM;123;312;BRA;a;True;
-3;;TesteDeveTerID3;10/11/2015 12:00:00 AM;123;312;BRA;a;True;
+1;Ainz;12/10/2510 00:00:00;962;231;SGP;qwe;False;http://vignette1.wikia.nocookie.net/vsbattles/images/f/f7/Ainz_Ooal_Gown.png/revision/latest?cb=20151204012832;
+2;Ken;12/10/1050 00:00:00;110;95;USA;Hadouken;False;http://static1.squarespace.com/static/50f14d35e4b0d70ab5fc4f24/t/53f31e7ce4b0e9d91b04d4b3/1408441982623/ken_portrait.gif;
+3;Ryu;10/12/2001 00:00:00;110;85;JPN;Hadouken;False;http://www.siliconloons.com/wp-content/uploads/2012/11/ryu_portrait3.gif;
+4;Blanka;22/07/2022 00:00:00;180;90;MBQ;Choque;False;https://upload.wikimedia.org/wikipedia/pt/a/a1/Blanka_(personagem).jpg;
