@@ -16,7 +16,7 @@ namespace StreetFighterCadastro
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "StreetFighter", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "StreetFighter", action = "Login", id = UrlParameter.Optional }
             );
         }
     }

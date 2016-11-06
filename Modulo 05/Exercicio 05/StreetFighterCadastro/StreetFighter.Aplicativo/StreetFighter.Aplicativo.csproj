@@ -42,11 +42,16 @@
   <ItemGroup>
     <Compile Include="PersonagemAplicativo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicoDeUsuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StreetFighter.Dominio\StreetFighter.Dominio.csproj">
       <Project>{8889e579-fe08-458e-94ec-0f91e25a57fa}</Project>
       <Name>StreetFighter.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StreetFighter.Infra\StreetFighter.Infra.csproj">
+      <Project>{4dfff6bb-569a-44d3-9b81-d90f3341f0c2}</Project>
+      <Name>StreetFighter.Infra</Name>
     </ProjectReference>
     <ProjectReference Include="..\StreetFighter.Repositorio\StreetFighter.Repositorio.csproj">
       <Project>{7235c102-e3fe-46a0-aba7-0d05e2a1f729}</Project>

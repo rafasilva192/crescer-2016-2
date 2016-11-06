@@ -206,3 +206,13 @@ div.perfilsobre > h1+div{
   text-decoration: none;
   margin-right: 50px;
 }
+
+.corpotexto.login{
+    height: 100px;
+}
+
+.loginentrar{
+    position: relative;
+    left: 137px;
+    top: 10px;
+}

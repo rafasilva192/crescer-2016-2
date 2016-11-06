@@ -16,5 +16,11 @@ namespace StreetFighter.Repositorio
          void DeletarPersonagem(Personagem personagem);
 
          void EditarPersonagem(Personagem personagem);
+
+        List<Usuario> ListarUsuarios(bool buscarSenha);
+
+        void SalvarUsuario(Usuario usuario);
+
+        Usuario BuscarUsuario(Usuario usuario);
     }
 }

@@ -1,7 +1,9 @@
 ﻿using StreetFighter.Aplicativo;
 using StreetFighter.Dominio;
 using StreetFighter.Web.Models;
+using StreetFighterCadastro.Filters;
 using StreetFighterCadastro.Models;
+using StreetFighterCadastro.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,21 +11,69 @@ using System.Web;
 using System.Web.Mvc;
 namespace StreetFighter.Web.Controllers
 {
+    
     public class StreetFighterController : Controller
     {
         // GET: StreetFighter
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        public ActionResult Unauthorized()
+        {
+            return View();
+        }
+
+        [ValidateAntiForgeryToken]
+        public ActionResult Logar(string nome, string senha, string botaoPost)
+        {
+            var aplicativo = new ServicoDeUsuario();
+            var usuario = new Usuario(nome, senha);
+            switch (botaoPost)
+            {
+                case "Cadastrar":
+                    try
+                    {
+                        aplicativo.CadastrarUsuario(usuario);
+                     }
+                    catch
+                    {
+
+                    }
+            ViewBag.sucesso = ("Cadastro feito com Sucesso");
+            return RedirectToAction("Login");
+            default:
+
+            var usuarioCadastrado = aplicativo.BuscarUsuarioAutenticado(usuario);
+            if (usuarioCadastrado != null)
+            {
+                ServicoDeAutenticacao.Autenticar(new UsuarioLogadoModel(usuarioCadastrado.Nome));
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return RedirectToAction("Login");
+            }
+        }
+       }
+        
+        [SFAutorizador]
         public ActionResult Index()
         {
             return View();
         }
 
+        [SFAutorizador]
         public ActionResult Cadastro()
         {
             ListaOrigem();
             return View();
         }
 
-
+        [SFAutorizador]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Salvar(ListaDePersonagens model)
         {
 
@@ -55,6 +105,7 @@ namespace StreetFighter.Web.Controllers
             }
         }
 
+        [SFAutorizador]
         public ActionResult FichaTecnica(int id)
         {
             var aplicativo = new PersonagemAplicativo();
@@ -62,6 +113,7 @@ namespace StreetFighter.Web.Controllers
             return View(model);
         }
 
+        [SFAutorizador]
         public ActionResult ListaDePersonagens(string filtro = null)
         {
             var aplicativo = new PersonagemAplicativo();
@@ -69,6 +121,7 @@ namespace StreetFighter.Web.Controllers
             return View(model);
         }
 
+        [SFAutorizador]
         public ActionResult Deletar(int id)
         {
             var aplicativo = new PersonagemAplicativo();
@@ -77,6 +130,7 @@ namespace StreetFighter.Web.Controllers
             return RedirectToAction("ListaDePersonagens");
         }
 
+        [SFAutorizador]
         public ActionResult Editar(int id)
         {
             ListaOrigem();
@@ -95,6 +149,7 @@ namespace StreetFighter.Web.Controllers
             return View("Cadastro", personagem);
         }
 
+        [SFAutorizador]
         public ActionResult SobreModel()
         {
             var model = new SobreModel();
@@ -103,7 +158,6 @@ namespace StreetFighter.Web.Controllers
 
             return View(model);
         }
-
         private void ListaOrigem()
         {
             //ViewBag.ListaPersonagens

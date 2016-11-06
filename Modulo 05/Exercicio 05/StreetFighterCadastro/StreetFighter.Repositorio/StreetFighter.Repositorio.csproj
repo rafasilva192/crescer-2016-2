@@ -48,6 +48,10 @@
       <Project>{8889e579-fe08-458e-94ec-0f91e25a57fa}</Project>
       <Name>StreetFighter.Dominio</Name>
     </ProjectReference>
+    <ProjectReference Include="..\StreetFighter.Infra\StreetFighter.Infra.csproj">
+      <Project>{4dfff6bb-569a-44d3-9b81-d90f3341f0c2}</Project>
+      <Name>StreetFighter.Infra</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
