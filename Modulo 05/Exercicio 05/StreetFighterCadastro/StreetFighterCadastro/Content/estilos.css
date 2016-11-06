@@ -47,7 +47,7 @@ body{
 .Filtro{
     position: absolute;
     left: 80%;
-    bottom: 168px;
+    top: 0%;
 }
 
 a{
@@ -108,30 +108,9 @@ div.cabecalho{
   padding: 15px 0;
 }
 
-div.cabecalho a{
-  color:rgb(255,255,255);
-  text-decoration: none;
-}
 
-div.cabecalho span:first-child{
-  color:rgb(255,255,255);
-  margin: 0 45px 0 40px;
-}
 
-div.cabecalho span:nth-of-type(2){
-  color:rgb(255,255,255);
-  margin: 0 45px 0 0;
-}
 
-div.cabecalho span:nth-of-type(3){
-  color:rgb(255,255,255);
-  margin: 0 0 0 0;
-}
-
-div.cabecalho span:last-child{
-  color:rgb(255,255,255);
-  margin: 0 40px 0 45px;
-}
 
 
 h1, h2, h3, p, ul{
@@ -218,4 +197,12 @@ div.perfilsobre > h1+div{
 
 .validation-summary-errors.text-danger, .field-validation-error{
     color: rgb(230, 20, 20);
+}
+
+.cabecalho a{
+    position: relative;
+    left: 60px;
+  color:rgb(255,255,255);
+  text-decoration: none;
+  margin-right: 50px;
 }

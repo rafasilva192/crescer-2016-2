@@ -1,4 +1,8 @@
-1;Ainz;12/10/2510 00:00:00;962;231;SGP;qwe;False;http://vignette1.wikia.nocookie.net/vsbattles/images/f/f7/Ainz_Ooal_Gown.png/revision/latest?cb=20151204012832;
-2;Ken;12/10/1050 00:00:00;110;95;USA;Hadouken;False;http://static1.squarespace.com/static/50f14d35e4b0d70ab5fc4f24/t/53f31e7ce4b0e9d91b04d4b3/1408441982623/ken_portrait.gif;
-3;Ryu;10/12/2001 00:00:00;110;85;JPN;Hadouken;False;http://www.siliconloons.com/wp-content/uploads/2012/11/ryu_portrait3.gif;
-4;Blanka;22/07/2022 00:00:00;180;90;MBQ;Choque;False;https://upload.wikimedia.org/wikipedia/pt/a/a1/Blanka_(personagem).jpg;
+1;Ainz;12/10/2510 00:00:00;120;150;JPN;Mass Death;False;http://vignette1.wikia.nocookie.net/vsbattles/images/f/f7/Ainz_Ooal_Gown.png/revision/latest?cb=20151204012832;
+2;Jesus;01/01/0001 00:00:00;120;100;CND;Salvar o Mundo;True;http://segredosdomundo.r7.com/wp-content/uploads/2015/12/2-14.jpg;
+3;Ken;12/10/1050 00:00:00;110;95;USA;Hadouken;False;http://static1.squarespace.com/static/50f14d35e4b0d70ab5fc4f24/t/53f31e7ce4b0e9d91b04d4b3/1408441982623/ken_portrait.gif;
+4;Ryu;10/12/2001 00:00:00;110;85;JPN;Hadouken;False;http://www.siliconloons.com/wp-content/uploads/2012/11/ryu_portrait3.gif;
+5;Chun-li;12/10/1985 00:00:00;120;95;JPN;Helicoptero;False;https://upload.wikimedia.org/wikipedia/pt/1/1e/Chun-Li_SSFIV.png;
+6;Scorpion;01/01/0001 00:00:00;120;102;LUX;Brazuka Power;True;http://vignette3.wikia.nocookie.net/mkwikia/images/a/ad/Scorpion_MKX_Render.png/revision/latest?cb=20160515093908;
+7;Jotaro Kujo;12/10/1965 00:00:00;120;100;JPN;Za Warudo, Star Platinum;True;http://vignette1.wikia.nocookie.net/jjba/images/4/41/Jotaro_article_crop_stardust_crusaders_color_v10_074.png/revision/latest?cb=20140713164042;
+8;Kenshiro;08/05/1980 00:00:00;125;120;JPN;Hokuto Hyakuretsu-ken;False;http://www.hokutonoken.it/film/gaiden/image/002.png;

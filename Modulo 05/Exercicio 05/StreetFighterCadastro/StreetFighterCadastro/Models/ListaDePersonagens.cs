@@ -10,7 +10,8 @@ namespace StreetFighterCadastro.Models
 {
     public class ListaDePersonagens
     {
-        public int Id { get; set; }
+        
+        public int? Id { get; set; }
 
         public string Imagem { get; set; }
 
@@ -37,5 +38,10 @@ namespace StreetFighterCadastro.Models
         [Required]
         [DisplayName("Personagem Oculto?")]
         public bool PersonagemOculto { get; set; }
+
+        public ListaDePersonagens()
+        {
+            this.Id = 0;
+        }
     }
 }

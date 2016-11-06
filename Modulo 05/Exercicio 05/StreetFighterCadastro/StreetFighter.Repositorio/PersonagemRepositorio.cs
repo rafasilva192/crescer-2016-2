@@ -39,7 +39,7 @@ namespace StreetFighter.Repositorio
                 }
                 streamReader.Dispose();
         }
-           
+            lista.Sort((x,y) => string.Compare(x.Nome, y.Nome));
             if (filtro == null) return lista;
             else return lista.Where(p => p.Nome.ToUpperInvariant().Contains(filtro.ToUpperInvariant())).OrderBy(p => p.Id).ToList();
         }
@@ -49,13 +49,14 @@ namespace StreetFighter.Repositorio
             int personagemId = 0;
             if (new FileInfo(textopath).Length != 0)
             {
-                var ultimaLinha = File.ReadLines(textopath).Last();
-                string[] numeroId = ultimaLinha.Split(';');
-                 personagemId = int.Parse(numeroId[0]) + 1;
-            } else personagemId = 1;
+                var lista = ListarPersonagens();
+                var listaPorId = lista.Select(p => p.Id).ToList();
+                listaPorId.Sort((a, b) => b - a);
+                personagemId = listaPorId.First();
+            }
 
                  var formatacao = String.Format(
-                $"{ personagemId };{ personagem.Nome };{ personagem.DataNascimento};{ personagem.Altura};{ personagem.Peso};{ personagem.Origem};{ personagem.GolpesEspeciais};{ personagem.PersonagemOculto};{ personagem.Imagem};"
+                $"{ personagemId + 1 };{ personagem.Nome };{ personagem.DataNascimento};{ personagem.Altura};{ personagem.Peso};{ personagem.Origem};{ personagem.GolpesEspeciais};{ personagem.PersonagemOculto};{ personagem.Imagem};"
             );
             
             File.AppendAllText(textopath, formatacao + Environment.NewLine);

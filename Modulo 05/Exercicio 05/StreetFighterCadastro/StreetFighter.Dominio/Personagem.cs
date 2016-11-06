@@ -27,7 +27,8 @@ namespace StreetFighter.Dominio
         {
             if (nome.ToUpperInvariant().Contains("NUNES"))
                 throw new RegraNegocioException("Não é permetido cadastrar membros do Illuminati");
-
+            if (origem.Contains("MDP"))
+                throw new RegraNegocioException("Só um personagem pode ser do morro da Pedra");
             this.Nome = nome;
             this.DataNascimento = datanascimento;
             this.Altura = altura;

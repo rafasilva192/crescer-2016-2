@@ -37,7 +37,7 @@
             <strong>Golpes especiais famosos:</strong> @(Model.GolpesEspeciais)
         </div>
         <div>
-            <strong>Personagem Desbloqueado:</strong> @(Model.PersonagemOculto)
+            <strong>Personagem Bloqueado:</strong> @(Model.PersonagemOculto?"Sim":"Não")
         </div>
     </div>
     <a type="button" id="delete" class="btn btn-default" href="~/StreetFighter/Deletar?Id=@Model.Id">

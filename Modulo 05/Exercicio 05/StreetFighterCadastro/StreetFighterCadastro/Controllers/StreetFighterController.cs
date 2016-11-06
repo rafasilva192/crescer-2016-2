@@ -19,14 +19,14 @@ namespace StreetFighter.Web.Controllers
 
         public ActionResult Cadastro()
         {
-            ListaDePersonagens personagem = new ListaDePersonagens();
             ListaOrigem();
-            return View(personagem);
+            return View();
         }
 
 
         public ActionResult Salvar(ListaDePersonagens model)
         {
+
             ListaOrigem();
             if (ModelState.IsValid)
             {
@@ -34,9 +34,13 @@ namespace StreetFighter.Web.Controllers
                 {
                     var aplicativo = new PersonagemAplicativo();
 
-                    var personagem = new Personagem(model.Id, model.Nome,model.DataNascimento,model.Altura,model.Peso,model.Origem,model.GolpesEspeciais,model.PersonagemOculto,model.Imagem);
+                    var personagem = new Personagem(model.Id==null?0:(int)model.Id, model.Nome,model.DataNascimento,model.Altura,model.Peso,model.Origem,model.GolpesEspeciais,model.PersonagemOculto,model.Imagem);
 
                     aplicativo.Salvar(personagem);
+                }
+                catch (RegraNegocioException)
+                {
+                    ModelState.AddModelError("","Não é permetido cadastrar membros do Illuminati");
                 }
                 catch
                 {
