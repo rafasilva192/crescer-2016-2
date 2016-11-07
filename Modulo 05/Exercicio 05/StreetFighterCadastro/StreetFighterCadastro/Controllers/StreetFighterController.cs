@@ -33,14 +33,14 @@ namespace StreetFighter.Web.Controllers
             switch (botaoPost)
             {
                 case "Cadastrar":
-                    try
-                    {
+                  //  try
+                   // {
                         aplicativo.CadastrarUsuario(usuario);
-                     }
-                    catch
-                    {
+                   //  }
+                 //   catch
+                  //  {
 
-                    }
+                 //   }
             ViewBag.sucesso = ("Cadastro feito com Sucesso");
             return RedirectToAction("Login");
             default:

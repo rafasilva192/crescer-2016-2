@@ -11,14 +11,14 @@ namespace StreetFighter.Aplicativo
 {
     public class ServicoDeUsuario
     {
-        private readonly IPersonagemRepositorio repositorio;
+        private readonly IUsuarioRepositorio repositorio;
 
         public ServicoDeUsuario()
         {
-            this.repositorio = new PersonagemRepositorio();
+            this.repositorio = new UsuarioRepositorioADO();
         }
 
-        public ServicoDeUsuario(IPersonagemRepositorio repositorio)
+        public ServicoDeUsuario(IUsuarioRepositorio repositorio)
         {
             this.repositorio = repositorio;
         }

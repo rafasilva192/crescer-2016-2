@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IPersonagemRepositorio.cs" />
+    <Compile Include="IUsuarioRepositorio.cs" />
     <Compile Include="Personagem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegraNegocioException.cs" />
