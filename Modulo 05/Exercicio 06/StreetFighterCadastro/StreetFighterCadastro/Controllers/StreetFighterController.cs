@@ -143,7 +143,7 @@ namespace StreetFighter.Web.Controllers
             personagem.Altura = model.Altura;
             personagem.Peso = model.Peso;
             personagem.Origem = model.Origem;
-            personagem.GolpesEspeciais = model.GolpesEspeciais;
+            personagem.GolpesEspeciais = model.GolpeEspecial;
             personagem.PersonagemOculto = model.PersonagemOculto;
             personagem.Imagem = model.Imagem;
             return View("Cadastro", personagem);

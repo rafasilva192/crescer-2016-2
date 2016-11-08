@@ -48,7 +48,7 @@ namespace StreetFighter.Repositorio
                 command.Parameters.AddWithValue("param_origem", personagem.Origem);
                 command.Parameters.AddWithValue("param_altura", personagem.Altura);
                 command.Parameters.AddWithValue("param_peso", personagem.Peso);
-                command.Parameters.AddWithValue("param_golpe", personagem.GolpesEspeciais);
+                command.Parameters.AddWithValue("param_golpe", personagem.GolpeEspecial);
                 command.Parameters.AddWithValue("param_personagemoculto", personagem.PersonagemOculto);
                 command.Parameters.AddWithValue("param_imagem", personagem.Imagem == null ? "" : personagem.Imagem);
                 command.Parameters.AddWithValue("param_id", personagem.Id);
@@ -77,7 +77,7 @@ namespace StreetFighter.Repositorio
                 command.Parameters.AddWithValue("param_origem", personagem.Origem);
                 command.Parameters.AddWithValue("param_altura", personagem.Altura);
                 command.Parameters.AddWithValue("param_peso", personagem.Peso);
-                command.Parameters.AddWithValue("param_golpe", personagem.GolpesEspeciais);
+                command.Parameters.AddWithValue("param_golpe", personagem.GolpeEspecial);
                 command.Parameters.AddWithValue("param_personagemoculto", personagem.PersonagemOculto);
                 command.Parameters.AddWithValue("param_imagem", personagem.Imagem==null?"":personagem.Imagem);
                 

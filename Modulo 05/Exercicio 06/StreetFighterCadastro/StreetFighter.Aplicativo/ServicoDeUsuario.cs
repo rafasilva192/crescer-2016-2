@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using StreetFighter.RepositorioEntityFramework;
 
 namespace StreetFighter.Aplicativo
 {
@@ -15,7 +16,7 @@ namespace StreetFighter.Aplicativo
 
         public ServicoDeUsuario()
         {
-            this.repositorio = new UsuarioRepositorioADO();
+            this.repositorio = new UsuarioRepositorioEntityFramework();
         }
 
         public ServicoDeUsuario(IUsuarioRepositorio repositorio)

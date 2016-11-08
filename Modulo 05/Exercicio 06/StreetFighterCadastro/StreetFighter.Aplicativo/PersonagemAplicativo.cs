@@ -14,7 +14,7 @@ namespace StreetFighter.Aplicativo
 
         public PersonagemAplicativo()
         {
-            this.repositorio = new PersonagemRepositorioADO();
+            this.repositorio = new PersonagemRepositorioEntityFramework();
         }
 
         public PersonagemAplicativo(IPersonagemRepositorio repositorio)

@@ -59,7 +59,7 @@ namespace StreetFighter.Repositorio
             }
 
                  var formatacao = String.Format(
-                $"{ personagemId + 1 };{ personagem.Nome };{ personagem.DataNascimento};{ personagem.Altura};{ personagem.Peso};{ personagem.Origem};{ personagem.GolpesEspeciais};{ personagem.PersonagemOculto};{ personagem.Imagem};"
+                $"{ personagemId + 1 };{ personagem.Nome };{ personagem.DataNascimento};{ personagem.Altura};{ personagem.Peso};{ personagem.Origem};{ personagem.GolpeEspecial};{ personagem.PersonagemOculto};{ personagem.Imagem};"
             );
             
             File.AppendAllText(textopath, formatacao + Environment.NewLine);
