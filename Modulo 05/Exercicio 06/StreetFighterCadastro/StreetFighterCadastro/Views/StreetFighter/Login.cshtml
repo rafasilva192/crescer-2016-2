@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="corpo subtitulo">
+    <h2>Login</h2>
+</div>
+<div class="corpotexto login">
+    @ViewBag.sucesso
+    @using (Html.BeginForm("Logar", "StreetFighter", FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            @Html.Label("Usuario", "", new { @class = "col-sm-2 control-label" })
+            <div class="col-sm-10">
+                @Html.TextBox("nome", "", new { placeholder = "Usuario" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Senha", "", new { @class = "col-sm-2 control-label" })
+            <div class="col-sm-10">
+                @Html.Password("senha", "", new { placeholder = "Senha" })
+            </div>
+        </div>
+
+        <input name="botaoPost" class="loginentrar"type="submit" value="Entrar" />
+        <input name="botaoPost" class="loginentrar" type="submit" value="Cadastrar" />
+
+    }
+    </div>
