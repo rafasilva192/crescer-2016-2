@@ -14,12 +14,49 @@ namespace StreetFighter.Repositorio
     {
         public void DeletarPersonagem(Personagem personagem)
         {
-            throw new NotImplementedException();
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["Personagem"].ConnectionString;
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string sql = "DELETE FROM Personagem WHERE Id = @param_Id";
+
+                    var command = new SqlCommand(sql, connection);
+                    command.Parameters.AddWithValue("param_Id", personagem.Id);
+                    command.ExecuteNonQuery();
+
+                    connection.Close();
+                }
+            }
         }
 
         public void EditarPersonagem(Personagem personagem)
         {
-            throw new NotImplementedException();
+            string connectionString = ConfigurationManager.ConnectionStrings["Personagem"].ConnectionString;
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string sql = "UPDATE Personagem SET Nome = @param_nome,DataNascimento = @param_datanasc,Origem = @param_origem,Altura = @param_altura,Peso = @param_peso,GolpeEspecial = @param_golpe,PersonagemOculto = @param_personagemoculto,Imagem = @param_imagem WHERE Id = @param_id";
+
+
+                var command = new SqlCommand(sql, connection);
+                command.CommandType = CommandType.Text;
+                command.Parameters.AddWithValue("param_nome", personagem.Nome);
+                command.Parameters.AddWithValue("param_datanasc", personagem.DataNascimento);
+                command.Parameters.AddWithValue("param_origem", personagem.Origem);
+                command.Parameters.AddWithValue("param_altura", personagem.Altura);
+                command.Parameters.AddWithValue("param_peso", personagem.Peso);
+                command.Parameters.AddWithValue("param_golpe", personagem.GolpesEspeciais);
+                command.Parameters.AddWithValue("param_personagemoculto", personagem.PersonagemOculto);
+                command.Parameters.AddWithValue("param_imagem", personagem.Imagem == null ? "" : personagem.Imagem);
+                command.Parameters.AddWithValue("param_id", personagem.Id);
+
+                command.ExecuteNonQuery();
+
+                connection.Close();
+            }
         }
 
         public void IncluirPersonagem(Personagem personagem)
@@ -42,7 +79,7 @@ namespace StreetFighter.Repositorio
                 command.Parameters.AddWithValue("param_peso", personagem.Peso);
                 command.Parameters.AddWithValue("param_golpe", personagem.GolpesEspeciais);
                 command.Parameters.AddWithValue("param_personagemoculto", personagem.PersonagemOculto);
-                command.Parameters.AddWithValue("param_imagem", personagem.Imagem);
+                command.Parameters.AddWithValue("param_imagem", personagem.Imagem==null?"":personagem.Imagem);
                 
                 command.ExecuteNonQuery();
 
@@ -55,12 +92,11 @@ namespace StreetFighter.Repositorio
             if (filtro == "" || filtro == null) filtro = "%";
             Personagem personagemEncontrado = null;
             var lista = new List<Personagem>();
-            string sql = "";
             string connectionString = ConfigurationManager.ConnectionStrings["Personagem"].ConnectionString;
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                sql = "SELECT * FROM Personagem WHERE UPPER(Nome) Like @param1";
+                var sql = "SELECT * FROM Personagem WHERE UPPER(Nome) Like @param1";
 
                 var command = new SqlCommand(sql, connection);
                 command.Parameters.Add(new SqlParameter("param1", $"%{filtro.ToUpperInvariant()}%"));
