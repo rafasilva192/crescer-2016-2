@@ -14,11 +14,13 @@ namespace StreetFighter.RepositorioEntityFramework
         {
             using (var connection = new ContextoBancoDeDados())
             {
-                var personagens = connection.Usuario.Where(p => p.Nome.Contains(usuario.Nome)).FirstOrDefault();
                 string senhaFinal = ServicoDeCriptografia.ConverterParaMD5($"{usuario.Nome}_$_{usuario.Senha}");
-                if (personagens !=null && senhaFinal == personagens.Senha)
+
+                var usuarioBuscado = connection.Usuario.Where(p => p.Nome.Equals(usuario.Nome) && p.Senha.Equals(senhaFinal)).FirstOrDefault();
+                
+                if (usuarioBuscado != null)
                 {
-                    return personagens;
+                    return usuarioBuscado;
                 }
                 
                 return null;
@@ -35,9 +37,13 @@ namespace StreetFighter.RepositorioEntityFramework
             string senhaFinal = ServicoDeCriptografia.ConverterParaMD5($"{usuario.Nome}_$_{usuario.Senha}");
             using (var connection = new ContextoBancoDeDados())
             {
-                var usuarioCadastrar = new Usuario(usuario.Nome, senhaFinal);
-                connection.Usuario.Add(usuarioCadastrar);
-                connection.SaveChanges();
+                var usuarioBuscado = connection.Usuario.Where(p => p.Nome.Equals(usuario.Nome)).FirstOrDefault();
+                if (usuarioBuscado == null)
+                {
+                    usuarioBuscado = new Usuario(usuario.Nome, senhaFinal);
+                    connection.Usuario.Add(usuarioBuscado);
+                    connection.SaveChanges();
+                }
             }
         }
     }

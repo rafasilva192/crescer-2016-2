@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+
+    <ul>
+
+        @{
+            foreach (var produto in Model)
+            {
+                <li class="listaPersonagens">
+                    <a href="~/Home/Produto?Id=@produto.Id">
+                        @produto.Nome , @produto.Valor ;
+                    </a>
+                </li>
+
+            }
+        }
+
+    </ul>
+</div>
+
+@using (Html.BeginForm("Escolher", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.TextBox("filtro", "", new { placeholder = "Filtre por Nome" })
+
+    <button name="submitbtn" value="filtrar" type="submit">Filtrar</button>
+    <button name="submitbtn"value="cadastrar" type="submit">Cadastrar</button>
+}

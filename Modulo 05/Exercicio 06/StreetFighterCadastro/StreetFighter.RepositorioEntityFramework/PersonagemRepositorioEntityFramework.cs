@@ -15,7 +15,6 @@ namespace StreetFighter.Repositorio
     {
         public void DeletarPersonagem(Personagem personagem)
         {
-            {
                using (var connection = new ContextoBancoDeDados())
                 {
                     var itemToRemove = connection.Personagem.SingleOrDefault(x => x.Id == personagem.Id); //returns a single item.
@@ -26,7 +25,6 @@ namespace StreetFighter.Repositorio
                         connection.SaveChanges();
                     }
                 }
-            }
         }
 
         public void EditarPersonagem(Personagem personagem)
@@ -58,10 +56,8 @@ namespace StreetFighter.Repositorio
             {
                 var personagens = connection.Personagem.Where(p => p.Nome.Contains(filtro)).OrderBy(p => p.Nome).ToList();
                 return personagens;
-            }
-            
+            }           
         }
-        
-       }
     }
+}
 

@@ -34,7 +34,6 @@ namespace StreetFighter.Repositorio
 
 
                 var command = new SqlCommand(sql, connection);
-                command.CommandType = CommandType.Text;
                 command.Parameters.AddWithValue("param_nome", personagem.Nome);
                 command.Parameters.AddWithValue("param_datanasc", personagem.DataNascimento);
                 command.Parameters.AddWithValue("param_origem", personagem.Origem);
@@ -42,7 +41,7 @@ namespace StreetFighter.Repositorio
                 command.Parameters.AddWithValue("param_peso", personagem.Peso);
                 command.Parameters.AddWithValue("param_golpe", personagem.GolpesEspeciais);
                 command.Parameters.AddWithValue("param_personagemoculto", personagem.PersonagemOculto);
-                command.Parameters.AddWithValue("param_imagem", personagem.Imagem);
+                command.Parameters.AddWithValue("param_imagem", personagem.Imagem==null?"":personagem.Imagem);
                 
                 command.ExecuteNonQuery();
 

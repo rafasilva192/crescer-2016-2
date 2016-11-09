@@ -92,10 +92,10 @@ namespace StreetFighter.Web.Controllers
                 {
                     ModelState.AddModelError("","Não é permetido cadastrar membros do Illuminati");
                 }
-                catch
-                {
+                //catch
+                //{
                     ModelState.AddModelError("","Ocorreu um erro inesperado, chama o Nunes");
-                }
+                //}
                 return RedirectToAction("ListaDePersonagens");
             }
             else

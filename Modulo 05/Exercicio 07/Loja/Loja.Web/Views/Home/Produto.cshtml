@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Produto";
+}
+
+<h2>Produto</h2>
+
+<div>
+    <p>@(Model.Nome)</p>
+    <p>@(Model.Valor)</p>
+    <a type="button" name="btnescolha" value="delete" class="btn btn-default" href="~/Home/Deletar?Id=@Model.Id">
+        Deletar
+    </a>
+    <a type="button" name="btnescolha" value="edit" class="btn btn-default" href="~/Home/Editar?Id=@Model.Id">
+        Editar
+    </a>
+</div>
