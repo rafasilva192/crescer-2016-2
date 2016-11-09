@@ -85,52 +85,107 @@ namespace Repositorio
 
         public IList<Funcionario> BuscarPorCargo(Cargo cargo)
         {
-            throw new NotImplementedException();
+            return this.Funcionarios.Where(f => f.Cargo.Equals(cargo)).ToList();
         }
 
         public IList<Funcionario> OrdenadosPorCargo()
         {
-            throw new NotImplementedException();
+            return this.Funcionarios.OrderBy(f => f.Cargo.Titulo).ThenBy(f => f.Nome).ToList();
         }
 
         public IList<Funcionario> BuscarPorNome(string nome)
         {
-            throw new NotImplementedException();
+            return this.Funcionarios.Where(f => f.Nome.IndexOf(nome, StringComparison.InvariantCultureIgnoreCase) >= 0).ToList();
         }        
 
         public IList<Funcionario> BuscarPorTurno(params TurnoTrabalho[] turnos)
         {
-            throw new NotImplementedException();
+            return this.Funcionarios.Where(f => turnos.Length == 0 || turnos.Contains(f.TurnoTrabalho)).ToList();
         }        
 
         public IList<Funcionario> FiltrarPorIdadeAproximada(int idade)
         {
-            throw new NotImplementedException();
-        }        
+            return this.Funcionarios.Where(f =>
+            {
+                int idadeFunc = CalcularIdade(f.DataNascimento);
+                return idadeFunc >= idade - 5 && idadeFunc <= idade + 5;
+            }).ToList();
+        }
+
+        private int CalcularIdade(DateTime dataNascimento)
+        {
+            int anos = DateTime.Now.Year - dataNascimento.Year;
+            bool mesMenor = DateTime.Now.Month < dataNascimento.Month;
+            bool mesIgualEDiaMenor = DateTime.Now.Month == dataNascimento.Month && DateTime.Now.Day < dataNascimento.Day;
+
+            if (mesMenor || mesIgualEDiaMenor)
+            {
+                anos--;
+            }
+
+            return anos;
+        }
 
         public double SalarioMedio(TurnoTrabalho? turno = null)
         {
-            throw new NotImplementedException();
+            return this.Funcionarios.Where(f => !turno.HasValue || f.TurnoTrabalho == turno.Value)
+                                    .Average(f => f.Cargo.Salario);
         }
 
         public IList<Funcionario> AniversariantesDoMes()
         {
-            throw new NotImplementedException();
+            int mesAtual = DateTime.Now.Month;
+            return this.Funcionarios.Where(f => f.DataNascimento.Month == mesAtual).ToList();
         }
 
         public IList<dynamic> BuscaRapida()
         {
-            throw new NotImplementedException();
+            return this.Funcionarios
+                        .Select(f => (dynamic)new
+                        {
+                            NomeFuncionario = f.Nome,
+                            TituloCargo = f.Cargo.Titulo
+                        })
+                        .ToList();
+
+            //return this.Funcionarios.Select(f =>
+            //{
+            //    dynamic r = new ExpandoObject();
+            //    r.NomeFuncionario = f.Nome;
+            //    r.TituloCargo = f.Cargo.Titulo;
+            //    return r;
+            //}).ToList();
         }
 
         public IList<dynamic> QuantidadeFuncionariosPorTurno()
         {
-            throw new NotImplementedException();
+            return this.Funcionarios.GroupBy(funcionario => funcionario.TurnoTrabalho)
+                                    .OrderBy(turno => turno.Key)
+                                    .Select(grupo =>
+                                        (dynamic)new
+                                        {
+                                            Turno = grupo.Key,
+                                            Quantidade = grupo.Count()
+                                        }).ToList();
         }
 
         public dynamic FuncionarioMaisComplexo()
         {
-            throw new NotImplementedException();
+            CultureInfo ptCulture = new CultureInfo("pt-BR");
+            CultureInfo entCulture = new CultureInfo("en-US");
+
+            return this.Funcionarios
+                    .Where(f => f.Cargo.Titulo != "Desenvolvedor Júnior" && f.TurnoTrabalho != TurnoTrabalho.Tarde)
+                    .OrderByDescending(f => Regex.Replace(f.Nome, "aouieyAOUIEY", "").Length)
+                    .Select(f =>
+                    new
+                    {
+                        Nome = f.Nome,
+                        DataNascimento = f.DataNascimento.ToString("dd/MM/yyyy"),
+                        SalarioRS = f.Cargo.Salario.ToString("C", ptCulture),
+                        SalarioUS = f.Cargo.Salario.ToString("C", entCulture),
+                        QuantidadeMesmoCargo = this.Funcionarios.Count(c => c.Cargo.Equals(f.Cargo))
+                    }).First();
         }
     }
 }

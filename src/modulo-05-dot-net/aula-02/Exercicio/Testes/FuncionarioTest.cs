@@ -12,8 +12,6 @@ namespace Testes
     public class FuncionarioTest
     {        
         private const string CARGO_DESENVOLVEDOR_JUNIOR = "Desenvolvedor Júnior";
-        private const string CARGO_DESENVOLVEDOR_PLENO = "Desenvolvedor Pleno";
-        private const string CARGO_DESENVOLVEDOR_SENIOR = "Desenvolvedor Sênior";
 
         //BuscarPorCargo
         [TestMethod]

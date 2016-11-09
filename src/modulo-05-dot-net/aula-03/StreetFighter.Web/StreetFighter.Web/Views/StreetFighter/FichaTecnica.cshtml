@@ -1,0 +1,11 @@
+﻿@model StreetFighter.Web.Models.FichaTecnicaModel
+@{
+    ViewBag.Title = "Ficha Técnica";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p>
+    <strong>Nome: </strong>@Model.Nome
+</p>
+
+@Html.Partial("_Enquete")

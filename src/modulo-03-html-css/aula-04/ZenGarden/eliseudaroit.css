@@ -1,0 +1,152 @@
+body {
+  background: url(https://s-media-cache-ak0.pinimg.com/originals/66/98/bc/6698bc2d735eaf119fa95ec03cb7a1e6.jpg) center top no-repeat;
+  background-attachment: fixed;
+  font-family: arial;
+  font-size: 20px;
+}
+
+/* Escondendo as propriedades de Digimon */
+header h1 span:nth-of-type(1) {
+  display: none;
+}
+
+.historia-digimon {
+  display: none;
+}
+
+.personagens > h2:nth-of-type(2) {
+  display: none;
+}
+
+.personagens > ul:nth-of-type(2) {
+  display: none;
+}
+
+.digiescolhidos {
+  display: none;
+}
+
+footer {
+  display: none;
+}
+
+/* Header */
+header span:nth-child(2) {
+	font-size: 40pt;
+}
+
+header {
+	color: rgb(0, 0, 0);
+	text-align: center;
+	margin: 20px auto;
+}
+
+header > nav {
+  text-align: left;
+}
+
+/* Navbar */
+nav {
+    height: 100%;
+    width: 250px;
+    position: absolute;;
+    top: 150;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+nav > a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.5s;
+}
+
+nav > a:hover {
+    color: #f1f1f1;
+}
+
+.autenticacao {
+  position: absolute;
+  top: 0;
+}
+
+.autenticacao > a {
+  padding-right: 80px;
+}
+
+/* Pokemon */
+.historia-pokemon {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 150px;
+  left: 350px;
+  padding: 20px;
+  width: 800px;
+  height: 330px;
+  color: #818181;
+  text-align: justify;
+  overflow: auto;
+}
+
+.historia-pokemon a {
+  color: #AFB7AA;
+  text-decoration: none;
+}
+
+.personagens {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 520px;
+  left: 350px;
+  padding: 20px;
+  width: 400px;
+  height: 600px;
+  color: #818181;
+  text-align: justify;
+  overflow: auto;
+}
+
+.treinadores-pokemon {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 520px;
+  left: 790px;
+  padding: 20px;
+  width: 360px;
+  height: 600px;
+  color: #818181;
+  text-align: justify;
+  overflow: auto;
+}
+
+ul > li {
+  list-style-type: none;
+  cursor: pointer;
+	transition: 0.5s;
+}
+
+ul > li:hover {
+  color: #f1f1f1;
+}
+
+/* ScrollBar */
+::-webkit-scrollbar
+{
+  width: 12px;
+}
+
+::-webkit-scrollbar-track
+{
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: rgba(0, 0, 0, 0.5);
+}

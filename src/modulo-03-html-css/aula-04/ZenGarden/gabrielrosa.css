@@ -1,0 +1,180 @@
+header{
+    position: relative;
+    top:170px;
+}
+
+body{
+    width: 220px;
+    background: linear-gradient(180deg, rgb(235, 210, 0) 0, rgb(235, 210, 0) 4%, rgba(234,165,60,1) 49%, rgba(232,126,12,1) 75%, rgba(232,126,12,1) 90%, rgba(232,126,12,1) 96%, rgba(232,126,12,1) 100%), rgb(235, 210, 0);
+    background-attachment: fixed;
+    font-size: medium;
+    color: rgba(255,255,0,1);
+}
+
+a{
+  text-decoration: none;
+}
+
+nav a{
+    white-space: nowrap;
+    display: table-cell;
+    position: relative;
+    cursor: pointer;
+    padding: 0 30px;
+    border: 1px solid;
+    top: -110px;
+    border-radius: 3px;
+    font: normal 100%/normal Arial, Helvetica, sans-serif;
+    color: rgb(7, 48, 151);
+    text-align: center;
+    background: linear-gradient(172deg, rgba(255,255,0,1) 0, rgba(255,255,0,1) 5%, rgba(255,255,0,1) 25%, rgba(255,255,0,1) 51%, rgba(235,70,0,1) 89%, rgba(235,70,0,1) 100%), rgba(0,0,0,1);
+    font-size: 30px;
+    box-shadow: 0 1px 0 0 rgba(255,255,255,0.298039) inset, 0 -1px 1px 0 rgba(255,255,255,0.14902) inset, 2px 7px 0 0 rgb(7, 48, 151) , 0 8px 3px 0 rgba(0,0,0,0.2) ;
+    transition: all 0.1s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+
+nav a:hover {
+    background: linear-gradient(172deg, rgba(255,255,0,1) 0, rgba(255,255,0,1) 5%, rgba(255,255,0,1) 25%, rgba(255,255,0,1) 68%, rgba(255,255,0,1) 76%, rgba(235,70,0,1) 94%, rgba(235,70,0,1) 100%), rgba(0,0,0,1);
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-size: auto auto;
+    font-size: 31px;
+    box-shadow: 0 1px 0 0 rgba(255,255,255,0.298039) inset, 0 -1px 1px 0 rgba(255,255,255,0.14902) inset, 5px 7px 0 0 rgb(7, 48, 151) , 0 8px 3px 0 rgba(0,0,0,0.2) ;
+}
+
+nav a:active {
+    background: linear-gradient(172deg, rgba(255,255,0,1) 0, rgba(255,255,0,1) 6%, rgba(255,255,0,1) 15%, rgba(235,70,0,1) 45%, rgba(235,70,0,1) 70%, rgba(235,70,0,1) 100%), rgb(255, 255, 255);
+    box-shadow: 0 1px 0 0 rgba(255,255,255,0.298039) inset, 0 -1px 1px 0 rgba(255,255,255,0.14902) inset;
+    transition: all 50ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+
+.autenticacao{
+    position: relative;
+    top:-400px;
+    left: 1000px;
+}
+
+.logo{
+    margin: 0px;
+    position: relative;
+    background-image: url(http://i64.tinypic.com/2vrs9om.png);
+    background-repeat: no-repeat;
+    width:400px;
+    height: 200px;
+    top:-340px;
+    left: 0px;
+}
+
+header h1:first-of-type{
+    font: normal 70px/1 "VT323", Helvetica, sans-serif;
+    color: rgba(255,255,0,1);
+    text-shadow: 2px 3px 0 rgba(235,70,0,1) ;
+    height: 100px;
+    width: 1300px;
+}
+
+.historia-digimon h1{
+    position: relative;
+    top:-110px;
+    padding: 0px;
+    border: none;
+    font: normal 50px/1 "VT323", Helvetica, sans-serif;
+    color: rgba(255,255,0,1);
+    text-align: left;
+    text-overflow: ellipsis;
+    text-shadow: 2px 3px 0 rgba(235,70,0,1) ;
+    height: 55px;
+    width: 1300px;
+}
+
+.historia-digimon p{
+    position: relative;
+    top:-110px;
+    height: 55px;
+    width: 1300px;
+    color: rgb(7, 48, 151);
+    text-align: left;
+    text-overflow: clip;
+    font-size: larger;
+}
+
+.personagens {
+  position: relative;
+  top: -70px;
+}
+
+.personagens h2:last-of-type{
+  font-size: x-large;
+  color: rgba(255,255,0,1);
+  text-align: left;
+  text-overflow: ellipsis;
+  text-shadow: 2px 3px 0 rgba(235,70,0,1) ;
+}
+
+.personagens ul:last-child{
+    margin: 10px 0px 20px 10px;
+    width: 157px;
+    height: 300px;
+    text-align: 20px;
+    font-size: medium;
+}
+
+.whatever {
+  width: 490px;
+  height: 455px;
+  background-image: url("http://i64.tinypic.com/1pt47n.jpg");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 700px;
+  top: 620px;
+}
+
+.digiescolhidos {
+  position: relative;
+  top:-30px;
+}
+
+.digiescolhidos h3:first-of-type{
+  font-size: x-large;
+  color: rgba(255,255,0,1);
+  text-align: left;
+  text-overflow: ellipsis;
+  text-shadow: 2px 3px 0 rgba(235,70,0,1) ;
+}
+
+.digiescolhidos ul:last-of-type{
+    margin: 10px 0px 20px 10px;
+    width: 157px;
+    height: 300px;
+    font-size: medium;
+}
+
+.digiescolhidos li{
+  width: 194px;
+  font-size: medium;
+}
+
+footer{
+  width: 221px;
+  font-size: smaller;
+}
+
+header span:last-of-type{
+    display: none;
+}
+
+.historia-pokemon:first-of-type{
+    display: none;
+}
+
+.personagens h2:first-of-type{
+    display: none;
+}
+
+.treinadores-pokemon{
+    display: none;
+}
+
+.personagens ul:first-of-type{
+    display: none;
+}

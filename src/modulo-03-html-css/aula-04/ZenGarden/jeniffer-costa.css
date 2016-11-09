@@ -1,0 +1,345 @@
+body{
+    background-image: url(https://s11.postimg.org/h3x32w2hv/bulbasaur_pokemon_drawing.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+    height: 1300px;
+}
+header > h1{
+    display: none;
+}
+header{
+    display: inline;
+}
+.logo{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/640px-International_Pok%C3%A9mon_logo.svg.png);
+    width: 1300px;
+    height: 400px;
+    margin-top: -160px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.autenticacao > a, nav > a{
+  margin: 0 0 0 30px;
+  color: black;
+  font: bold;
+  cursor: pointer;  
+}
+.autenticacao{
+    font-size: 0px;
+    background-image: url(http://addictedtopokemongo.com/pokemongohack/img/icon-header.png);
+    background-repeat: no-repeat;
+    width: 192px;
+    height: 194px;
+    margin: 76px 1070px 79px 957px;
+    border-radius: 117px;
+}
+
+nav:nth-child(2){
+  margin-top: -132;
+  text-align: center;
+  vertical-align: middle;
+  background-color:rgba(230,230,230,0.6);
+  height: 4px;
+  padding: 34px;
+  padding-bottom: 35;
+  font-size: 20px;
+  color: black;
+  width: auto;
+  cursor: pointer;
+  font-weight: 900;
+  
+}
+
+a:visited{
+   color: black;
+    text-decoration:none; 
+}
+a:link{
+    color: black;
+    text-decoration:none;
+}
+
+.historia-pokemon{
+    padding: 30px;
+    width: 1000px;
+    background-color:rgba(230,230,230,0.6);
+    margin: 100px auto;
+    text-align: justify;
+    border-radius: 15px;
+    font-size: 17px;
+}
+.personagens{
+    padding: 15px;
+    background-color:rgba(230,230,230,0.6);
+    margin: -39px 150px 15px 150px;
+    text-align: justify;
+    border-radius: 15px;
+    overflow-y: scroll;
+    width: 470px;
+    height: 500px;
+    border-radius: 15px;
+    position: absolute;
+    
+}
+
+.treinadores-pokemon{
+  margin-left: 700px;
+  margin: -39px 700px;
+  padding: 15px;
+  background-color:rgba(230,230,230,0.6);
+  text-align: justify;
+  border-radius: 15px;
+  overflow-y: scroll;
+  width: 470px;
+  height: 500px;
+  border-radius: 15px;
+  position: absolute;
+}
+
+.personagens > ul{
+    list-style:none;
+    cursor: pointer;
+}
+.treinadores-pokemon > ul{
+    list-style:none;
+    cursor: pointer;
+}
+.personagens > ul > li{
+background-repeat:no-repeat;
+list-style-image: url(https://pokemonrerdthunder.files.wordpress.com/2011/04/pokeball.png);
+font-size: 20px;
+ padding-bottom: 10px;
+  margin-bottom:10px;
+}
+
+.treinadores-pokemon> ul > li{
+background-repeat:no-repeat;
+list-style-image: url(https://pokemonrerdthunder.files.wordpress.com/2011/04/pokeball.png);
+font-size: 20px;
+ padding-bottom: 10px;
+  margin-bottom:10px;
+}
+h3{
+    font-size: 25px;
+}
+
+footer{
+  position: absolute;
+  bottom: -650;
+  text-align: right;
+}
+
+.historia-digimon{
+    display: none;
+}
+
+.treinadores-pokemon li:first-child:hover:after{
+content: url(http://vignette2.wikia.nocookie.net/pokemonshow/images/c/c2/Ash_Ketchum_BW.png/revision/latest?cb=20110128170608&path-prefix=pt-br);
+display: block;
+position: absolute;
+left: 250px;
+}
+
+.treinadores-pokemon li:nth-of-type(2):hover:after{
+content: url(https://upload.wikimedia.org/wikipedia/pt/b/b1/MistyEP.png);
+display: block;
+position: absolute;
+left: 250px;
+}
+
+.treinadores-pokemon li:nth-of-type(3):hover:after{
+content: url(https://upload.wikimedia.org/wikipedia/en/7/71/DP-Brock.png);
+display: block;
+position: absolute;
+left: 250px;
+top: 80px;
+}
+
+.treinadores-pokemon li:nth-of-type(4):hover:after{
+content: url(http://cdn.bulbagarden.net/upload/e/e1/TraceyEP.png);
+display: block;
+position: absolute;
+left: 250px;
+top: 150px;
+}
+
+.treinadores-pokemon li:nth-of-type(5):hover:after{
+content: url(http://vignette2.wikia.nocookie.net/es.pokemon/images/b/b5/May.png/revision/latest/scale-to-width-down/200?cb=20120305164046);
+display: block;
+position: absolute;
+left: 250px;
+top: 90px;
+}
+
+.treinadores-pokemon li:nth-of-type(6):hover:after{
+content: url(http://www.p-pokemon.com/anime/perso11.gif);
+display: block;
+position: absolute;
+left: 250px;
+top: 150px;
+}
+
+.treinadores-pokemon li:nth-of-type(7):hover:after{
+content: url(http://cdn.bulbagarden.net/upload/b/bf/Dawn_DP_2.png);
+display: block;
+position: absolute;
+left: 250px;
+top: 150px;
+}
+
+.treinadores-pokemon li:nth-of-type(8):hover:after{
+content: url(http://cdn.bulbagarden.net/upload/thumb/9/97/IrisBW.png/150px-IrisBW.png);
+display: block;
+position: absolute;
+left: 250px;
+top: 150px;
+}
+
+.treinadores-pokemon li:nth-of-type(9):hover:after{
+content: url(https://media.pocketmonsters.net/imageboard/66/12993146930050.png);
+display: block;
+position: absolute;
+left: 250px;
+top: 130px;
+}
+
+.treinadores-pokemon li:nth-of-type(10):hover:after{
+content: url(http://static3.wikia.nocookie.net/__cb20130928235052/p__/protagonist/images/b/b5/Clemont_XY.png);
+display: block;
+position: absolute;
+left: 250px;
+top: 130px;
+}
+
+.treinadores-pokemon li:nth-of-type(11):hover:after{
+content: url(http://3.bp.blogspot.com/-i5UsC1gZ62I/VL71O2kKULI/AAAAAAAAE60/Evgu250xeZw/s1600/Bonnie_XY_series.png);
+display: block;
+position: absolute;
+left: 250px;
+top: 130px;
+}
+
+.treinadores-pokemon li:nth-of-type(12):hover:after{
+content: url(http://i.cdn.turner.com/v5cache/CARTOON/site/Images/i78/poks17_serena_174x252.png);
+display: block;
+position: absolute;
+left: 250px;
+top: 150px;
+}
+
+.personagens li:first-child:hover:after{
+content: url(http://www.riogameplay.com.br/wp-content/uploads/2016/07/dsc444444444444444444444444.png);
+display: block;
+position: absolute;
+left: 250px;
+top: 150px;
+}
+
+.personagens li:nth-of-type(2):hover:after{
+content: url(https://upload.wikimedia.org/wikipedia/vi/4/44/Ivysaur_002.png);
+display: block;
+position: absolute;
+left: 200px;
+top: 110px;
+}
+
+.personagens li:nth-of-type(3):hover:after{
+content: url(http://vignette2.wikia.nocookie.net/virtuadopt/images/b/be/Venusaur.png/revision/latest?cb=20111216215214);
+display: block;
+position: absolute;
+left: 200px;
+top: 150px;
+}
+
+.personagens li:nth-of-type(4):hover:after{
+content: url(http://wiki.pdod.net/view/images/5/56/Charmander.png);
+display: block;
+position: absolute;
+left: 200px;
+top: 150px;
+}
+
+.personagens li:nth-of-type(5):hover:after{
+content: url(http://static.pokemonpets.com/images/monsters-images-240-240/5-Charmeleon.png);
+display: block;
+position: absolute;
+left: 200px;
+top: 150px;
+}
+.personagens li:nth-of-type(6):hover:after{
+content: url(http://vignette2.wikia.nocookie.net/dragons/images/9/95/Charizard.png/revision/latest?cb=20111122232530);
+display: block;
+position: absolute;
+left: 200px;
+top: 150px;
+}
+.personagens li:nth-of-type(7):hover:after{
+content: url(http://pokequest.neocities.org/img/Squirtle.png);
+display: block;
+position: absolute;
+left: 200px;
+top: 150px;
+}
+.personagens li:nth-of-type(8):hover:after{
+content: url(http://pokemon3d.net/wiki/images/d/d7/Wartortle.png);
+display: block;
+position: absolute;
+left: 200px;
+top: 150px;
+}
+.personagens li:nth-of-type(9):hover:after{
+content: url(https://upload.wikimedia.org/wikipedia/en/4/45/Pok%C3%A9mon_Blastoise_art.png);
+display: block;
+position: absolute;
+left: 200px;
+top: 150px;
+}
+.personagens li:nth-of-type(10):hover:after{
+content: url(http://vignette1.wikia.nocookie.net/pokepediabr/images/5/5d/010Caterpie.png/revision/latest?cb=20130518183621&path-prefix=pt-br);
+display: block;
+position: absolute;
+left: 200px;
+top: 150px;
+}
+.personagens li:nth-of-type(11):hover:after{
+content: url(http://cdn.bulbagarden.net/upload/thumb/c/cd/011Metapod.png/250px-011Metapod.png);
+display: block;
+position: absolute;
+left: 200px;
+top: 150px;
+}
+.personagens li:nth-of-type(12):hover:after{
+content: url(http://vignette2.wikia.nocookie.net/virtuadopt/images/9/96/Butterfree.png/revision/latest?cb=20111229004533);
+display: block;
+position: absolute;
+left: 200px;
+top: 150px;
+}
+.personagens li:nth-of-type(13):hover:after{
+content: url(http://vignette1.wikia.nocookie.net/pokepediabr/images/5/5d/010Caterpie.png/revision/latest?cb=20130518183621&path-prefix=pt-br);
+display: block;
+position: absolute;
+left: 200px;
+top: 150px;
+}
+
+
+header h1 span:nth-child(1) {  
+   display: none;  
+}
+
+.personagens h2:nth-of-type(2) {
+    display: none;
+}
+
+.personagens ul:nth-of-type(2){
+   display: none;   
+}
+.digiescolhidos{
+    display: none;
+}

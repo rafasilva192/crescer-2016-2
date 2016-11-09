@@ -1,0 +1,75 @@
+﻿@model ExemploMVC.Models.AlunosModel
+@{
+    ViewBag.Title = "Título da Página no Navegador";
+}
+
+<h2>Exemplos Razor</h2>
+
+lorem ipsum dolore sit amet
+
+<br>
+<br>
+<br>
+
+@{ 
+    var script = "<script>console.log('Hello!');</script>";
+
+    var alunos = new List<string>()
+    {
+        "Henrique Mentz",
+        "Henrique Ostermann",
+        "Gabriel Rosa",
+        "Gabriel Henz",
+        "Leonardo ALmeida",
+        "Mateus Teixeira",
+        "Nunes"
+    };
+
+    if (DateTime.Now.Day == 31)
+    {
+        <h1>Tá acabando o mês hein!</h1>
+        <p>Chega dia 5 duma vez</p>
+    }
+}
+
+<br>
+<br>
+<br>
+
+<p>@DateTime.Now.ToString("dd/MM/yy")</p>
+
+<ul style="background: yellow;">
+    @foreach (var aluno in alunos)
+    {
+        <li>@(aluno == "Nunes" ? "ILUMINATTI" : aluno)</li>
+    }
+</ul>
+
+@if (DateTime.Now.Year == 2016)
+{
+    @:2016!
+    <text>2016!!</text>
+}
+
+<br>
+
+<p>blabla</p>
+
+<br>
+
+fabriciorissetto@gmail.com
+
+<br>
+
+@@
+
+<br>
+
+@Html.Raw(script)
+
+<ul style="background: yellowgreen;">
+    @foreach (var aluno in Model.ListaCompleta)
+    {
+        <li>@aluno</li>
+    }
+</ul>

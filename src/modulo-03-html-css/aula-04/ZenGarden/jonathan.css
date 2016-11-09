@@ -1,0 +1,870 @@
+@font-face {
+    font-family: 'pokemon_gbregular';
+    src: url('gb/pokemon_gb-webfont.woff2') format('woff2'),
+         url('gb/pokemon_gb-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'webfontregular';
+    src: url('pokemon_solid-webfont.woff2') format('woff2'),
+         url('pokemon_solid-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/*Remover tudo sobre DIGIMON*/
+h1 > span:first-of-type{
+    display: none;
+}
+
+.historia-digimon{
+    display: none;
+}
+
+.personagens > h2:last-of-type, ul:last-of-type{
+    display: none;
+}
+
+.treinadores-pokemon > ul{
+    display: block;
+}
+
+.digiescolhidos > h3 {
+    display: none;
+}
+
+/*ESTILIZAR*/
+
+h1 > span:last-of-type{
+    font-family: webfontregular;
+    color: #f1c40f;
+    transition: 2s;
+    position: absolute;
+    left: 202px;
+    top: 33px;
+}
+
+
+h1 > span:last-of-type:hover{
+    font-size: 200px;
+    left: -132px;
+    top: -273px;
+    background: url(http://www.kineo.com/m/0/pokemon-go-blog-banner.png) no-repeat;
+    border-radius: 40px;
+    transition: 2s;
+}
+
+header > h1:first-of-type{
+    font-family: pokemon_gbregular;
+    position: relative;
+    margin-top: 300px;
+    margin-left: 380px;
+    margin-bottom: 340px;
+}
+
+header > nav{
+    position: absolute;
+    display: inline-block;
+    border: solid 1px;
+    top: 10px;
+    height: 45px;
+    width: 135px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-family: pokemon_gbregular;
+}
+
+header > nav > a{
+    font-family: pokemon_gbregular;
+    padding: 4px;
+}
+
+nav {
+    border: solid 1px;
+}
+
+nav > a > span{
+    margin-left: 35px;
+}
+
+.whatever{
+    width: 320px;
+    height: 300px;
+    border: solid 1px;
+    margin-top: 10px;
+    margin: auto;
+    background: url(http://ocremix.org/files/images/games/gb/8/pokemon-red-version-gb-title-73633.jpg) no-repeat;
+}
+
+.historia-pokemon{
+    width: 500px;
+    margin: auto;
+    text-align: justify;
+}
+
+.historia-pokemon > h1{
+    font-family: pokemon_gbregular;
+}
+
+.content{
+    margin: auto;
+    width: 500px;
+}
+
+body{
+    background: url(http://vignette2.wikia.nocookie.net/mcleodgaming/images/d/d8/MissingNo..png/revision/latest?cb=20131108185400) no-repeat;
+}
+
+.content > .personagens {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    border: solid 1px;
+    overflow-y: scroll;
+    margin-left: 100px;
+}
+
+.content > .treinadores-pokemon{
+    margin-top: 30px;
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    border: solid 1px;
+    margin-left: 100px;
+}
+
+.personagens > ul{
+    list-style-type: none;
+}
+
+.treinadores-pokemon > ul{
+    list-style-type: none;
+}
+
+.personagens > ul::first-of-type{
+    margin: auto;
+}
+
+.personagens > .treinadores-pokemon > ul{
+     list-style: none;
+}
+
+footer{
+    font-family: pokemon_gbregular;
+    margin: auto;
+    width: 600px;
+    margin-top:20px;
+}
+
+.content > .treinadores-pokemon > ul > li:hover:first-of-type:after{
+    content: url(http://i.imgur.com/BqMrQbW.png);
+    position: absolute;
+    padding-left: 20px;
+}
+
+.content > .treinadores-pokemon > ul > li:hover:nth-of-type(2):after{
+    content: url(http://i.imgur.com/FhRUyK4.png);
+    position: absolute;
+    padding-left: 75px;
+}
+
+.content > .treinadores-pokemon > ul > li:hover:nth-of-type(3):after{
+    content: url(http://i.imgur.com/RSNbwnu.gif);
+    position: absolute;
+    padding-left: 75px;
+}
+
+.content > .treinadores-pokemon > ul > li:hover:nth-of-type(4):after{
+    content: url(http://i.imgur.com/yQsv1G7.png);
+    position: absolute;
+    padding-left: 20px;
+}
+
+.content > .treinadores-pokemon > ul > li:hover:nth-of-type(5):after{
+    content: url(http://cdn.bulbagarden.net/upload/8/8e/Spr_3r_000.png);
+    position: absolute;
+    padding-left: 75px;
+}
+
+.content > .treinadores-pokemon > ul > li:hover:nth-of-type(6):after{
+    content: url(http://cdn.bulbagarden.net/upload/8/8e/Spr_3r_000.png);
+    position: absolute;
+    padding-left: 75px;
+}
+
+.content > .treinadores-pokemon > ul > li:hover:nth-of-type(7):after{
+    content: url(http://cdn.bulbagarden.net/upload/8/8e/Spr_3r_000.png);
+    position: absolute;
+    padding-left: 75px;
+}
+
+.content > .treinadores-pokemon > ul > li:hover:nth-of-type(8):after{
+    content: url(http://cdn.bulbagarden.net/upload/8/8e/Spr_3r_000.png);
+    position: absolute;
+    padding-left: 75px;
+}
+
+.content > .treinadores-pokemon > ul > li:hover:nth-of-type(9):after{
+    content: url(http://cdn.bulbagarden.net/upload/8/8e/Spr_3r_000.png);
+    position: absolute;
+    padding-left: 75px;
+}
+
+.content > .treinadores-pokemon > ul > li:hover:nth-of-type(10):after{
+    content: url(http://cdn.bulbagarden.net/upload/8/8e/Spr_3r_000.png);
+    position: absolute;
+    padding-left: 75px;
+}
+
+.content > .treinadores-pokemon > ul > li:hover:nth-of-type(11):after{
+    content: url(http://cdn.bulbagarden.net/upload/8/8e/Spr_3r_000.png);
+    position: absolute;
+    padding-left: 75px;
+}
+
+.content > .treinadores-pokemon > ul > li:hover:nth-of-type(12):after{
+    content: url(http://cdn.bulbagarden.net/upload/8/8e/Spr_3r_000.png);
+    position: absolute;
+    padding-left: 75px;
+}
+
+.content > .personagens > ul > li:hover:before{
+    content: url(http://cdn.bulbagarden.net/upload/8/8e/Spr_3r_000.png);
+}
+
+.content > .personagens > ul > li:first-of-type:active:before{
+    content: url(http://cdn.bulbagarden.net/upload/a/a3/Spr_1b_001.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(2):active:before{
+    content: url(http://pldh.net/media/pokemon/gen1/redblue/002.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(3):active:before{
+    content: url(https://img.pokemondb.net/sprites/red-blue/normal/venusaur-color.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(4):active:before{
+    content: url(https://img.pokemondb.net/sprites/firered-leafgreen/normal/charmander.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(5):active:before{
+    content: url(https://img.pokemondb.net/sprites/red-blue/normal/charmeleon-color.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(6):active:before{
+    content: url(http://cdn.bulbagarden.net/upload/c/cc/Spr_2g_006.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(7):active:before{
+    content: url(http://cdn.bulbagarden.net/upload/4/4c/Spr_2s_007.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(8):active:before{
+    content: url(http://www.poke-amph.com/frlg/sprites/large/008.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(9):active:before{
+    content: url(http://cdn.bulbagarden.net/upload/c/c8/Spr_2g_009.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(10):active:before{
+    content: url(http://cdn.bulbagarden.net/upload/5/5a/Spr_1b_010.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(11):active:before{
+    content: url(http://cdn.bulbagarden.net/upload/9/9e/Spr_3f_011.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(12):active:before{
+    content: url(http://cdn.bulbagarden.net/upload/c/c7/Spr_3f_012.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(13):active:before{
+    content: url(https://img.pokemondb.net/sprites/firered-leafgreen/shiny/weedle.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(14):active:before{
+    content: url(http://cdn.bulbagarden.net/upload/0/02/Spr_3f_014.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(15):active:before{
+    content: url(https://img.pokemondb.net/sprites/red-blue/normal/beedrill-color.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(16):active:before{
+    content: url(https://img.pokemondb.net/sprites/black-white/normal/pidgey.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(17):active:before{
+    content: url(http://cdn.bulbagarden.net/upload/e/e5/Spr_3f_017.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(18):active:before{
+    content: url(http://cdn.bulbagarden.net/upload/1/14/Spr_3f_018.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(19):active:before{
+    content: url(https://img.pokemondb.net/sprites/firered-leafgreen/normal/rattata.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(20):active:before{
+    content: url(https://img.pokemondb.net/sprites/red-blue/normal/raticate-color.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(21):active:before{
+    content: url(https://img.pokemondb.net/sprites/red-blue/normal/spearow-color.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(22):active:before{
+    content: url(https://img.pokemondb.net/sprites/red-blue/normal/fearow-color.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(23):active:before{
+    content: url(http://frentebatalla.com/imagenes/oro-plata/sprites/plata/pokemon/frente/023.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(24):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/024.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(25):active:before{
+    content: url(http://orig06.deviantart.net/d49b/f/2010/230/a/b/pikachu_pokemon_yellow_sprite_by_xxverdanaxx.gif);
+}
+
+.content > .personagens > ul > li:nth-of-type(26):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/026.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(27):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/027.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(28):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/028.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(29):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/029.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(30):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/030.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(31):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/031.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(32):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/032.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(33):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/033.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(34):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/034.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(35):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/035.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(36):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/036.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(37):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/037.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(38):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/038.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(39):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/039.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(40):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/040.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(41):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/041.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(42):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/042.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(43):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/043.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(44):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/044.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(45):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/045.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(46):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/046.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(47):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/047.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(48):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/048.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(49):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/049.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(50):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/050.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(51):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/051.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(52):active:before{
+    content: url(https://img.pokemondb.net/sprites/red-blue/normal/meowth-color.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(53):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/053.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(54):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/054.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(55):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/055.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(56):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/056.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(57):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/057.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(58):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/058.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(59):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/059.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(60):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/060.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(61):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/061.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(62):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/062.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(63):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/063.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(64):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/064.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(65):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/065.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(66):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/066.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(67):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/067.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(68):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/068.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(69):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/069.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(70):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/070.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(71):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/071.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(72):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/072.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(73):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/073.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(74):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/074.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(75):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/075.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(76):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/076.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(77):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/077.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(78):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/078.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(79):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/079.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(80):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/080.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(81):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/081.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(82):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/082.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(83):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/083.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(84):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/084.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(85):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/085.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(86):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/086.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(87):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/087.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(88):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/088.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(89):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/089.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(90):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/090.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(91):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/091.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(92):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/092.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(93):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/093.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(94):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/094.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(95):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/095.png);
+}
+
+
+
+.content > .personagens > ul > li:nth-of-type(96):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/096.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(97):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/097.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(98):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/098.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(99):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/099.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(100):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/100.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(101):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/101.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(102):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/102.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(103):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/103.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(104):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/104.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(105):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/105.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(106):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/106.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(107):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/107.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(108):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/108.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(109):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/109.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(110):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/110.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(111):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/111.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(112):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/112.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(113):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/113.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(114):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/114.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(115):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/115.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(116):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/116.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(117):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/117.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(118):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/118.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(119):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/119.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(120):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/120.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(121):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/121.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(122):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/122.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(123):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/123.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(124):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/124.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(125):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/125.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(126):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/126.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(127):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/127.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(128):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/128.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(129):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/129.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(130):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/130.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(131):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/131.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(132):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/132.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(133):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/133.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(134):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/134.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(135):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/135.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(136):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/136.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(137):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/137.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(138):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/138.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(139):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/139.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(140):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/140.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(141):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/141.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(142):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/142.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(143):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/143.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(144):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/144.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(145):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/145.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(146):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/146.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(147):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/147.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(148):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/148.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(149):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/149.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(150):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/150.png);
+}
+
+.content > .personagens > ul > li:nth-of-type(151):active:before{
+    content: url(http://pldh.net/media/pokemon/gen3/frlg/151.png);
+}
+h2{
+    font-family: pokemon_gbregular;
+    font-size: 16px;
+}
+
+.treinadores-pokemon > h3{
+    font-family: pokemon_gbregular;
+    font-size: 14px;
+}
+
+li:hover{
+    cursor: pointer;
+}
+
+nav > a > span:hover {
+    color: white;
+    background-color: black;
+}
+
+header > nav > a:hover {
+    color: white;
+    background-color: black;
+}
+
+

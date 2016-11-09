@@ -1,0 +1,340 @@
+﻿body{
+	background-image: url('https://uploaddeimagens.com.br/imagens/pokemon_raichu_1920x1080_wallpaper_wallpaper_hd_2560x1440_www-paperhi-com-jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow-x: hidden;
+	background-attachment: fixed;
+	font-family: Arial;
+	margin: 0;
+}
+header h1:first-child{
+	display: none;
+}
+.historia-digimon{
+	display: none;
+}
+h2:nth-child(2){
+	display: none;
+}
+.digiescolhidos{
+	display: none;
+}
+
+nav:nth-child(2){
+	margin: 0 auto 100px auto;
+	background-color: #f8f8f8;
+
+	border-bottom: 1px #888 solid;
+	box-shadow: 0px 1px 1px #888;
+
+	width: 99%;
+	padding: 14px;
+	margin-top: 35px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+nav:nth-child(2) a{
+	text-transform: uppercase;
+	font-size: 14pt;
+	text-decoration: none;
+	color: #666;
+	font-weight: bold;
+	margin-right: 14px;
+	margin-left: 14px;
+	transition: all 0.5s;
+}
+nav:nth-child(2) a:hover{
+	color: #222;
+}
+
+.logo{
+display: inline-block;
+    width: 1153px;
+    height: 227px;
+    background-image: url(https://uploaddeimagens.com.br/images/000/759/214/full/logotipo.png?1477731701.png);
+    background-size: cover;
+    background-repeat: no-repeat;}
+header span:nth-child(2){
+	display: none;
+	font-size: 40pt;
+}
+header span:nth-child(2):after{
+	font-size: 40pt;
+}
+header{
+	color: #ffdd5e;
+	width: 1000px;
+	text-align: center;
+	margin: 20px auto 0 auto;
+}
+header h1{
+	font-size: 30pt;
+	text-shadow: 1px 1px 5px #555;
+}
+.historia-pokemon{
+	margin: 0 auto 0 auto;
+	background-color: rgba(250,250,250,.8);
+	border: 1px #1e3a61 solid;
+	border-radius: 10px;
+	width: 980px;
+	padding: 0px 0px 10px 0px;
+}
+.historia-pokemon h1
+	{
+
+    color: rgb(249, 248, 245);
+    font-size: 16pt;
+    text-transform: uppercase;
+    padding: 8px 8px 6px 8px;
+    background-color: #968013;
+    border-radius: 9px 9px 0 0;
+    margin: 0;
+    border-bottom: 1px #1e3a61 solid;
+}
+.historia-pokemon p{
+	margin: 8px 10px 10px 10px;
+}
+
+
+.content{
+	width: 980px	;
+	padding: 10px;
+	margin: 0 auto 0 auto;
+}
+.content > .personagens{
+	margin: 0 auto 0 auto;
+	background-color: rgba(189, 146, 15, 0.67);
+	border: 1px #800000 solid;
+	border-radius: 10px;
+	padding: 0px 0px 10px 0px;
+	display: inline-block;
+	width: 500px;
+	height: 360px;
+	overflow: hidden;
+	background-color: rgba(250,250,250,.8);
+}
+.content > .personagens > h2{
+    color: white;
+    font-size: 16pt;
+    text-transform: uppercase;
+    padding: 8px 8px 6px 8px;
+    background-color: #ceae51;
+    border-radius: 10px 10px 0 0;
+    margin: 0;
+    border-bottom: 1px #800000 solid;
+}
+
+.content > .personagens > ul{
+	list-style: none;
+	text-decoration: none;
+	padding: 0;
+	height: 298px;
+	margin-bottom: 300px;
+	overflow: auto;
+	width: 460px;
+    margin-left: 21px;
+}
+.content > .personagens > ul > li{
+	border: 1px#000 solid;
+	padding: 5px;
+	font-size: 13pt;
+	cursor: pointer;
+}
+.content > .personagens > ul > li:nth-of-type(2n-1){
+	background-color: #fffcb8;
+}
+.content > .personagens > ul > li:nth-of-type(2n){
+	background-color: #f9e174;
+}
+.content > .treinadores-pokemon{
+	margin: 0 auto 0 auto;
+	background-color: rgba(250,250,250,.8);
+	border: 1px #800000 solid;
+	border-radius: 10px;
+	padding: 0px 0px 10px 0px;
+	display: inline-block;
+	width: 465px;
+	background-color: rgba(250,250,250,.8);
+	float: right;
+}
+.content > .treinadores-pokemon > h3{
+	color: white;
+    font-size: 16pt;
+    text-transform: uppercase;
+    padding: 8px 8px 6px 8px;
+    background-color: rgba(189, 146, 15, 0.67);
+    border-radius: 10px 10px 0 0;
+    margin: 0;
+    border-bottom: 1px #800000 solid;
+}
+.content > .treinadores-pokemon > ul{
+	list-style: none;
+	text-decoration: none;
+	padding: 0;
+	height: 400px;
+	overflow: auto;
+	width: 180px;
+	margin-left: 20px;
+}
+.content > .treinadores-pokemon > ul > li{
+	border: 1px#000 solid;
+	padding: 5px;
+	font-size: 13pt;
+	cursor: pointer;
+	transition: 0.50s;
+}
+.content > .treinadores-pokemon > ul > li:nth-child(1):hover:after{
+	content: '';
+	position: absolute;
+	bottom: -355px;
+	right: 245px;
+	background-image: url(http://vignette3.wikia.nocookie.net/pokemonshow/images/4/41/Ash_com_a_m%C3%A3o_p_cima.png/revision/latest?cb=20110519012110&path-prefix=pt-br);
+	width: 148px;
+	height: 338px;
+	background-size: cover;
+}
+.content > .treinadores-pokemon > ul > li:nth-child(2):hover:after{
+	content: '';
+	position: absolute;
+	bottom: -365px;
+	right: 250px;
+	background-image: url('http://vignette1.wikia.nocookie.net/pokemon/images/6/63/Misty_(anime).png/revision/latest?cb=20100424105822');
+	width: 175px;
+	height: 340px;
+	background-size: cover;
+}
+.content > .treinadores-pokemon > ul > li:nth-child(3):hover:after{
+	content: '';
+	position: absolute;
+	bottom: -365px;
+	right: 235px;
+	background-image: url('https://upload.wikimedia.org/wikipedia/en/7/71/DP-Brock.png');
+	width: 155px;
+	height: 330px;
+	background-size: cover;
+}
+.content > .treinadores-pokemon > ul > li:nth-child(4):hover:after{
+	content: '';
+	position: absolute;
+	bottom: -365px;
+	right: 255px;
+	background-image: url('http://vignette1.wikia.nocookie.net/pocketmonster/images/6/6f/Tracey.png/revision/latest?cb=20160616015338&path-prefix=pt-br');
+	width: 170px;
+	height: 335px;
+	background-size: cover;
+}
+.content > .treinadores-pokemon > ul > li:nth-child(5):hover:after{
+	content: '';
+	position: absolute;
+	bottom: -365px;
+	right: 255px;
+	background-image: url('http://vignette1.wikia.nocookie.net/pokemonshow/images/3/3c/May_Anime_Artwork.png/revision/latest?cb=20110310013139&path-prefix=pt-br');
+	width: 150px;
+	height: 335px;
+	background-size: cover;
+}
+.content > .treinadores-pokemon > ul > li:nth-child(6):hover:after{
+	content: '';
+	position: absolute;
+	bottom: -345px;
+	right: 225px;
+	background-image: url('http://vignette2.wikia.nocookie.net/pokemonshow/images/3/32/Max.png/revision/latest?cb=20110521010623&path-prefix=pt-br');
+	width: 210px;
+	height: 315px;
+	background-size: cover;
+}
+.content > .treinadores-pokemon > ul > li:nth-child(7):hover:after{
+	content: '';
+	position: absolute;
+	bottom: -355px;
+	right: 215px;
+	background-image: url('http://vignette3.wikia.nocookie.net/pokemonshow/images/3/3e/Dawn2_(1).png/revision/latest?cb=20110131235749&path-prefix=pt-br');
+	width: 190px;
+	height: 340px;
+	background-size: cover;
+}
+.content > .treinadores-pokemon > ul > li:nth-child(8):hover:after{
+	content: '';
+	position: absolute;
+	bottom: -355px;
+	right: 210px;
+	background-image: url('http://vignette3.wikia.nocookie.net/scratchpad/images/2/2d/IRIS.png/revision/latest?cb=20130425223648');
+	width: 215px;
+	height: 340px;
+	background-size: cover;
+}
+.content > .treinadores-pokemon > ul > li:nth-child(9):hover:after{
+	content: '';
+	position: absolute;
+	bottom: -355px;
+	right: 210px;
+	background-image: url('http://2.bp.blogspot.com/-flMeRB1TK98/TYPjXxMVP2I/AAAAAAAABmk/cuVWx2s8cEo/s1600/Cilan%2Be%2BPansage%2B2.png');
+	width: 175px;
+	height: 345px;
+	background-size: cover;
+}
+.content > .treinadores-pokemon > ul > li:nth-child(10):hover:after{
+	content: '';
+	position: absolute;
+	bottom: -355px;
+	right: 235px;
+	background-image: url('http://img06.deviantart.net/b748/i/2015/070/c/7/smash___clemont_by_lucarioshirona-d8ldmdu.png');
+	width: 170px;
+	height: 345px;
+	background-size: cover;
+}
+.content > .treinadores-pokemon > ul > li:nth-child(11):hover:after{
+	content: '';
+	position: absolute;
+	bottom: -355px;
+	right: 230px;
+	background-image: url('http://3.bp.blogspot.com/-i5UsC1gZ62I/VL71O2kKULI/AAAAAAAAE60/Evgu250xeZw/s1600/Bonnie_XY_series.png');
+	width: 160px;
+	height: 320px;
+	background-size: cover;
+}
+.content > .treinadores-pokemon > ul > li:nth-child(12):hover:after{
+	content: '';
+	position: absolute;
+	bottom: -355px;
+	right: 245px;
+	background-image: url('http://cdn.bulbagarden.net/upload/d/d5/Serena_XY2.png');
+	width: 140px;
+	height: 335px;
+	background-size: cover;
+}
+.content > .treinadores-pokemon > ul > li:nth-of-type(2n-1){
+	background-color: #fffcb8;
+}
+.content > .treinadores-pokemon> ul > li:nth-of-type(2n){
+	background-color: #f9e174;
+}
+.content > .treinadores-pokemon > ul > li:hover{
+	background-color: #ffd100;
+}
+footer{
+	display: inline-block;
+	background-color: #ddd;
+	margin-top: 5px;
+	padding: 5px;
+	border-radius: 4px;
+}
+.autenticacao{
+	margin-top: -57px;
+}
+.autenticacao > a{
+
+	    margin: 0 2px 0 2px;
+	    font-size: 14pt;
+	    text-decoration: none;
+	    padding: 10px;
+	    background-color: #0d29de;
+	    border-radius: 6px;
+	    border: 1px solid #0e35e6;
+	    box-shadow: 1px 1px 1px #444;
+	    color: #FFF;
+	    font-weight: bold;
+}
+.autenticacao > a:hover{
+	background-color: #0b9649;
+}

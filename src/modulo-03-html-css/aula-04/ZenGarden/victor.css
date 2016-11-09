@@ -1,0 +1,251 @@
+/*
+Seletores para tirar textos de POKEMON
+*/
+h1 > span{
+
+    display: none;
+}
+
+.historia-pokemon {
+    display: none;
+}
+
+.personagens > h2:first-child{
+    display: none;
+}
+
+.personagens > ul:first-of-type{
+    display: none;
+}
+
+.treinadores-pokemon{
+    display: none;
+}
+
+/* IMAGENS PNG PARA LOGO
+
+http://orig02.deviantart.net/5e0d/f/2011/191/b/f/logo_for_spritemaster44_by_basesbytally-d3lndt9.png
+https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Digimon_Logo.svg/2000px-Digimon_Logo.svg.png
+http://wikimon.net/images/thumb/f/fd/Digivice_tri.png/200px-Digivice_tri.png
+http://i.stack.imgur.com/eRtWY.png
+https://s-media-cache-ak0.pinimg.com/originals/84/0b/83/840b835ffec2c79d438b03b87a1e968a.jpg
+
+
+IMAGEM PARA O BODY
+
+http://animeshumi.com/image/data/Other/Digimon-Season1-DVD.jpg
+
+*/
+
+/*
+Inicio do CSS
+*/
+
+body{
+    background: url(http://rpgista.com.br/wp-content/uploads/2016/07/digimon.jpg) fixed;
+    background-size: cover;
+}
+
+header{
+    height: 250px;
+    background: rgba(44, 62, 80, .5);
+    border-radius: 10px;
+    width: 100%;
+}
+
+header h1{
+    text-shadow: 2px 0px 10px #2960b9, 
+                 -2px 0px 10px #2960b9, 
+                 0px 2px 10px #2960b9, 
+                 0px -2px 10px #2960b9;
+    color: rgb(241, 196, 15);
+    font-weight: bold;
+    width: 500px;
+    font-size: 50px;
+    padding-top: 10px; 
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.logo{
+    background-image: url(http://img13.deviantart.net/92fa/i/2012/068/4/b/digimon_logo_by_urbinator17-d4s7qgp.png);
+    background-size: cover;
+    height: 160px;
+    width: 400px;
+    display: block; 
+    margin: auto;
+    z-index: 0;
+ }
+
+.autenticacao{
+    position: absolute;
+    top: 20px;
+    right: 0px;
+}
+
+nav{
+    text-align: center;
+    padding: 20px 20px;
+    margin: 20px 0;
+}
+
+nav a{
+    margin: 10px;
+    border-radius: 15px;
+    background-color: rgba(41,96,185,0.8);
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+
+}
+
+nav a:hover{
+    background-color: rgb(241, 196, 15);
+}
+
+.historia-digimon{
+    width: 900px;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(255, 255, 255, .6);
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    margin: auto auto;
+    padding-bottom: 10px;
+}
+
+.historia-digimon a{
+    color: blue;
+}
+
+.historia-digimon > h1{
+    text-shadow: 2px 0px 10px #2960b9, 
+                 -2px 0px 10px #2960b9, 
+                 0px 2px 10px #2960b9, 
+                 0px -2px 10px #2960b9;
+    color: rgb(241, 196, 15);
+    font-size: 40px;
+    text-align: center;
+    border-bottom: dashed 2px;
+    padding: 20px 20px;     
+}
+
+.historia-digimon > p{
+    padding: 20px;
+    color: black;
+    text-align: center;
+}
+
+/*LISTA DE DIGIMONS*/
+.personagens{
+    border: dashed;
+    float: left;
+    width: 400px;
+    padding: 30px;
+    text-align: center;
+    height: 500px;
+    margin: 50px;
+    margin-left: 130px;
+    
+    background-color: rgba(255, 255, 255, .9); 
+    background-image: 
+        linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+        linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.2em;
+
+}
+
+.personagens > ul {
+    padding-left: 0px;
+    height: 300px;
+}
+
+.personagens > ul > li{
+    list-style-type: none;
+    border-bottom: solid 2px;
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.personagens > h2{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.personagens > ul > li:nth-child(even){
+    background-color: rgba(0, 0, 255, .5);
+}
+
+
+
+/*LISTA DE DIGIESCOLHIDOS*/
+.digiescolhidos{
+    /*background: url(http://cdn.idigitaltimes.com/sites/idigitaltimes.com/files/styles/embed/public/2015/03/10/digimon-adventure.jpg) no-repeat;*/
+    background-size: cover;
+    background-position-x: -20px;
+    border: dashed;
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    padding: 30px;
+    margin: 50px;
+    text-align: center;
+
+
+    background-color: rgba(255, 255, 255, .9); 
+    background-image: 
+        linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+        linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.2em;
+}
+
+.digiescolhidos > ul {
+    padding-left: 0px;
+}
+
+.digiescolhidos > ul > li{
+    list-style-type: none;
+    border-bottom: solid 2px;
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.digiescolhidos > ul > li:nth-child(even){
+    background-color: rgba(0, 0, 255, .5);
+}
+
+.digiescolhidos > h2{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+footer{
+    background: rgba(44, 62, 80, .5);
+    border-radius: 10px;
+    color: rgb(241, 196, 15);
+    
+    text-shadow: 2px 0px 10px #2960b9, 
+                 -2px 0px 10px #2960b9, 
+                 0px 2px 10px #2960b9, 
+                 0px -2px 10px #2960b9;
+
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+footer:after{
+    content: "Desenvolvido por Victor Bittencourt";
+    display: block;
+}

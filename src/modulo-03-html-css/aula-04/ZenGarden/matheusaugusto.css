@@ -1,0 +1,176 @@
+@font-face {
+    font-family: 'digivolveregular';
+    src: url('pixel_digivolve-webfont.woff2') format('woff2'),
+         url('pixel_digivolve-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header h1{
+    position: absolute;
+    font-family: digivolveregular;
+    left: 322.5px;
+    position: absolute;
+    top: -25px;
+    color: #FFB34A;
+    text-shadow: 2px 2px #ff0000;
+}
+.logo{
+    width: 500px;
+    height: 100px;
+    margin: auto;
+    background-color: #666;
+    background: url('http://i.imgur.com/t8ocl0m.png') no-repeat;
+    background-size: 500px;
+}
+header h1 span:first-child{
+    display: none;
+}
+header h1 span:last-child{
+    display: none;
+}
+.historia-pokemon{
+    display: none;
+}
+.personagens > h2:first-child{
+    display: none;
+}
+.personagens > ul:nth-of-type(1){
+    display: none;
+}
+.content{
+    width: 80%;
+    margin: 10px auto 50px;
+    height: 450px;
+}
+.personagens > ul:nth-of-type(2), .digiescolhidos{
+    float: left;
+    width: 63%;
+    height: 300px;
+    margin: 10px;
+}
+
+.treinadores-pokemon > ul, .treinadores-pokemon > h3{
+    display: none;
+}
+body{
+    background: url('http://i.imgur.com/Q1MH8cy.jpg') no-repeat;
+}
+header{
+  	width: 80%;
+    margin: auto;
+  	height: 130px;
+    padding-top: 30px;
+  	position: relative;
+}
+.autenticacao{
+  	width: 100px;
+  	height: 40px;
+  	position: absolute;
+  	top: 10px;
+  	right: 10px;
+    padding: 10px;
+    background-color: rgba(133, 133, 133, 0.95);
+    border-radius: 16px;
+}
+.autenticacao a{
+    color: white;
+}
+*{
+  	text-decoration: none;
+    font-family: arial;
+}
+body > nav{
+  	width: 770px;
+    margin: auto;
+  	height: 20px;
+    padding-top: 2px;
+  	margin-top: 10px auto;
+     background-color: rgba(133, 133, 133, 0.7);
+    border: 1px solid #FFB34A;
+    border-radius: 10px;
+}
+body > nav a span{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 30px;
+    transition: 1.5s;
+}
+body > nav a span:hover{
+    color: #000;
+}
+section{
+    border-radius: 35px 15px;
+    background-color: rgba(133, 133, 133, 0.95);
+    box-shadow: 2px 2px #333;
+    color: #222;
+}
+.historia-digimon{
+  	width: 80%;
+    margin: auto;
+  	height: 200px;
+}
+.historia-digimon p{
+    margin: 10px;
+}
+.historia-digimon p span{
+    font-weight: bold;
+}
+.historia-digimon p a{
+    font-weight: bold;
+    color: black;
+    transition: 1.5s;
+}
+.historia-digimon p a:hover{
+    color: white;
+}
+.historia-digimon h1{
+    font-family: digivolveregular;
+    color: #222;
+    margin-left: 25px;
+}
+footer{
+  	width: 100%;
+  	height: 20px;
+  	background: #222;
+  	margin-top: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: black;
+    text-align: center;
+}
+.personagens{
+  	float: right;
+    margin-right: 20px;
+}
+.personagens h2{
+    font-family: digivolveregular;
+    color: #222;
+    margin-left: 25px;
+}
+.digiescolhidos h3{
+    font-family: digivolveregular;
+    color: #222;
+    margin-left: 25px;
+}
+ul{
+    list-style-image: url('http://i.imgur.com/4tLoLBi.png');
+}
+.treinadores-pokemon{
+    width: 200px;
+    height: 350px;
+    position: absolute;
+    top: 475px;
+    left: 500px;
+}
+.personagens ul li:hover{
+    color: white;
+}
+.digiescolhidos ul li:hover{
+    color: white;
+}
+.digiescolhidos > ul > li:hover .treinadores-pokemon{
+    background-color: #ccc;
+}

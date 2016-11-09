@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AulaADO.Dominio", "AulaADO.Dominio\AulaADO.Dominio.csproj", "{FD857E49-C58E-4082-B500-FEBF7E461F09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AulaADO.Repositorio", "AulaADO.Repositorio\AulaADO.Repositorio.csproj", "{5D5C2504-F4F5-4A29-B3CE-BD785F86D830}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AulaADO.App", "AulaADO.App\AulaADO.App.csproj", "{32DFA704-682C-40C6-8C77-8139FD557884}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD857E49-C58E-4082-B500-FEBF7E461F09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD857E49-C58E-4082-B500-FEBF7E461F09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD857E49-C58E-4082-B500-FEBF7E461F09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD857E49-C58E-4082-B500-FEBF7E461F09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D5C2504-F4F5-4A29-B3CE-BD785F86D830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D5C2504-F4F5-4A29-B3CE-BD785F86D830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D5C2504-F4F5-4A29-B3CE-BD785F86D830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D5C2504-F4F5-4A29-B3CE-BD785F86D830}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32DFA704-682C-40C6-8C77-8139FD557884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32DFA704-682C-40C6-8C77-8139FD557884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32DFA704-682C-40C6-8C77-8139FD557884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32DFA704-682C-40C6-8C77-8139FD557884}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

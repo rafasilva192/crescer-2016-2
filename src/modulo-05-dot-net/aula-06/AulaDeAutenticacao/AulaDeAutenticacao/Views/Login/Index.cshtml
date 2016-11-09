@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Login Index</h2>
+
+
+@using (Html.BeginForm("FazerLogin", "Login", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.TextBox("usuario", "", new { placeholder="usuario" });
+    @Html.Password("senha", "", new { placeholder = "senha" });
+    
+    <button type="submit">Entrar</button>
+}

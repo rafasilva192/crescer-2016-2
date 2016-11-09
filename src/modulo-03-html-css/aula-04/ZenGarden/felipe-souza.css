@@ -1,0 +1,239 @@
+.personagens > :last-of-type,
+.digiescolhidos,
+.historia-digimon,
+h1 > span:first-child {
+    display: none;
+}
+
+h1 > span:last-child {
+    font-family: 'Bungee', cursive;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 74px;
+    width: 100%;
+    min-width: 300px;
+    font-family: 'Pacifico', cursive;
+    background-color: #cd5241;
+    color: #ffe69c;
+    text-align: center;
+    overflow-wrap: break-word
+}
+
+nav:not(.autenticacao) {
+    position: relative;
+    top: 0;
+    left: -5%;
+    margin-top: 74px;
+    height: 40px;
+    width: 105.6%;
+    min-width: 300px;
+    font-family: 'Bungee', cursive;
+    background-color: #084152;
+    color: #ffe69c;
+    text-align: center;
+}
+
+nav:not(.autenticacao) > a:not(:first-of-type) {
+    margin-left: 9px;
+}
+
+nav:not(.autenticacao) > a {
+    height: 100%;
+    transition: color 0.3s ease;
+}
+
+nav:not(.autenticacao) > a:hover {
+    color: #cd5241;
+}
+
+.whatever {
+    position: relative;
+    margin: 0 auto;
+    top: 15px;
+    height: 30%;
+    width: 100%;
+    background-image: url(http://31.media.tumblr.com/63e10630e5216c6af8798ec870acfbbc/tumblr_n4pl0xYGuF1s3bc1no1_400.gif);
+    background-repeat: no-repeat;
+    background-size: 24.7%;
+    background-position: center;
+}
+
+.whatever:hover {
+    position: relative;
+    margin: 0 auto;
+    top: 15px;
+    height: 30%;
+    width: 85%;
+    background-image: url(http://31.media.tumblr.com/63e10630e5216c6af8798ec870acfbbc/tumblr_n4pl0xYGuF1s3bc1no1_400.gif);
+    background-repeat: no-repeat;
+    background-size: 29%;
+    background-position: center;
+    animation: evolution 15s infinite;
+    animation-timing-function: step-end;
+}
+
+@keyframes evolution {
+    0%   {
+        background-size: 29%;
+        background-image: url(http://31.media.tumblr.com/63e10630e5216c6af8798ec870acfbbc/tumblr_n4pl0xYGuF1s3bc1no1_400.gif);        
+    }
+    34%  {
+        background-size: 20%;
+        background-image: url(http://31.media.tumblr.com/5e7c202c9577d66bb0bb2a1cc049e511/tumblr_n4pl0xYGuF1s3bc1no2_400.gif);
+    }
+    67%  {
+        background-size: 18%;
+        background-image: url(http://rs260.pbsrc.com/albums/ii29/lulubelle95/Charizard-1.gif~c200);
+    }
+}
+
+.autenticacao {
+    font-family: 'Bungee', cursive;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.autenticacao > a {
+    position: relative;
+    margin-right: 30px;
+    transition: color 0.3s ease;
+}
+
+.autenticacao > a:hover {
+    color: #084152;
+}
+
+body {
+    background-color: #eeb45a;
+}
+
+section {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 80%;
+    margin: 0 10%;
+    background-color: rgba(238, 222, 123, 0.8);
+    border-radius: 10px;
+}
+
+section:last-of-type {
+    margin-bottom: 5%;
+}
+
+.historia-pokemon > h1,
+section h2,
+section h3 {
+    font-family: 'Bungee', cursive;
+    margin-left: 15px;
+    margin-bottom: -5px;
+}
+
+footer {
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    height: 3%;
+    width: 100%;
+    min-height: 40px;
+    min-width: 300px;
+    font-family: 'Bungee', cursive;
+    background-color: #cd5241;
+    color: #ffe69c;
+    text-align: center;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: #eeb45a;
+}
+
+p > a {
+    color: #084152;
+}
+
+p, li {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+    text-align: justify;
+}
+
+p:last-child, li:last-child {
+    padding-bottom: 15px;
+}
+
+p {
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+li {
+    list-style-image: url(https://cdndata.bigfooty.com/medal/362_1467858108l.jpg);
+    padding-bottom: 1px;
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-button {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #4059bd;
+  border: 19px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #084152;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #084152;
+}
+::-webkit-scrollbar-track {
+  background: #eede7b;
+  border: 28px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #eede7b;
+}
+::-webkit-scrollbar-track:active {
+  background: #eede7b;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), url(https://fonts.gstatic.com/s/robotocondensed/v13/Zd2E9abXLFGSr9G3YK2MsDAdhzWOYhqHvOZMRGaEyPo.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v7/Q_Z9mv4hySLTMoMjnk_rCfesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+  font-family: 'Bungee';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Bungee'), local('Bungee-Regular'), url(https://fonts.gstatic.com/s/bungee/v2/86NbnFpNqZ2MU9Gl0ca2YQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}

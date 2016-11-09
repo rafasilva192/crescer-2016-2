@@ -1,0 +1,42 @@
+﻿@model IEnumerable<StreetFighter.Dominio.Personagem>
+@{
+    ViewBag.Title = "Listagem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form method="get" action="~/StreetFighter/Listar" class="form-inline filtro-pesquisa">
+    <div class="form-group">
+        <input type="text" name="filtro" class="form-control" placeholder="Digite aqui o nome do personagem...">
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
+
+
+<div style="text-align: right; margin: 20px 10px;">
+    <a href="~/StreetFighter/Manter" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Novo</a>
+</div>
+
+<table class="table table-striped">
+    <thead> 
+    <tr> 
+        <th>Personagem</th>
+        <th style="width: 40px;">Editar</th> 
+        <th style="width: 40px;">Excluir</th> 
+        </tr> 
+    </thead>
+    @foreach (var personagem in Model)
+    {
+        <tr>
+
+            <td>
+                @personagem.Nome
+            </td>
+            <td>
+                <a class="glyphicon glyphicon-pencil" href="~/StreetFighter/Manter/@personagem.Id"></a>
+            </td>
+            <td>
+                <a class="glyphicon glyphicon-trash" href="~/StreetFighter/Excluir/@personagem.Id"></a>
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,44 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Street Fighter - Inicio</title>
+    <link href="~/Content/estilo.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="menu">
+        <span class="item">
+            <a href="~/StreetFighter/Index">Inicio</a>
+        </span>
+        <span class="item">
+            <a href="~/StreetFighter/Cadastro">Cadastro</a>
+        </span>
+        <span class="item">
+            <a href="~/StreetFighter/FichaTecnica">Ficha Técnica</a>
+        </span>
+        <span class="item">
+            <a href="~/StreetFighter/Sobre">Sobre</a>
+        </span>
+    </div>
+
+    <div class="conteudo">
+        <div class="titulo">
+            <h1>@ViewBag.Title</h1>
+        </div>
+
+        <div class="corpo">
+            @RenderBody()
+        </div>
+    </div>
+
+    <script src="~/Scripts/jquery-1.9.1.js"></script>
+    @RenderSection("Scripts", false)
+</body>
+</html>
+

@@ -1,0 +1,290 @@
+@font-face{
+    font-family: "Digimon";
+    src: url(pixel-digivolve-italic.ttf) format("truetype");
+}
+header span:nth-of-type(2) {
+    display: none;
+}
+
+.historia-pokemon{
+    display: none;
+}
+
+article.personagens h2:nth-of-type(1){
+    display: none;
+}
+
+.treinadores-pokemon{
+    display:none;
+}
+article.personagens ul:nth-of-type(1){
+    display: none;
+}
+
+body{
+    background-color:#F7C743;
+    background-image: url(
+    https://i.ytimg.com/vi/q8WZh4uWWI4/maxresdefault.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: Courier New, Courier, monospace;
+}
+
+h1,h2,h3,footer{
+     font-family: "Digimon";
+}
+
+header{
+    min-height: 500px;
+    background: rgba(128,128,128, 0.7);
+    border-top-right-radius: 39px;
+    border-top-left-radius:39px;  
+    font-family: "Digimon";
+}
+
+header h1{
+    background: rgba(255,165,000,0.5);
+    text-align: center; 
+    color: white;
+    border-top-right-radius: 50px;
+    border-top-left-radius:50px;
+}
+
+.logo{
+   width: 472px;
+    min-height: 288;
+    /* 472 - 288 */
+    background-image: url(https://s-media-cache-ak0.pinimg.com/originals/44/e2/20/44e22097ce17a8ce8c728acb47e5a9c1.gif);
+    background-repeat: no-repeat;
+    margin-top:300px; 
+    margin-left:auto;
+    margin-right:auto;
+}
+
+ .autenticacao{
+    width: 300px;
+    height: 50px;
+    margin: 10px;
+    font-size: 28pt;
+   
+}
+nav a{
+    background:rgba(247,199,67,0.5);
+    border-top-left-radius:10px; 
+    border-top-right-radius:10px; 
+    color:black;
+    text-decoration:none;
+    font-size:15pt; 
+    font-family: "Digimon";
+    border-style:outset;
+    border-width: thin;
+}
+
+header nav a{
+    font-size: 25pt;
+    border-style: none;
+    
+}
+
+ nav a:hover{
+    background: rgba(255,236,179,0.5);
+    color:white;
+    transition:1s;
+}
+
+
+.historia-digimon{
+    width: 800px;
+    min-height:100px;
+    margin: 10px auto;
+    background: #FFF;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+section.content{
+    position: relative;
+    width: 1240px;
+    min-height: 800px;
+    margin: 0px auto;
+    background-color: white;
+    border-radius: 10px;
+}
+
+article.personagens{
+    float: left;
+    width: 550px;
+    min-height: 600px;
+    border:solid  rgba(255,236,179,0.5);
+    border-radius: 20px;
+    padding: 10px;
+}
+aside.digiescolhidos{
+    width: 250x;
+    min-height: 600px;
+    overflow: auto;
+    border:solid rgba(255,236,179,0.5);
+    border-radius: 20px;
+    padding: 10px;
+    
+}
+
+article.personagens ul:nth-of-type(2){
+    width: 400px;
+    border-radius:50px;
+    overflow:auto;
+    padding: 50px;
+    text-decoration:none;
+}
+
+ul{
+    list-style: none;
+}
+
+.personagens ul li::before{
+    content:url(imagens/digi.png);
+    
+}
+.digiescolhidos ul li::before{
+    content:url(imagens/digi.png);
+} 
+
+.personagens ul li{
+    font-size: 15pt;
+}
+
+.digiescolhidos ul li{
+    font-size: 15pt;
+}
+
+footer{
+    margin: 100px auto;
+    text-align: center;
+}
+
+aside.digiescolhidos ul li:nth-of-type(1):hover{
+    content:url(imagens/taichi.png);
+    background-repeat: no-repeat;
+}
+aside.digiescolhidos ul li:nth-of-type(2):hover{
+    content:url(imagens/matt.png);
+    background-repeat: no-repeat;
+}
+
+aside.digiescolhidos ul li:nth-of-type(3):hover{
+    content:url(imagens/sora.png);
+    background-repeat: no-repeat;
+}
+
+aside.digiescolhidos ul li:nth-of-type(4):hover{
+    content:url(imagens/joe.png);
+    background-repeat: no-repeat;
+}
+aside.digiescolhidos ul li:nth-of-type(5):hover{
+    content:url(imagens/kari.png);
+    background-repeat: no-repeat;
+}
+aside.digiescolhidos ul li:nth-of-type(6):hover{
+    content:url(imagens/davis.png);
+    background-repeat: no-repeat;
+}
+
+aside.digiescolhidos ul li:nth-of-type(7):hover{
+    content:url(imagens/yolei.png);
+    background-repeat: no-repeat;
+}
+aside.digiescolhidos ul li:nth-of-type(8):hover{
+    content:url(imagens/cody.png);
+    background-repeat: no-repeat;
+}
+aside.digiescolhidos ul li:nth-of-type(9):hover{
+    content:url(imagens/ken.png);
+    background-repeat: no-repeat;
+}
+aside.digiescolhidos ul li:nth-of-type(10):hover{
+    content:url(imagens/mimi.png);
+    background-repeat: no-repeat;
+}
+aside.digiescolhidos ul li:nth-of-type(11):hover{
+    content:url(imagens/rika.png);
+    background-repeat: no-repeat;
+}
+
+aside.digiescolhidos ul li:nth-of-type(12):hover{
+    content:url(imagens/takato.png);
+    background-repeat: no-repeat;
+}
+aside.digiescolhidos ul li:nth-of-type(13):hover{
+    content:url(imagens/yoshino.png);
+    background-repeat: no-repeat;
+}
+
+aside.digiescolhidos ul li:nth-of-type(14):hover{
+    content:url(imagens/keenan.png);
+    background-repeat: no-repeat;
+}
+
+
+article.personagens ul li:nth-of-type(1):hover{
+    content:url(imagens/agumon.png);
+    background-repeat: no-repeat;
+}
+
+article.personagens ul li:nth-of-type(2):hover{
+    content:url(imagens/Gabumon.png);
+    background-repeat: no-repeat;
+}
+
+article.personagens ul li:nth-of-type(3):hover{
+    content:url(imagens/biyomon-tentomon.png);
+    background-repeat: no-repeat;
+}
+article.personagens ul li:nth-of-type(4):hover{
+    content:url(imagens/gomamon-e-patamon.png);
+    background-repeat: no-repeat;
+}
+article.personagens ul li:nth-of-type(5):hover{
+    content:url(imagens/gatomon.png);
+    background-repeat: no-repeat;
+}
+article.personagens ul li:nth-of-type(6):hover{
+    content:url(imagens/veemon.png);
+    background-repeat: no-repeat;
+}
+
+article.personagens ul li:nth-of-type(7):hover{
+    content:url(imagens/hawkmon.png);
+    background-repeat: no-repeat;
+}
+article.personagens ul li:nth-of-type(8):hover{
+    content:url(imagens/armadillomon.png);
+    background-repeat: no-repeat;
+}
+
+article.personagens ul li:nth-of-type(9):hover{
+    content:url(imagens/wormmon.png);
+    background-repeat: no-repeat;
+}
+article.personagens ul li:nth-of-type(10):hover{
+    content:url(imagens/palmon.png);
+    background-repeat: no-repeat;  
+}
+
+article.personagens ul li:nth-of-type(11):hover{
+    content:url(imagens/renamon.png);
+    background-repeat: no-repeat; 
+}
+
+article.personagens ul li:nth-of-type(12):hover{
+    content:url(imagens/guilmon.png);
+    background-repeat: no-repeat;
+}
+
+article.personagens ul li:nth-of-type(13):hover{
+    content:url(imagens/lalamon.png);
+    background-repeat: no-repeat;
+}
+article.personagens ul li:nth-of-type(14):hover{
+    content:url(imagens/falcomon.png);
+    background-repeat: no-repeat;
+}

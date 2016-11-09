@@ -1,0 +1,795 @@
+header,
+section.historia-digimon,
+section.content > article.personagens > h2:nth-child(2),
+section.content > aside.digiescolhidos,
+section.content > article.personagens > ul:last-child{
+    display:none;
+}
+
+body{
+    background-image: url(http://i.imgur.com/0z27rj8.png);
+
+}
+
+    body > nav:before{
+        content: url(http://i.imgur.com/6y44NRv.png);
+        float: left;
+        margin-top: -400px;
+        margin-left: 150px;
+    }
+    
+    body > nav {
+        margin-top: 530px;
+        margin-left: 100px;
+                   
+    }
+        body > nav > a{
+            margin-top: -300px;
+
+        }
+            body > nav > a > span{
+                position: relative;
+                border: solid;
+                border-radius: 10px;                        
+                text-decoration: none;
+                border-color: black;
+                color: rgb(255, 224, 61);
+                background: rgb(49, 51, 130);
+                padding: 10px;                          
+                -webkit-text-stroke-width: 1px;
+            }
+            body > nav > a:first-of-type > span {
+                margin-left:260px;
+            }
+    section.historia-pokemon{
+        border: solid;
+        border-radius: 20px;
+        background: rgba(200,200,200, 0.8);
+        border-color: rgb(49, 51, 130);
+        border-width: 5px;
+        width: 1000px;
+        margin-left: 150px;
+           
+    }
+        section.historia-pokemon > h1{
+            text-transform: uppercase;
+            border: solid;
+            color: rgb(49, 51, 130);
+            border-color:rgb(255, 224, 61);
+            margin: 0px;
+            background: none;
+            border-width: 5px;
+            border-radius: 10px;
+            text-align: left;
+            padding-left: 10px;
+        }
+        section.historia-pokemon > p {
+            padding-left: 15px;
+        }
+
+
+div.whatever{
+
+}
+
+
+article.personagens{
+    border: solid;
+    border-radius: 10px;
+    border-color: rgb(49, 51, 130);
+    border-width: 5px;
+    background: rgba(200,200,200, 0.8);
+    width: 1000;
+    margin-left: 150px;
+}
+article.personagens > h2:first-child{
+    text-transform: uppercase;
+    border: solid;
+    color: rgb(49, 51, 130);
+    border-color: rgb(255, 224, 61);
+    background: black;
+    margin: 0px;
+    background: none;
+    border-width: 5px;
+    border-radius: 10px;
+    padding-left: 7px;
+}
+
+article.personagens > ul:first-of-type{
+    width: 345px;
+    height: 345px;
+    text-align: center;
+    margin-left: 600px;
+    list-style-type: none;
+}
+
+    article.personagens > ul:first-of-type > li {
+        display: inline;
+        position: absolute;
+        z-index: 1;  
+        border: solid;
+        border-radius: 10px;
+        margin: 5px;        
+        width: 80px;
+    }
+
+    article.personagens > ul:first-of-type > li:first-of-type{ /*Bulbasaur*/
+        margin-left: -805px;
+        background:#A7DB8D;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(2){ /*Ivysaur*/
+        margin-left: -805px;
+        margin-top: 30px;
+        background:#A7DB8D;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(3){ /*Venosaur*/
+        margin-left: -805px;
+        margin-top: 55px;
+        background:#A7DB8D;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(4){ /*Charmander*/
+        margin-left: -715px;        
+        background:#F5AC78;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(5){ /*Charmilion*/
+        margin-left: -715px;
+        margin-top: 30px;
+        background: #F5AC78;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(6){ /*Charizard*/
+        margin-left: -715px;
+        margin-top: 55px;
+        background:#F5AC78;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(7){ /*Squirtle*/
+        margin-left: -625px;        
+        background:#9DB7F5;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(8){ /*Wartortle*/
+        margin-left: -625px;
+        margin-top: 30px;
+        background:#9DB7F5;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(9){ /*Blastoise*/
+        margin-left: -625px;
+        margin-top: 55px;
+        background:#9DB7F5;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(10){ /*Caterpie*/
+        margin-left: -535px;
+        background:#A8B820;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(11){ /*Metapod*/
+        margin-left: -535px;
+        margin-top: 30px;
+        background:#A8B820;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(12){ /*Butterfree*/
+        margin-left: -535px;
+        margin-top: 55px;
+        background:#A8B820;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(19){ /*Ratata*/
+        margin-left: -535px;
+        margin-top: 80px;
+        background: #C6C6A7;
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(20){ /*Raticate*/
+        margin-left: -535px;
+        margin-top: 105px;
+        background: #C6C6A7;
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(21){ /*Spearow*/
+        margin-left: -535px;
+        margin-top: 130px;
+        background: #C6C6A7;
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(22){ /*Fearow*/
+        margin-left: -535px;
+        margin-top: 155px;
+        background: #C6C6A7;
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(23){ /*Ekans*/
+        margin-left: -535px;
+        margin-top: 180px;
+        background: #C183C1;
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(24){ /*Arbok*/
+        margin-left: -535px;
+        margin-top: 205px;
+        background: #C183C1;
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(25){ /*Pìkachu*/
+        margin-left: -535px;
+        margin-top: 230px;
+        background: #FAE078;
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(26){ /*Raichu*/
+        margin-left: -535px;
+        margin-top: 255px;
+        background: #FAE078;
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(27){ /*Sandshrew*/
+        margin-left: -535px;
+        margin-top: 280px;
+        background: #EBD69D;
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(28){ /*Sandslash*/
+        margin-left: -535px;
+        margin-top: 305px;
+        background: #EBD69D;
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(29){ /*Nidoran*/
+        margin-left: -445px;
+        background: #C183C1;
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(30){ /*Nidorina*/
+        margin-left: -445px;
+        margin-top: 30px;
+        background: #C183C1;
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(31){ /*Niqueen*/
+        margin-left: -445px;
+        margin-top: 55px;
+        background: #C183C1;
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(32){ /*Nidoran*/
+        margin-left: -445px;
+        margin-top: 80px;
+        background: #C183C1;
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(33){ /*Nidoran*/
+        margin-left: -445px;
+        margin-top: 105px;
+        background: #C183C1;
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(34){ /*Nidoran*/
+        margin-left: -445px;
+        margin-top: 130px;
+        background: #C183C1;
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(35){ /*Clefairy*/ 
+        margin-left: -805px;
+        margin-top: 80px; 
+        background: #F4BDC9;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(36){ /*Clefable*/
+        margin-left: -805px;
+        margin-top: 105px;  
+        background: #F4BDC9;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(37){ /*Vulpix*/
+        margin-left: -805px;
+        margin-top: 130px;      
+        background: #F5AC78;  
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(38){ /*Ninetales*/
+        margin-left: -805px;
+        margin-top: 155px;  
+        background: #F5AC78;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(39){ /*Jigglypuff*/
+        margin-left: -805px;
+        margin-top: 180px;       
+        background: #C6C6A7; 
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(40){ /*Wigglypuff*/
+        margin-left: -805px;
+        margin-top: 205px;  
+        background: #C6C6A7;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(41){ /*Zubat*/
+        margin-left: -805px;
+        margin-top: 230px;      
+        background: #C183C1;  
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(42){ /*Golbat*/
+        margin-left: -805px;
+        margin-top: 255px;  
+        background: #C183C1;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(43){ /*Oddish*/
+        margin-left: -805px;
+        margin-top: 280px;       
+        background: #A7DB8D; 
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(44){ /*Gloom*/
+        margin-left: -805px;
+        margin-top: 305px;  
+        background: #A7DB8D;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(45){ /*Vileplume*/
+        margin-left: -805px;
+        margin-top: 330px; 
+        background: #A7DB8D;       
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(46){ /*Paras*/
+        margin-left: -715px;
+        margin-top: 80px;      
+        background: #C6D16E;  
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(47){ /*Parasect*/
+        margin-left: -715px;
+        margin-top: 105px;  
+        background: #C6D16E;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(48){ /*Venonat*/
+        margin-left: -715px;
+        margin-top: 130px;      
+        background: #C6D16E;  
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(49){ /*Venomoth*/
+        margin-left: -715px;
+        margin-top: 155px;  
+        background: #C6D16E;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(50){ /*Digglet*/
+        margin-left: -715px;
+        margin-top: 180px;  
+        background: #EBD69D;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(51){ /*Dugtrio*/
+        margin-left: -715px;
+        margin-top: 180px;  
+        background:#EBD69D;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(52){ /*Meowth*/
+        margin-left: -715px;
+        margin-top: 205px;        
+        background: #C6C6A7;
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(53){ /*Persian*/
+        margin-left: -715px;
+        margin-top: 230px;  
+        background: #C6C6A7;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(54){ /*Psyduck*/
+        margin-left: -715px;
+        margin-top: 255px; 
+        background: #9DB7F5;       
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(55){ /*Golduck*/
+        margin-left: -715px;
+        margin-top: 280px; 
+        background: #9DB7F5;       
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(56){ /*Mankey*/
+        margin-left: -715px;
+        margin-top: 305px;    
+        background: #D67873;    
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(57){ /*Primeape*/
+        margin-left: -715px;
+        margin-top: 330px;  
+        background: #D67873;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(58){ /*Growlithe*/
+        margin-left: -625px;
+        margin-top: 80px;      
+        background: #F5AC78;  
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(59){ /*Arcanine*/
+        margin-left: -625px;
+        margin-top: 105px; 
+        background: #F5AC78;       
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(60){ /*Poliwag*/
+        margin-left: -625px;
+        margin-top: 130px;     
+        background: #9DB7F5;   
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(61){ /*Plowhirl*/
+        margin-left: -625px;
+        margin-top: 155px;  
+        background: #9DB7F5;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(62){ /*Poliwrath*/
+        margin-left: -625px;
+        margin-top: 180px;  
+        background: #9DB7F5;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(63){ /*Abra*/
+        margin-left: -625px;
+        margin-top: 205px; 
+        background: #FA92B2;       
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(64){ /*kadabra*/
+        margin-left: -625px;
+        margin-top: 230px;  
+        background: #FA92B2;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(65){ /*alakhazam*/
+        margin-left: -625px;
+        margin-top: 255px;  
+        background: #FA92B2;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(66){ /*machop*/
+        margin-left: -625px;
+        margin-top: 280px;        
+        background: #D67873;
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(67){ /*machoke*/
+        margin-left: -625px;
+        margin-top: 305px;      
+        background: #D67873;  
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(68){ /*machamp*/
+        margin-left: -625px;
+        margin-top: 330px; 
+        background: #D67873;       
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(69){ /*Bellsprout*/
+        margin-left: -445px;
+        margin-top: 155px;     
+        background: #A7DB8D;   
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(70){ /*weepinbel*/
+        margin-left: -445px;
+        margin-top: 180px;  
+        background: #A7DB8D;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(71){ /*victrebel*/
+        margin-left: -445px;
+        margin-top: 205px;  
+        background: #A7DB8D;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(72){ /*tetacool*/
+        margin-left: -445px;
+        margin-top: 230px;    
+        background: #9DB7F5;
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(73){ /*tentacruel*/
+        margin-left: -445px;
+        margin-top: 255px; 
+        background: #9DB7F5;       
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(74){ /*geodude*/
+        margin-left: -445px;
+        margin-top: 280px;    
+        background: #D1C17D;    
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(75){ /*graveler*/
+        margin-left: -445px;
+        margin-top: 305px;   
+        background: #D1C17D;     
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(76){ /*golem*/
+        margin-left: -445px;
+        margin-top: 330px;  
+        background: #D1C17D;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(77){ /*ponita*/
+        margin-left: -535px;
+        margin-top: 330px; 
+        background: #F5AC78;       
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(78){
+        background-image: url(http://i.imgur.com/xraIZMJ.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        text-indent: -9999px;
+        margin-left:-170px; 
+        height: 300px;
+        width: 300px;
+        margin-top: 15px;
+        border-radius: 50%;
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(78) ~ li{
+        display:none;
+    }
+     
+    article.treinadores-pokemon{
+        border:solid;
+        border-radius:10px;
+        border-width: 5px;
+        border-color:rgb(49, 51, 130);
+        background: rgba(200,200,200, 0.8);
+        width: 500px;
+        margin-left: 400px;                
+    }
+        article.treinadores-pokemon > h3{
+            text-transform: uppercase;
+            color: rgb(49, 51, 130);           
+            border: solid;
+            border-color:rgb(255, 224, 61);
+            margin: 0px;
+            text-align: right;
+            padding-right: 7px; 
+            border-radius: 10px;
+            border-width: 5px;
+        }
+        article.treinadores-pokemon > ul{            
+            text-align: right;
+            padding-right: 50px;
+            list-style-type: none;
+        }
+        article.treinadores-pokemon > ul > li{
+            border: solid;
+            border-radius: 10px;
+            color: white;
+            border-color: black;
+            background: rgba(247, 0, 34, 0.7);
+            width: 100px;
+            text-align: center;
+            margin-left: 315px;
+        }
+        article.treinadores-pokemon > ul > li:first-of-type:hover ~ li:nth-of-type(12){
+            content : url(http://i.imgur.com/3Ds7TAd.png);
+        }
+        article.treinadores-pokemon > ul > li:nth-of-type(2):hover ~ li:nth-of-type(12){
+            content : url(http://i.imgur.com/OmBhqE2.png);
+        }
+        article.treinadores-pokemon > ul > li:nth-of-type(3):hover ~ li:nth-of-type(12){
+            content : url(http://i.imgur.com/iGFFnNI.gif);
+        }
+        article.treinadores-pokemon > ul > li:nth-of-type(4):hover ~ li:nth-of-type(12){
+            content : url(http://i.imgur.com/l06aXxd.png);
+        }
+        article.treinadores-pokemon > ul > li:nth-of-type(5):hover ~ li:nth-of-type(12){
+            content : url(http://i.imgur.com/61aOf3H.png);
+        }
+        article.treinadores-pokemon > ul > li:nth-of-type(6):hover ~ li:nth-of-type(12){
+            content : url(http://i.imgur.com/NiblPuA.png);
+        }
+        article.treinadores-pokemon > ul > li:nth-of-type(7):hover ~ li:nth-of-type(12){
+            content : url(http://i.imgur.com/lk8qjBY.png);
+        }
+        article.treinadores-pokemon > ul > li:nth-of-type(8):hover ~ li:nth-of-type(12){
+            content : url(http://i.imgur.com/7B38tU7.png);
+        }
+        article.treinadores-pokemon > ul > li:nth-of-type(9):hover ~ li:nth-of-type(12){
+            content : url(http://i.imgur.com/4BRY2Jg.png);
+        }
+        article.treinadores-pokemon > ul > li:nth-of-type(10):hover ~ li:nth-of-type(12){
+            content : url(http://i.imgur.com/pUrzhs2.png);
+        }
+        article.treinadores-pokemon > ul > li:nth-of-type(11):hover ~ li:nth-of-type(12){
+            content : url(http://i.imgur.com/0e5yaht.png);
+        }
+        
+        article.treinadores-pokemon > ul > li:nth-of-type(12){
+            position: absolute;
+            color: transparent;
+            border: solid;
+            border-color: black;
+            background-image: url(http://i.imgur.com/9xAd5VD.png);
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 190px;
+            margin-left: 0px;
+            margin-top: -240px;
+        
+        }
+    article.personagens > ul:first-of-type > li:first-of-type:hover ~ li:nth-of-type(78){ /*Bulbasaur*/
+        content: url(http://i.imgur.com/VHqG22d.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(2):hover ~ li:nth-of-type(78){ /*Ivysaur*/
+        content: url(http://i.imgur.com/5YNYX5K.png);     
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(3):hover ~ li:nth-of-type(78){ /*Venosaur*/
+        content: url(http://i.imgur.com/SDDDsYH.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(4):hover ~ li:nth-of-type(78){ /*Charmander*/
+        content: url(http://i.imgur.com/foyklaW.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(5):hover ~ li:nth-of-type(78){ /*Charmilion*/
+        content: url(http://i.imgur.com/M1b8ZfY.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(6):hover ~ li:nth-of-type(78){ /*Charizard*/
+        content: url(http://i.imgur.com/L0PCpOI.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(7):hover ~ li:nth-of-type(78){ /*Squirtle*/
+        content: url(http://i.imgur.com/6Sf8vaM.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(8):hover ~ li:nth-of-type(78){ /*Wartortle*/
+        content: url(http://i.imgur.com/mZbklRB.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(9):hover ~ li:nth-of-type(78){ /*Blastoise*/
+        content: url(http://i.imgur.com/6J4yThL.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(10):hover ~ li:nth-of-type(78){ /*Caterpie*/
+        content: url(http://i.imgur.com/6R96Wlc.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(11):hover ~ li:nth-of-type(78){ /*Metapod*/
+        content: url(http://i.imgur.com/prRIjFu.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(12):hover ~ li:nth-of-type(78){ /*Butterfree*/
+        content: url(http://i.imgur.com/6ZtMniA.png);     
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(19):hover ~ li:nth-of-type(78){ /*Ratata*/
+        content: url(http://i.imgur.com/LhuFief.png);
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(20):hover ~ li:nth-of-type(78){ /*Raticate*/
+        content: url(http://i.imgur.com/MSQF2CH.png);
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(21):hover ~ li:nth-of-type(78){ /*Spearow*/
+        content: url(http://i.imgur.com/K7JctaF.png);
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(22):hover ~ li:nth-of-type(78){ /*Fearow*/
+        content: url(http://i.imgur.com/5vMPSDr.png);
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(23):hover ~ li:nth-of-type(78){ /*Ekans*/
+        content: url(http://i.imgur.com/fMV7UE3.png);
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(24):hover ~ li:nth-of-type(78){ /*Arbok*/
+        content: url(http://i.imgur.com/tlbwxJZ.png);
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(25):hover ~ li:nth-of-type(78){ /*Pìkachu*/
+        content: url(http://i.imgur.com/OUGpJvv.png);
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(26):hover ~ li:nth-of-type(78){ /*Raichu*/
+        content: url(http://i.imgur.com/JnVg0th.png);
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(27):hover ~ li:nth-of-type(78){ /*Sandshrew*/
+       content: url(http://i.imgur.com/56N2RAg.png);
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(28):hover ~ li:nth-of-type(78){ /*Sandslash*/
+        content: url(http://i.imgur.com/Ok34EGC.png);
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(29):hover ~ li:nth-of-type(78){ /*Nidoran*/
+        content: url(http://i.imgur.com/QcoToKX.png);
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(30):hover ~ li:nth-of-type(78){ /*Nidorina*/
+        content: url(http://i.imgur.com/2C1MXuE.png);
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(31):hover ~ li:nth-of-type(78){ /*Niqueen*/
+        content: url(http://i.imgur.com/s1OXb4s.png);
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(32):hover ~ li:nth-of-type(78){ /*Nidoran*/
+        content: url(http://i.imgur.com/7Kn1BvO.png);
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(33):hover ~ li:nth-of-type(78){ /*Nidorino*/
+        content: url(http://i.imgur.com/OH9nKoG.png);
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(34):hover ~ li:nth-of-type(78){ /*Nidoking*/
+        content: url(http://i.imgur.com/pCyvIt8.png);
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(35):hover ~ li:nth-of-type(78){ /*Clefairy*/ 
+        content: url(http://i.imgur.com/jsiO2O2.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(36):hover ~ li:nth-of-type(78){ /*Clefable*/
+        content: url(http://i.imgur.com/LI82Rg9.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(37):hover ~ li:nth-of-type(78){ /*Vulpix*/
+        content: url(http://i.imgur.com/tdCow3O.png);  
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(38):hover ~ li:nth-of-type(78){ /*Ninetales*/
+        content: url(http://i.imgur.com/UHDFw9O.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(39):hover ~ li:nth-of-type(78){ /*Jigglypuff*/
+        content: url(http://i.imgur.com/pKmdi1N.png); 
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(40):hover ~ li:nth-of-type(78){ /*Wigglypuff*/
+        content: url(http://i.imgur.com/ezYjsNH.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(41):hover ~ li:nth-of-type(78){ /*Zubat*/
+        content: url(http://i.imgur.com/NM5oF79.png);  
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(42):hover ~ li:nth-of-type(78){ /*Golbat*/
+        content: url(http://i.imgur.com/sLkis2n.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(43):hover ~ li:nth-of-type(78){ /*Oddish*/
+        content: url(http://i.imgur.com/OrnL4iT.png); 
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(44):hover ~ li:nth-of-type(78){ /*Gloom*/
+        content: url(http://i.imgur.com/MN57QoD.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(45):hover ~ li:nth-of-type(78){ /*Vileplume*/
+        content: url(http://i.imgur.com/pqLNJrx.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(46):hover ~ li:nth-of-type(78){ /*Paras*/
+        content: url(http://i.imgur.com/kuTlOst.png);  
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(47):hover ~ li:nth-of-type(78){ /*Parasect*/
+        content: url(http://i.imgur.com/PKUgEJM.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(48):hover ~ li:nth-of-type(78){ /*Venonat*/
+        content: url(http://i.imgur.com/xP97Kp5.png);  
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(49):hover ~ li:nth-of-type(78){ /*Venomoth*/
+        content: url(http://i.imgur.com/uuEK7JQ.png/);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(50):hover ~ li:nth-of-type(78){ /*Digglet*/
+        content: url(http://i.imgur.com/MQEsk9A.png);     
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(51):hover ~ li:nth-of-type(78){ /*Dugtrio*/
+        content: url(http://i.imgur.com/OCqMoB6.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(52):hover ~ li:nth-of-type(78){ /*Meowth*/
+        content: url(http://i.imgur.com/f3R55eq.png);
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(53):hover ~ li:nth-of-type(78){ /*Persian*/
+        content: url(http://i.imgur.com/wC3SF5l.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(54):hover ~ li:nth-of-type(78){ /*Psyduck*/
+        content: url(http://i.imgur.com/hE4idxU.png);       
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(55):hover ~ li:nth-of-type(78){ /*Golduck*/
+        content: url(http://i.imgur.com/o2KmntR.png);       
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(56):hover ~ li:nth-of-type(78){ /*Mankey*/
+        content: url(http://i.imgur.com/kv6qbLN.png);    
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(57):hover ~ li:nth-of-type(78){ /*Primeape*/
+        content: url(http://i.imgur.com/fYyN0Eq.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(58):hover ~ li:nth-of-type(78){ /*Growlithe*/
+        content: url(http://i.imgur.com/vJwCJ4V.png);  
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(59):hover ~ li:nth-of-type(78){ /*Arcanine*/
+        content: url(http://i.imgur.com/ogvK84W.png);       
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(60):hover ~ li:nth-of-type(78){ /*Poliwag*/
+        content: url(http://i.imgur.com/Aa5aTiD.png);   
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(61):hover ~ li:nth-of-type(78){ /*Plowhirl*/
+        content: url(http://i.imgur.com/x7PgFV7.png);     
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(62):hover ~ li:nth-of-type(78){ /*Poliwrath*/
+        content: url(http://i.imgur.com/RkQBeMt.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(63):hover ~ li:nth-of-type(78){ /*Abra*/
+        content: url(http://i.imgur.com/HfW9oHf.png);       
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(64):hover ~ li:nth-of-type(78){ /*kadabra*/
+        content: url(http://i.imgur.com/HKN1CuJ.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(65):hover ~ li:nth-of-type(78){ /*alakhazam*/
+        content: url(http://i.imgur.com/c6j2KIl.png);     
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(66):hover ~ li:nth-of-type(78){ /*machop*/
+        content: url(http://i.imgur.com/D5wByZe.png);
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(67):hover ~ li:nth-of-type(78){ /*machoke*/
+        content: url(http://i.imgur.com/GxQZy4X.png);  
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(68):hover ~ li:nth-of-type(78){ /*machamp*/
+        content: url(http://i.imgur.com/ygETfbN.png);       
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(69):hover ~ li:nth-of-type(78){ /*Bellsprout*/
+        content: url(http://i.imgur.com/G65nbx1.png);   
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(70):hover ~ li:nth-of-type(78){ /*weepinbel*/
+        content: url(http://i.imgur.com/SaYyCkI.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(71):hover ~ li:nth-of-type(78){ /*victrebel*/
+        content: url(http://i.imgur.com/TbMLCcU.png);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(72):hover ~ li:nth-of-type(78){ /*tetacool*/
+        content: url(http://i.imgur.com/E96Dkoy.png);
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(73):hover ~ li:nth-of-type(78){ /*tentacruel*/
+        content: url(http://i.imgur.com/8SYrkJM.png);       
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(74):hover ~ li:nth-of-type(78){ /*geodude*/
+        content: url(http://i.imgur.com/S6nnRzT.png);    
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(75):hover ~ li:nth-of-type(78){ /*graveler*/
+        content: url(http://i.imgur.com/f1Nf9XK.png/);    
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(76):hover ~ li:nth-of-type(78){ /*golem*/
+        content: url(http://i.imgur.com/eDEdBZ3.png/);      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(77):hover ~ li:nth-of-type(78){ /*ponita*/
+        content: url(http://i.imgur.com/bWxmMco.png);       
+    }            
+               
+article.personagens > ul:first-of-type > li:nth-of-type(13){ /*Weedle*/
+
+         display: none;   
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(14){ /*Kakuna*/
+         display: none;       
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(15){ /*Beedrill*/
+        display: none;        
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(16){ /*Pidgey*/
+        display:none;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(17){ /*Pidgeotto*/
+        display: none;      
+    }
+    article.personagens > ul:first-of-type > li:nth-of-type(18){ /*Pidgeot*/
+        display: none;      
+    }

@@ -1,0 +1,309 @@
+
+body{
+    font-family: Arial;
+    background: url(http://4.bp.blogspot.com/-w_GprQ4SLoE/VQHySIpXH5I/AAAAAAAANQE/58anVPr_o7w/s1600/Pok%C3%A9mon%2B8.gif)
+    no-repeat center top;
+
+}
+
+header{
+    margin-top: 350px;
+}
+
+.logo{
+    margin-top: -405px;
+    position: absolute;
+    display: -webkit-inline-box;
+    width: 348px;
+    height: 255px;
+    background: url(http://pixelslogodesign.com/blog/wp-content/uploads/2016/07/post-pic-1.gif);
+}
+
+@font-face {
+    font-family: "My Custom Font";
+    src: url(http://www.example.org/mycustomfont.ttf) format("truetype");
+}
+
+header h1{
+    font-family: times;
+    margin-top: 50px;
+    margin-left: auto;
+    text-align: center;
+    color: red;
+    font-family: Times;
+}
+
+.historia-pokemon h1:before{
+    content: "História "; 
+}
+
+.historia-pokemon h1:after{
+    content: icon;
+}
+
+
+.historia-pokemon p:nth-of-type(2){
+    margin-top: 35px; 
+}
+
+.historia-pokemon span{
+    font-weight: bold;
+}
+
+body > nav{
+    padding: 10px;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: dimgray;
+    border-width: 1px;
+}
+
+nav span{
+    text-align: center;
+    margin: 20px 0px;
+    padding-left: 100px;
+    color: black;
+    font-style: italic;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.whatever{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-image: url(http://3.bp.blogspot.com/-2XVUBhCNWlo/U2rtZiJMRDI/AAAAAAAAFZA/AttDUeQaHOg/s1600/Pokemon+9.gif); 
+    top: 162px;
+    right: 5px;
+}
+
+.historia-pokemon{
+    font-family: times 'Times New Roman', Times, serif;
+    margin: auto;
+    width: 480px;
+    height: 400px;
+    height: 420px;
+    text-align: center;
+    border-left: solid;
+    border-right: solid;
+    border-color: silver;
+    border-width: 1px;
+    background-image: url(http://www.pixelstalk.net/wp-content/uploads/2016/02/Pokemon-Pikachu-Backgrounds-Wallpapers-620x388.jpg);
+}
+
+.autenticacao{
+    margin-top: -140px;
+    margin-left: 50px;
+    border: none;
+    word-spacing: 30px;    
+    position: absolute;    
+}
+
+.autenticacao a{
+	font-size:16px;
+	font-family:Arial;
+	font-weight:normal;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:2px solid #74b807;
+	padding:9px 25px;
+	text-decoration:none;
+	background:-moz-linear-gradient( center top, #3ff024 80%, #26bf35 25% );
+	background:-ms-linear-gradient( top, #3ff024 80%, #26bf35 25% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3ff024', endColorstr='#26bf35');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(80%, #3ff024), color-stop(25%, #26bf35) );
+	background-color:#3ff024;
+	color:#ffffff;
+	display:inline-block;
+	text-shadow:2px 2px 0px #528009;
+ 	-webkit-box-shadow:inset 0px 0px 10px 0px #a4e271;
+ 	-moz-box-shadow:inset 0px 0px 10px 0px #a4e271;
+ 	box-shadow:inset 0px 0px 10px 0px #a4e271;
+}
+
+.autenticacao a:hover {
+	background:-moz-linear-gradient( center top, #26bf35 80%, #3ff024 25% );
+	background:-ms-linear-gradient( top, #26bf35 80%, #3ff024 25% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#26bf35', endColorstr='#3ff024');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(80%, #26bf35), color-stop(25%, #3ff024) );
+	background-color:#26bf35;
+}
+
+article{
+    top: 460px;
+    position: absolute;
+}
+
+.personagens{
+    width: 420px;
+    height: 400px;
+    left: 10px;
+    overflow: scroll;
+    overflow-x: hidden;
+    text-align: left;
+}
+
+.treinadores-pokemon{
+    width: 420px;
+    height: 400px;
+    right: 10px;
+    text-align: right;
+}
+
+h2, h3{
+    padding: 10px; 
+    font-size: 20px;
+    margin: 1px;
+    font-family: times;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.personagens li:hover:after{
+    position: absolute;
+    right: 20px;
+    top: 100px;
+}
+
+.personagens li:first-child:hover:after{
+   content: url('http://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/250px-001Bulbasaur.png');
+}
+.personagens li:nth-child(2):hover:after{
+    content: url('http://cdn.bulbagarden.net/upload/thumb/7/73/002Ivysaur.png/250px-002Ivysaur.png');
+}
+.personagens li:nth-child(3):hover:after{
+    content: url('http://cdn.bulbagarden.net/upload/thumb/a/ae/003Venusaur.png/250px-003Venusaur.png');
+}
+.personagens li:nth-child(4):hover:after{
+    content: url('http://cdn.bulbagarden.net/upload/thumb/7/73/004Charmander.png/250px-004Charmander.png');
+}
+.personagens li:nth-child(5):hover:after{
+    content: url('http://cdn.bulbagarden.net/upload/thumb/4/4a/005Charmeleon.png/250px-005Charmeleon.png');
+}
+.personagens li:nth-child(6):hover:after{
+    content: url('http://cdn.bulbagarden.net/upload/thumb/7/7e/006Charizard.png/250px-006Charizard.png');
+}
+.personagens li:nth-child(7):hover:after{
+    content: url('http://cdn.bulbagarden.net/upload/thumb/3/39/007Squirtle.png/250px-007Squirtle.png');
+}
+.personagens li:nth-child(8):hover:after{
+    content: url('http://cdn.bulbagarden.net/upload/thumb/0/0c/008Wartortle.png/250px-008Wartortle.png');
+}
+.personagens li:nth-child(9):hover:after{
+    content: url('http://cdn.bulbagarden.net/upload/thumb/0/02/009Blastoise.png/250px-009Blastoise.png');
+}
+.personagens li:nth-child(10):hover:after{
+    content: url('http://cdn.bulbagarden.net/upload/thumb/5/5d/010Caterpie.png/250px-010Caterpie.png');
+}
+.personagens li:nth-child(11):hover:after{
+    content: url('http://cdn.bulbagarden.net/upload/thumb/c/cd/011Metapod.png/250px-011Metapod.png');
+}
+.personagens li:nth-child(12):hover:after{
+    content: url('http://cdn.bulbagarden.net/upload/thumb/d/d1/012Butterfree.png/250px-012Butterfree.png');
+}
+.personagens li:nth-child(13):hover:after{
+    content: url('http://cdn.bulbagarden.net/upload/thumb/d/df/013Weedle.png/250px-013Weedle.png');
+}
+.personagens li:nth-child(14):hover:after{
+    content: url('http://cdn.bulbagarden.net/upload/thumb/f/f0/014Kakuna.png/250px-014Kakuna.png');
+}
+.personagens li:nth-child(15):hover:after{
+    content: url('http://cdn.bulbagarden.net/upload/thumb/6/61/015Beedrill.png/250px-015Beedrill.png');
+}
+
+
+
+
+.personagens::-webkit-scrollbar { width:15px; background:#e3e0d6; z-index: 1}
+.personagens::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); z-index: 1}
+.personagens::-webkit-scrollbar-thumb { border-radius:10px; background:#8b8778;  z-index: 1}
+
+.treinadores-pokemon li:hover:after{
+    position: absolute;
+    right: 130px;
+    top: 50px;
+}
+
+.treinadores-pokemon li:first-child:hover:after {
+   content: url('http://vignette1.wikia.nocookie.net/pokemonshow/images/8/81/Ash_bw.png/revision/latest?cb=20110630181426&path-prefix=pt-br');
+}
+
+.treinadores-pokemon li:nth-child(2):hover:after{
+    content: url('https://upload.wikimedia.org/wikipedia/pt/b/b1/MistyEP.png');
+}
+
+.treinadores-pokemon li:nth-child(3):hover:after{
+    content: url('http://cdn.bulbagarden.net/upload/thumb/2/21/Brock_DP_Anime_art.png/150px-Brock_DP_Anime_art.png');
+}
+
+.treinadores-pokemon li:nth-child(4):hover:after{
+    content: url('http://cdn.bulbagarden.net/upload/e/e1/TraceyEP.png');
+}
+.treinadores-pokemon li:nth-child(5):hover:after{
+    content: url('http://4.bp.blogspot.com/_PBvx3Zh8Fjc/ShBqVQrUx1I/AAAAAAAAACg/fvKrWu1dEPU/s400/may.gif');
+}
+.treinadores-pokemon li:nth-child(6):hover:after{
+    content: url('http://1.bp.blogspot.com/_M6aw73pV4kg/SmkWURiU-QI/AAAAAAAAAUk/vYRCuzhIEMc/s320/max.gif');
+}
+.treinadores-pokemon li:nth-child(7):hover:after{
+    content: url('http://i297.photobucket.com/albums/mm236/pokemyth/personagens/protagonistas/p_dawn1.png');
+}
+.treinadores-pokemon li:nth-child(8):hover:after{
+    content: url('http://4.bp.blogspot.com/-WEQperszHZ4/ViFpB1rFPCI/AAAAAAAAAPE/7qMBOOj7XKc/s1600/12852715290084.png');
+}
+.treinadores-pokemon li:nth-child(9):hover:after{
+    content: url('http://2.bp.blogspot.com/-kARgCITBvRw/UIQ_LUa6IbI/AAAAAAAAEAM/b0b9gNzCcjM/s1600/100px-CilanBW.png');
+}
+.treinadores-pokemon li:nth-child(10):hover:after{
+    content: url('http://static3.wikia.nocookie.net/__cb20130928235052/p__/protagonist/images/b/b5/Clemont_XY.png');
+}
+.treinadores-pokemon li:nth-child(11):hover:after{
+    content: url('http://cdn.bulbagarden.net/upload/thumb/8/8d/Bonnie_XY_2.png/140px-Bonnie_XY_2.png');
+}
+.treinadores-pokemon li:nth-child(12):hover:after{
+    content: url('http://2.bp.blogspot.com/-hIbPMo3XBnk/UjrmEVVx57I/AAAAAAAAAhk/jP91Axb7vJ8/s200/XY-Serena.png');
+}
+
+
+ul{
+    padding-left: 5px;
+}
+
+li{
+    padding: 3px;
+    list-style-type: none;
+}
+
+footer{
+    margin: 20px;
+    text-align: center;
+}
+
+.historia-digimon{
+    display: none;
+}
+
+.personagens h2:nth-child(2){
+    display: none;
+}
+
+.personagens > ul:last-child {
+    display: none;
+}
+
+h1 span:first-child{
+    display: none;
+}
+
+.digiescolhidos{
+    display: none;
+}
+

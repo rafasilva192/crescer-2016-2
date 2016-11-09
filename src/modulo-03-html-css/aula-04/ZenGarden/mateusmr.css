@@ -1,0 +1,280 @@
+@font-face {
+    font-family: 'fregat';
+    src: url(mateusmr.ttf);
+}
+@font-face {
+    font-family: 'munro';
+    src: url(munro.ttf);
+}
+
+
+h1 > span:nth-of-type(1), .personagens > h2:nth-of-type(2), .personagens > ul:nth-of-type(2), .digiescolhidos, .historia-digimon {
+  display: none;
+}
+
+
+body {
+  background: #79C9FA url(http://i.imgur.com/1menftq.png);
+  background-repeat: no-repeat;
+  background-position-y: -50px;
+  font-family: 'fregat','pokefont', arial;
+}
+
+header{
+  position:absolute;
+  top: 20px;
+  height: 150px;
+  width: 96%;
+}
+
+header > h1{
+  position: relative;
+  left: 700px;
+  font-size: 40px;
+  color: #ffcb05;
+  text-shadow: -2px 0 #3368B0, 0 2px #3368B0, 2px 0 #3368B0, 0 -2px #3368B0;
+  text-shadow:
+    0px  2px 1px #3368B0,
+    0px -2px 1px #3368B0,
+   -3px  2px 1px #3368B0,
+   -3px -2px 1px #3368B0;
+  float:left;
+}
+
+.logo{
+  position:relative;
+  background-size: contain;
+  top: 0px;
+  background-image: url(http://i.imgur.com/iSJdrjW.png);
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 200px;
+}
+
+header .autenticacao {
+  position: relative;
+  height: 50px;
+  width: 250px;
+  top: -90px;
+  text-align: right;
+  float: right;
+  transition: 0.1s;
+}
+
+header .autenticacao a:hover{
+    font-size: 27px;
+}
+
+.autenticacao > a {
+  position: relative;
+  top: 10px;
+  font-size: 25px;
+}
+
+.autenticacao > a:hover {
+  position: relative;
+  top: 10px;
+  font-size: 25px;
+}
+
+.whatever {
+  position: relative;
+  top: 40px;
+  left: -290px;
+  width: 80px;
+  height: 80px;
+  margin: 2% auto;
+  background: url('http://i.imgur.com/DmTpWlh.png') left center;
+}
+
+.whatever:not(:hover){
+    animation: play .3s steps(2) infinite;
+}
+
+@keyframes play {
+	100% { background-position: -160px; }
+}
+
+nav {
+  position: absolute;
+  top: 140px;
+  transition: 0.1s;
+}
+
+nav > a {
+  position: relative;
+  top: 0px;
+  left: 20px;
+  padding:0px;
+  margin:0px;
+  font-family: Impact;
+  text-transform: uppercase;
+  color: #1D2C5E;
+	font-size: 20px;
+	padding: 10px 5px;
+	line-height: 20px;
+	text-decoration: none;
+	border-radius: 20px;
+	display: inline;
+  transition: .5s;
+}
+
+nav > a:hover{
+  color: #ffcb05;
+	background-color: #3368B0;
+  border-radius: 60px;
+}
+
+.historia-pokemon{
+  position: absolute;
+  top: 200px;
+  left: 90px;
+  display: inline-block;
+  vertical-align: top;
+  width: 22%;
+  height: 47%;
+  box-sizing: border-box;
+  font-size: 20px;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: rgba(52,102,175,.7);
+  border: solid 1px;
+  border-radius: 10px;
+  transition: 3s;
+}
+
+.historia-pokemon:hover{
+  background: url(http://i.imgur.com/RmzfB0a.png);
+  background-color: rgba(52,102,175,.7);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.historia-pokemon > h1{
+  text-align: left;
+}
+
+p > a {
+  text-decoration: none;
+  color: #ffcb05;
+}
+
+.historia-pokemon > p{
+  font-size: 13px;
+}
+
+.content {
+  position:absolute;
+  top: 200px;
+  left: 400px;
+  width: 60%;
+  height: 40%;
+  padding: 20px;
+  float: left;
+}
+
+.personagens{
+  position: relative;
+  top: -20px;
+  left: -50px;
+  width: 33%;
+  height: 320px;
+  float: right;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  font-size: 15px;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: rgba(52,102,175,0.5);
+  border: solid 1px;
+  border-radius: 10px;
+}
+
+.treinadores-pokemon{
+  position: relative;
+  top: -20px;
+  left: -100px;
+  width: 33%;
+  height: 320px;
+  float: right;
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 15px;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: rgba(52,102,175,0.5);
+  border: solid 1px;
+  border-radius: 10px;
+}
+
+.personagens ul{
+  left: 20px;
+  width: 180px;
+  height: 200px;
+
+  overflow: scroll;
+  float: right;
+}
+
+.treinadores-pokemon ul{
+  width: 180px;
+  height: 300px;
+  list-style-position: inside;
+
+  overflow: auto;
+  float: left;
+}
+
+li{
+  list-style: none;
+}
+
+li:hover{
+  background: rgba(51,104,176,0.9);
+}
+
+footer{
+  position:relative;;
+  left: -400px;
+  bottom: -475px;
+  font-weight: bolder;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 10px;
+}
+::-webkit-scrollbar-button {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #C7A008;
+  border: 0px groove #400040;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C7A008;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #C7A008;
+}
+::-webkit-scrollbar-track:vertical {
+  background: rgba(51,104,176,0.9);
+  border: 0px groove #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: rgba(51,104,176,0.5);
+}
+::-webkit-scrollbar-track:active {
+  background: rgba(51,104,176,0.5);
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

@@ -1,0 +1,294 @@
+/* Removendo conteudo de Pokemon  */
+header span:last-child {
+  display: none;
+}
+
+.historia-pokemon {
+  display: none;
+}
+
+.personagens h2:first-of-type {
+  display: none;
+}
+
+.personagens ul:first-of-type {
+  display: none;
+}
+
+.treinadores-pokemon {
+   display: none;
+}
+
+/* Adicionando estilo ao html */
+@font-face {
+    font-family: digimon;
+    src: url("digimon-font.ttf");
+}
+
+header, .historia-digimon h1, nav a, .personagens, .digiescolhidos {
+    font-family: digimon;
+}
+
+.historia-digimon h1, .personagens h2, .digiescolhidos h3 {
+    text-align: center;
+}
+
+body {
+    font-family: arial;
+    background-image: url("http://image.prntscr.com/image/fb4ee16581ee47f4861f628072a84436.png");
+    background-repeat: no-repeat;
+    background-color:#0580bb;
+}
+
+header {
+    margin: 20px auto;
+}
+
+    header div.logo {
+        background-image: url("http://image.prntscr.com/image/c7d0717056a247e29e7559c7d9e3c06f.png");
+        background-repeat: no-repeat;
+        float: left;
+        width: 380px;
+        height: 125px;
+    }
+
+    header h1:first-of-type {
+        display: inline;
+        font-size: 45px;
+        text-shadow: 0 0 40px white;
+    }
+
+.historia-digimon a {
+    color: black;
+}
+
+    .historia-digimon a:hover {
+        color: white;
+    }
+
+.historia-digimon, .personagens, .digiescolhidos, .autenticacao a, body > nav a {
+    box-shadow: 5px 5px 10px 0px black;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.autenticacao a, body > nav a {
+    color: black;
+    border-style: solid;
+    border-color: black;
+    transition-duration: 0.3s;
+    padding: 3px;
+}
+
+.autenticacao a {
+    border-width: 3px;
+    border-radius: 10px;
+    background-color: #FEC435;
+
+}
+
+    .autenticacao a:hover {
+        background-color: #E8AF3F;
+    }
+
+body > nav {
+    margin: 10px auto;
+}
+
+    body > nav a {
+        display: inline-block;
+        border-width: 2px;
+        border-radius: 5px;
+        background-color: silver;
+    }
+
+    nav > a span {
+        display: inline-block;
+    }
+
+    nav > a:hover {
+        background-color: grey;
+    }
+
+.historia-digimon, .personagens, .digiescolhidos {
+    margin: 70px auto;
+    width: 800px;
+    background-color: silver;
+    border-color: grey;
+    border-style: solid;
+    border-radius: 52px;
+    padding: 30px;
+    opacity: 0.9;
+}
+
+.personagens ul, .digiescolhidos ul{
+    list-style-type: none;
+    margin: auto 30px;
+}
+
+.personagens ul li, .digiescolhidos ul li {
+    background-color: #FEC435;
+    border-style: solid;
+    border-color: black;
+    padding: 2px;
+}
+
+.personagens ul li:hover, .digiescolhidos ul li:hover {
+    background-color: #E8AF3F;
+}
+
+.personagens ul li:hover:after, .digiescolhidos ul li:hover:after {
+    border-style: solid;
+    border-color: black;
+    border-radius: 52px;
+    background-color: white;
+    box-shadow: 5px 5px 10px 0px black;
+    position: absolute;
+    left: 45%;
+}
+
+.personagens ul li {
+    display: block;
+    width: 170px;
+}
+
+    .personagens ul li:hover:after {
+        top: 800px;
+    }
+
+    /*Agumon*/
+    .personagens ul li:nth-child(1):hover:after {
+        content: url("http://image.prntscr.com/image/49cf48049a4040e88943d4a41d31d8d8.png");
+    }
+    /*Gabumon*/
+    .personagens ul li:nth-child(2):hover:after {
+        content:  url("http://image.prntscr.com/image/6d9fbd77e6e541068ee9f24b18ddcc5b.png");
+    }
+    /*Biyomon e Tentomon*/
+    .personagens ul li:nth-child(3):hover:after {
+        content:  url("http://image.prntscr.com/image/b8f474cd9602438eaf8e8b44714dd2f4.png");
+    }
+    /*Gomamon e Patamon*/
+    .personagens ul li:nth-child(4):hover:after {
+        content: url("http://image.prntscr.com/image/50d39d4903424ae29faa414f1bab215a.png");
+    }
+    /*Gatomon*/
+    .personagens ul li:nth-child(5):hover:after {
+        content: url("http://image.prntscr.com/image/710320f0d9e54a5fa58ff3cb23cdc72c.png");
+    }
+    /*Veemon*/
+    .personagens ul li:nth-child(6):hover:after {
+        content: url("http://image.prntscr.com/image/43c66c5a21c742fbbe0f9911eeb56c68.png");
+    }
+    /*Hawkmon*/
+    .personagens ul li:nth-child(7):hover:after {
+        content: url("http://image.prntscr.com/image/0eb731dde3db42cf86c9918c7ffd3ea2.png");
+    }
+    /*Armadillomon*/
+    .personagens ul li:nth-child(8):hover:after {
+        content:  url("http://image.prntscr.com/image/37baae6facde44609fe600f61a5b6540.png");
+    }
+    /*Wormmon*/
+    .personagens ul li:nth-child(9):hover:after {
+        content: url("http://image.prntscr.com/image/6ead92e2725041a2a89b848ca4255f43.png");
+    }
+    /*Palmon*/
+    .personagens ul li:nth-child(10):hover:after {
+        content: url("http://image.prntscr.com/image/93c063c114e549fcb74af237ca904b9f.png");
+    }
+    /*Renamon*/
+    .personagens ul li:nth-child(11):hover:after {
+        content: url("http://image.prntscr.com/image/2d68439babb64d4f9ec116120fab403a.png");
+    }   
+    /*Guilmon*/
+    .personagens ul li:nth-child(12):hover:after {
+        content: url("http://image.prntscr.com/image/9919deee84504f0f970ffaf2e901452b.png");
+    }
+    /*Lalamon*/
+    .personagens ul li:nth-child(13):hover:after {
+        content: url("http://image.prntscr.com/image/ea57a2e694014527a0c3eab8f4b4d813.png");
+    }
+    /*Falcomon*/
+    .personagens ul li:nth-child(14):hover:after {
+        content: url("http://image.prntscr.com/image/a7704377a16e4e2a8038804510165615.png");
+    }
+
+.digiescolhidos {
+    height: 600px;
+}
+
+.digiescolhidos ul li {
+    display: inline-block;
+}
+
+    .digiescolhidos ul li:hover:after  {
+        top: 1500px;
+    }
+    /*Taichi*/
+    .digiescolhidos ul li:nth-child(1):hover:after {
+        content: url("http://image.prntscr.com/image/532b3d573b484fb6b4a9f798b71759d1.png");
+    }
+    /*Matt*/
+    .digiescolhidos ul li:nth-child(2):hover:after {
+        content: url("http://image.prntscr.com/image/c3e0bac2e7184616a80bafc054edb7e5.png");
+    }
+    /*Sora*/
+    .digiescolhidos ul li:nth-child(3):hover:after {
+        content: url("http://image.prntscr.com/image/1f2ec2c07d5643e6ad17fa2b9cde8bf8.png");
+    }
+    /*Joe*/
+    .digiescolhidos ul li:nth-child(4):hover:after {
+        content: url("http://image.prntscr.com/image/3212f5ce3fdc4dfc9905f76f49f3e6c7.png");
+    }
+    /*Kari*/
+    .digiescolhidos ul li:nth-child(5):hover:after {
+        content: url("http://image.prntscr.com/image/6fe0fffaf09e4236b3879e42165a3da4.png");
+    }
+    /*Davis*/
+    .digiescolhidos ul li:nth-child(6):hover:after {
+        content: url("http://image.prntscr.com/image/652d82c4d00a4e9b92d0d15f6ac89c27.png");
+    }
+    /*Yolei*/
+    .digiescolhidos ul li:nth-child(7):hover:after {
+        content: url("http://image.prntscr.com/image/8a6829c1a58c4ea0b06c7b68fa1d144a.png");
+    }
+    /*Cody*/
+    .digiescolhidos ul li:nth-child(8):hover:after {
+        content: url("http://image.prntscr.com/image/537e2d56172d43bf8594ccd42264a46f.png");
+    }
+    /*Ken*/
+    .digiescolhidos ul li:nth-child(9):hover:after {
+        content: url("http://image.prntscr.com/image/7acc5ddda79c48cfb47d9249d135d911.png");
+    }
+    /*Mimi*/
+    .digiescolhidos ul li:nth-child(10):hover:after {
+        content: url("http://image.prntscr.com/image/c37c043d868c4c9cb2e200d857cf9e3a.png");
+    }
+    /*Rika*/
+    .digiescolhidos ul li:nth-child(11):hover:after {
+        content: url("http://image.prntscr.com/image/cfde994772b94948b1e013c31288ba2a.png");
+    }   
+    /*Takato*/
+    .digiescolhidos ul li:nth-child(12):hover:after {
+        content: url("http://image.prntscr.com/image/b97ee57d2d4c4946aa1abe65634b143b.png");
+    }
+    /*Yoshino*/
+    .digiescolhidos ul li:nth-child(13):hover:after {
+        content: url("http://image.prntscr.com/image/7442b6887c2447e49420a84c06f7f9d2.png");
+    }
+    /*Keenan*/
+    .digiescolhidos ul li:nth-child(14):hover:after {
+        content: url("http://image.prntscr.com/image/cab5e654de984ac7b247f649afd8cb98.png");
+    }
+
+footer {
+    float: right;
+}
+
+    footer:after {
+        /*Icone*/
+        content: url("http://image.prntscr.com/image/a6d6a0438c484fdaaea90c2893787c42.gif");
+    }

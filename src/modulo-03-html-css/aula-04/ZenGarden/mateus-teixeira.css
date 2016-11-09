@@ -1,0 +1,402 @@
+/*Excluindo html pokémon*/
+header span:nth-of-type(2){
+  display: none;
+}
+.historia-pokemon{
+  display: none;
+}
+
+.personagens> :nth-of-type(1){
+  display: none;
+}
+
+.treinadores-pokemon{
+  display: none;
+}
+
+/*Deixando apenas digimon adventure*/
+.personagens li:nth-of-type(11),
+.personagens li:nth-of-type(12),
+.personagens li:nth-of-type(13),
+.personagens li:nth-of-type(14){
+  display:none;
+}
+
+.digiescolhidos li:nth-of-type(11),
+.digiescolhidos li:nth-of-type(12),
+.digiescolhidos li:nth-of-type(13),
+.digiescolhidos li:nth-of-type(14){
+  display:none;
+}
+
+
+
+/**/
+.historia-digimon{
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border-radius: 20px;
+  text-align: justify;
+  padding: 20px;
+  margin: 20px;
+  font-size: 20px;
+  box-shadow: 5px 5px 5px 0px #154f82;
+  
+}
+
+.historia-digimon:before{
+  content: url(http://image.prntscr.com/image/85cb3fdda60a4bdc866bd569fcc61069.png);
+  animation: slides;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.1s;
+  float: right;
+  margin: 20px;
+  
+
+}
+
+.personagens h2{
+  background: #154f82;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 10px;
+  padding-left: 20px;
+  border-radius: 20px;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.personagens{
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border-radius: 20px;
+  text-align: justify;
+  padding: 0px 20px 50px;
+  margin: 0px 100px 20px;
+  font-size: 20px;
+  position: relative;
+  box-shadow: 5px 5px 5px 0px #154f82;
+}
+
+.digiescolhidos h3{
+  background: #154f82;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 10px;
+  padding-left: 20px;
+  border-radius: 20px;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+
+.digiescolhidos{
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border-radius: 20px;
+  text-align: justify;
+  padding: 0px 20px 50px;
+  margin: 0px 100px 20px;
+  font-size: 20px;
+  position: relative;
+  box-shadow: 5px 5px 5px 0px #154f82;
+}
+
+nav{
+  background-color: #f79523;
+  margin: 0px auto 50px auto;
+  margin-bottom: 250px;
+}
+
+nav > a{
+  display: inline-block;
+  color: #154f82;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-right: 2px solid;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+a{
+  text-decoration: none;
+  color: white;  
+}
+
+
+header{
+  background-color: #154f82;
+  color: white;
+  text-align: center;
+  padding: 3px 0px;
+}
+
+header h1{
+  font-size: 20px;
+  animation-name: title;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+  text-transform: uppercase;
+}
+.autenticacao{
+    left: 77%;
+    background: transparent;
+    top: 20px;
+    position: absolute;
+    margin-top: 80px; 
+      
+}
+.autenticacao > a{ 
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  padding: 5px 35px;
+  border: 0px;
+  background: #f79523;
+  color: #154f82;
+  font-size: 20px;   
+}
+
+.autenticacao >a:hover{
+  background: #154f82;
+  color: #f79523;
+}
+nav a:hover{
+  background: #154f82;
+  color: #f79523;
+}
+
+body{
+  margin: 0;
+  overflow-x: hidden;
+  font-family: Digimon;
+  background: url(http://locomotiva26.com.br/wp-content/uploads/2016/10/digimon_adventure_by_x0lis-d935h9w.png) right bottom no-repeat,
+  url(http://image.prntscr.com/image/47287fe5d8554f1abfa450c130d76427.png);
+  background-color: #174274;
+}
+
+footer{
+  background: #154f82;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 400px;
+}
+
+.logo{
+  background: url(http://orig08.deviantart.net/b8be/f/2015/263/f/e/digimon_tamers_logo_vector_by_3prsta-d9a8wxs.png) no-repeat;
+  background-size: 610px;
+  position: absolute; 
+  top: 120px;
+  left: 120px;
+  padding: 250px 400px;
+}
+
+
+
+li:nth-child(odd):hover{
+  background: #f79523;
+  width: 400px;
+}
+
+/*Digimons*/
+.personagens li:nth-of-type(1):hover::after{
+ content: url(http://image.prntscr.com/image/414aa7d5ddd643e99f30ad4ab84551a5.png);
+ left: 60%;
+ top: 80px;
+ position: absolute; 
+}
+
+.personagens li:nth-of-type(2):hover::after{
+ content: url(http://image.prntscr.com/image/9248f0eae393410f95d52c31ec970838.png);
+ left: 60%;
+ top: 80px;
+ position: absolute;
+}
+.personagens li:nth-of-type(3):hover::after{
+ content: url(http://image.prntscr.com/image/2c8ec33a24ed4c5faf95ccf5873ddbe0.png);
+ left: 60%;
+ top: 80px;
+ position: absolute;
+}
+
+.personagens li:nth-of-type(4):hover::after{
+ content: url(http://image.prntscr.com/image/0456fb9b49e046729cc5c8d347147d8f.png);
+ left: 60%;
+ top: 80px;
+ position: absolute;
+}
+
+.personagens li:nth-of-type(5):hover::after{
+ content: url(http://image.prntscr.com/image/019f4adca5894e94907ac433279c9fd4.png);
+ left: 60%;
+ top: 80px;
+ position: absolute;
+}
+
+.personagens li:nth-of-type(6):hover::after{
+ content: url(http://image.prntscr.com/image/1f854e6ceb5c468a82f3518e20654602.png);
+ left: 60%;
+ top: 80px;
+ position: absolute;
+}
+
+.personagens li:nth-of-type(7):hover::after{
+ content: url(http://image.prntscr.com/image/183cf89f4a6e4fd98ab65d7324cf44a0.png);
+ left: 60%;
+ top: 80px;
+ position: absolute;
+}
+
+.personagens li:nth-of-type(8):hover::after{
+ content: url(http://image.prntscr.com/image/c417480d7f5147229cdc07b3a985479e.png);
+ left: 60%;
+ top: 80px;
+ position: absolute;
+}
+
+.personagens li:nth-of-type(9):hover::after{
+ content: url(http://image.prntscr.com/image/afbff457e59b4ddc9e0d0d428c2d7dad.png);
+ left: 60%;
+ top: 80px;
+ position: absolute;
+}
+
+.personagens li:nth-of-type(10):hover::after{
+ content: url(http://image.prntscr.com/image/76b47fd9eade4e618493f4cd7d93de5c.png);
+ left: 60%;
+ top: 80px;
+ position: absolute;
+}
+
+/*Digiescolhidos*/
+
+.digiescolhidos li:nth-of-type(1):hover::after{
+ content: url(http://image.prntscr.com/image/e2d92982f5df4ec8b874a11b9ac9fb9d.png);
+ left: 60%;
+ top: 80px;
+ position: absolute;
+}
+
+.digiescolhidos li:nth-of-type(2):hover::after{
+ content: url(http://image.prntscr.com/image/5ac0a3e9c360425994007b4039f5c142.png);
+ left: 60%;
+ top: 80px;
+ position: absolute;
+}
+
+.digiescolhidos li:nth-of-type(3):hover::after{
+ content: url(http://image.prntscr.com/image/004428ac061447348256d20a20600107.png);
+ left: 60%;
+ top: 80px;
+ position: absolute;
+}
+
+.digiescolhidos li:nth-of-type(4):hover::after{
+ content: url(http://image.prntscr.com/image/b5f89851c8c84603b3a49d305c28bbf9.png);
+ left: 60%;
+ top: 80px;
+ position: absolute;
+}
+
+.digiescolhidos li:nth-of-type(5):hover::after{
+ content: url(http://image.prntscr.com/image/357b6d9095ac40ec81ac9b22dee1d465.png);
+ left: 60%;
+ top: 80px;
+ position: absolute;
+}
+
+.digiescolhidos li:nth-of-type(6):hover::after{
+ content: url(http://image.prntscr.com/image/047ca2d2ee3046d2b54a207f72b94479.png);
+ left: 60%;
+ top: 80px;
+ position: absolute;
+}
+
+.digiescolhidos li:nth-of-type(7):hover::after{
+ content: url(http://image.prntscr.com/image/1032d4e0ff9549b89f6fbcd46719e2af.png);
+ left: 60%;
+ top: 80px;
+ position: absolute;
+}
+
+.digiescolhidos li:nth-of-type(8):hover::after{
+ content: url(http://image.prntscr.com/image/b65edfe9a24c40db826bde2004b5f771.png);
+ left: 60%;
+ top: 80px;
+ position: absolute;
+}
+
+.digiescolhidos li:nth-of-type(9):hover::after{
+ content: url(http://image.prntscr.com/image/5c9772845e2d4a5e8c3333104a9257bc.png);
+ left: 60%;
+ top: 80px;
+ position: absolute;
+}
+
+.digiescolhidos li:nth-of-type(10):hover::after{
+ content: url(http://image.prntscr.com/image/21e694a5e02049d78c4ff9c3b31d2267.png);
+ left: 60%;
+ top: 80px;
+ position: absolute;
+}
+
+
+li:nth-child(even):hover{
+  background: #154f82;
+  width: 400px;
+}
+
+li{
+  list-style:none;
+  list-style-image:url(http://vignette4.wikia.nocookie.net/digimobs/images/d/dc/Digivice.png/revision/latest?cb=20120524200011);
+}
+
+
+/*Scroll*/
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+  -webkit-border-radius: 16px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #000;
+  -webkit-border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 10px;
+  background-color: #174274;
+  -webkit-border-radius: 3px;
+}
+
+
+
+/*Effects*/
+
+@font-face {
+    font-family: Digimon;
+    src: url(Digimon.ttf);
+}
+
+@keyframes title {
+   from {transform: translateX(60%)}
+   to{transform: translateX(-80%)}
+}
+
+@keyframes slides {
+    0% {background: url(http://image.prntscr.com/image/d290c30d13504d639def0a58483b3da7.png) no-repeat;}
+    20% {background: url(http://image.prntscr.com/image/dda4b2a09d804a499f86bc7d940bd4ed.png) no-repeat;}
+    40% {background: url(http://image.prntscr.com/image/59d9bf4ea72d484a83aad8fc65e4589b.png) no-repeat;}
+    60% {background: url(http://image.prntscr.com/image/9987dfa2199740dc8ad61c154a01b084.png) no-repeat;}
+    80% {background: url(http://image.prntscr.com/image/28ef1276e25f444fbc3ed26bdf418724.png) no-repeat;}
+    100% {background: url(http://image.prntscr.com/image/3cd5b463a06b4ac1903561d74fdbf0e2.png) no-repeat;}
+   
+    
+
+}
