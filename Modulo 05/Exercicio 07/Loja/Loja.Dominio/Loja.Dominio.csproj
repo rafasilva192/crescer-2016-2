@@ -45,6 +45,7 @@
     <Compile Include="Produto.cs" />
     <Compile Include="ProdutoServico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegraDeNegocioException.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="IUsuarioRepositorio.cs" />
     <Compile Include="UsuarioServico.cs" />

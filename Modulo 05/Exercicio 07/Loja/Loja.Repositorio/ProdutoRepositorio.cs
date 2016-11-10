@@ -51,7 +51,14 @@ namespace Loja.Repositorio
                 return contexto.Produto.Where(p => p.Nome.Contains(filtro)).OrderBy(p => p.Nome).ToList();
             }
         }
-        
+
+        public bool ProdutoComMesmoNome(Produto produto)
+        {
+            using (var contexto = new ContextoDeDados())
+            {
+                return Convert.ToBoolean(contexto.Produto.Where(p => p.Nome.Equals(produto.Nome)).First());
+            }
+        }
 
         private Produto AcharPorId(Produto produto, ContextoDeDados contexto)
         {

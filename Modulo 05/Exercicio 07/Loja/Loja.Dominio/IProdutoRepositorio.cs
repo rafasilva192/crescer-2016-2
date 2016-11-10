@@ -15,5 +15,7 @@ namespace Loja.Dominio
         void EditarProduto(Produto produto);
 
         List<Produto> ListarProduto(string filtro);
+
+        bool ProdutoComMesmoNome(Produto produto);
     }
 }

@@ -21,6 +21,7 @@ namespace Loja.Dominio
         }
         public void SalvarProduto(Produto produto)
         {
+            VerificarNomeEValor(produto);
             produtoRepositorio.CadastrarProduto(produto);
         }
         public void RemoverProduto(Produto produto)
@@ -29,7 +30,24 @@ namespace Loja.Dominio
         }
         public void AlterarProduto(Produto produto)
         {
+            VerificarNomeEValor(produto);
             produtoRepositorio.EditarProduto(produto);
+        }
+        public void VerificarNomeEValor(Produto produto)
+        {
+            bool nomeMenorQueTresCharacteres = produto.Nome.Length <= 2;
+            if (produtoRepositorio.ProdutoComMesmoNome(produto))
+            {
+                throw new RegraDeNegocioException("Já tem um produto cadastrado com esse nome");
+            }
+            else if (nomeMenorQueTresCharacteres)
+            {
+                throw new RegraDeNegocioException("O nome do produto precisa ter 3 ou mais caracteres");
+            }
+            else if (produto.Valor == 0)
+            {
+                throw new RegraDeNegocioException("O valor do produto não pode ser zero");
+            }
         }
     }
 }

@@ -38,30 +38,48 @@ namespace Loja.Web.Controllers
             return View();
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Salvar(ProdutoModel model)
         {
             if (ModelState.IsValid)
             {
                 if (model.Id != null)
                 {
-                    var aplicativo = ServicoDeDependencias.MontarProdutoServico();
+                    try
+                    {
+                        var aplicativo = ServicoDeDependencias.MontarProdutoServico();
 
-                    var produto = new Produto((int)model.Id, model.Nome, model.Valor);
+                        var produto = new Produto((int)model.Id, model.Nome, model.Valor);
 
-                    aplicativo.AlterarProduto(produto);
+                        aplicativo.AlterarProduto(produto);
 
-                    return RedirectToAction("Index");
+                        return RedirectToAction("Index");
+                    }
+                    catch(RegraDeNegocioException ex)
+                    {
+                        ModelState.AddModelError("", ex);
+                        return View("Cadastro", model);
+                    }
                 }
                 else
                 {
-                    var aplicativo = ServicoDeDependencias.MontarProdutoServico();
+                    try
+                    {
+                        var aplicativo = ServicoDeDependencias.MontarProdutoServico();
 
-                    var produto = new Produto(model.Nome, model.Valor);
+                        var produto = new Produto(model.Nome, model.Valor);
 
-                    aplicativo.SalvarProduto(produto);
+                        aplicativo.SalvarProduto(produto);
 
-                    return RedirectToAction("Index");
-                }
+                        return RedirectToAction("Index");
+                    }
+                    catch (RegraDeNegocioException ex)
+                    {
+                        ModelState.AddModelError("", ex);
+                        return View("Cadastro", model);
+                    }
+            }
             }
             else
             {
