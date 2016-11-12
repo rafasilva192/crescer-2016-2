@@ -1,0 +1,29 @@
+﻿<div id="telaLogin" class="sub-tela formulario-centralizado col-md-5">
+  <form id="formLogin" class="form-horizontal">
+    <div class="form-group">
+      <h2 class="titulo col-md-offset-3 col-md-3">Marvelflix</h2>
+    </div>
+    <div class="form-group">
+      <label for="emailLogin" class="col-md-3">E-mail</label>
+      <div class="col-md-9">
+        <input type="email" id="emailLogin" name="email" class="form-control has-error" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="senhaLogin" class="col-md-3">Senha</label>
+      <div class="col-md-9">
+        <input type="password" id="senhaLogin" name="senha" class="form-control" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <div id="container-botao-entrar" class="col-md-offset-3 col-md-3 pull-right">
+        <button type="submit" class="btn btn-primary">Entrar</button>
+      </div>
+    </div>
+  </form>
+</div>
+<div id="telaPrincipal" class="sub-tela">
+</div>
+@section Scripts{
+  @Scripts.Render("~/bundles/app")
+}

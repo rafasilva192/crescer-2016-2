@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Marvelflix</title>
+  <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  @Styles.Render("~/Content/css")
+  @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="container">
+  <div class="loader tela-centralizada" style="display: none;">
+    <span>{</span><span>}</span>
+  </div>
+  <section class="tela tela-centralizada">
+    @RenderBody()
+  </section>
+  @Scripts.Render("~/bundles/jquery")
+  @Scripts.Render("~/bundles/handlebars")
+  @Scripts.Render("~/bundles/jqueryval")
+  @Scripts.Render("~/bundles/bootstrap")
+  @RenderSection("Scripts", required: false)
+</body>
+</html>

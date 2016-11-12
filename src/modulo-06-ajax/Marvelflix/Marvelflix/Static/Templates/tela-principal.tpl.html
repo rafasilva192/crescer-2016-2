@@ -1,0 +1,32 @@
+<div class="row">
+  <h2 class="titulo">Bem vindo!</h2>
+</div>
+<div class="row">
+  <button class="btn" id="btn-sincronizar-com-marvel">Sincronizar com Marvel</button>
+  <button class="btn" id="btn-pagina-anterior"><< Anterior</button>
+  <button class="btn" id="btn-proxima-pagina">Proxima >></button>
+</div>
+<div class="row">
+  <section id="listagem-herois" class="col-md-6">
+    <ul>
+    {{#each chars}}
+      <li data-heroi-id="{{ id }}">
+        <a href="{{ link }}" target="_blank">
+          <span class="nome-item">{{ name }}</span>  
+        </a>
+        <img class="thumbnail" src="{{ thumbnail }}">
+      </li>
+    {{/each}}
+    </ul>
+  </section>
+  <section id="listagem-comics" class="col-md-6">
+    <img class="capa-comic" src="{{ selecionado.comic_thumbnail }}">
+    <ul>
+    {{#each selecionado.comics}}
+      <li>
+        <span class="nome-item">{{ title }}</span>
+      </li>
+    {{/each}}
+    </ul>
+  </section>
+</div>

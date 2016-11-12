@@ -1,0 +1,76 @@
+﻿html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+}
+
+label {
+  color: aliceblue;
+}
+
+.sub-tela {
+  display: none;
+}
+
+.titulo {
+  font-weight: bold;
+  color: red;
+  padding-bottom: 10px;
+}
+
+.tela-centralizada {
+  /* Flex */
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Fim-do-flex */
+}
+
+.formulario-centralizado {
+  text-align: center;
+}
+
+.formulario-centralizado--top {
+  align-self: flex-start;
+}
+
+.formulario-centralizado--bottom {
+  align-self: flex-end;
+}
+
+.error {
+  color: red;
+}
+
+.thumbnail {
+  height: 200px;
+  width: 200px;
+}
+
+.capa-comic {
+  height: 230px;
+  width: 195px;
+}
+
+#container-botao-entrar {
+  padding-left: 0;
+  margin-left: 114px;
+}
+
+#container-botao-entrar button {
+  width: 104px;
+}
+
+.nome-item {
+  color: azure;
+}

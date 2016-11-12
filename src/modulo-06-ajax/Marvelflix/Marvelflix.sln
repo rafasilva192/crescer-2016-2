@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marvelflix", "Marvelflix\Marvelflix.csproj", "{69ABA6F0-136C-4BA9-AAD4-B3FB87FF32C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. WebApp + API", "1. WebApp + API", "{2B7BB3B0-C0E9-4B2A-8757-712BD07FFA99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Dominio", "2. Dominio", "{A931880B-C81E-4C11-88D0-0118815935AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Repositorio", "3. Repositorio", "{BA2623D4-C26F-43AD-BB2D-CE70266DAF38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marvelflix.Repositorio", "Marvelflix.Repositorio\Marvelflix.Repositorio.csproj", "{EC0FC984-CD6B-4FA5-AD11-188F3672560D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marvelflix.Dominio", "Marvelflix.Dominio\Marvelflix.Dominio.csproj", "{D6C1CC96-811D-4CF0-9C33-F53057DF00BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69ABA6F0-136C-4BA9-AAD4-B3FB87FF32C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69ABA6F0-136C-4BA9-AAD4-B3FB87FF32C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69ABA6F0-136C-4BA9-AAD4-B3FB87FF32C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69ABA6F0-136C-4BA9-AAD4-B3FB87FF32C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC0FC984-CD6B-4FA5-AD11-188F3672560D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC0FC984-CD6B-4FA5-AD11-188F3672560D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC0FC984-CD6B-4FA5-AD11-188F3672560D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC0FC984-CD6B-4FA5-AD11-188F3672560D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6C1CC96-811D-4CF0-9C33-F53057DF00BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6C1CC96-811D-4CF0-9C33-F53057DF00BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6C1CC96-811D-4CF0-9C33-F53057DF00BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6C1CC96-811D-4CF0-9C33-F53057DF00BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{69ABA6F0-136C-4BA9-AAD4-B3FB87FF32C1} = {2B7BB3B0-C0E9-4B2A-8757-712BD07FFA99}
+		{EC0FC984-CD6B-4FA5-AD11-188F3672560D} = {BA2623D4-C26F-43AD-BB2D-CE70266DAF38}
+		{D6C1CC96-811D-4CF0-9C33-F53057DF00BD} = {A931880B-C81E-4C11-88D0-0118815935AF}
+	EndGlobalSection
+EndGlobal
