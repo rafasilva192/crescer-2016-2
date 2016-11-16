@@ -2,11 +2,31 @@ class TelaPrincipal {
   
   constructor(seletor) {
     this.$elem = $(seletor);
+    this.herois = new Herois();
     this.qtdHeroisPorPagina = 5;
     this.renderizarEstadoInicial();
   }
 
   registrarBindsEventos(self) {
+
+    $('li[data-heroi-id]').each(function () {
+      $(this).click(function () {
+        let idHeroi = $(this).attr('data-heroi-id');
+        console.log(idHeroi);
+        marvelflix.render('#listagem-comics', 'listagem-comics', {
+          selecionado: {
+            id: idHeroi,
+            comic_thumbnail: 'http://d1466nnw0ex81e.cloudfront.net/n_iv/600/1199087.jpg',
+            comics: [
+              { title: 'Titulo 1' },
+              { title: 'Titulo 2' },
+              { title: 'Titulo 3' },
+              { title: 'Titulo 4' },
+            ]
+          }
+        })
+      });
+    });
 
     self.$btnSincronizar = $('#btn-sincronizar-com-marvel');
     self.$btnProximaPagina = $('#btn-proxima-pagina');
@@ -38,8 +58,9 @@ class TelaPrincipal {
   }
 
   sincronizar() {
+
     let self = this;
-    let url = 'https://gateway.marvel.com:443/v1/public/characters?apikey=&orderBy=-modified&limit=20';
+    let url = 'https://gateway.marvel.com:443/v1/public/characters?apikey=7ae597c1277cc37f2a4001139b3e2199&orderBy=-modified&limit=20';
     $.get(url).then(
       (res) => {
         res.data.results.forEach(
@@ -59,21 +80,20 @@ class TelaPrincipal {
   }
 
   cadastrarNovoHeroi(heroi) {
-    $.post('/api/herois', heroi).done((res) => {
+    this.herois.cadastrar(heroi).done((res) => {
       console.log('novo id', res.id);
     });
   }
 
   carregarERenderizarHerois(pagina) {
-    return $.get('/api/herois', {
-      pagina: pagina,
-      tamanhoPagina: this.qtdHeroisPorPagina
-    }).done(function (res) {
-      this.qtdTotalRegistros = res.total;
-      this.renderizarHerois(res.dados).then(() => {
-        this.registrarBindsEventos(this);
-      })
-    }.bind(this));
+
+    return this.herois.pegarRegistros(pagina, this.qtdHeroisPorPagina)
+      .done(function (res) {
+        this.qtdTotalRegistros = res.total;
+        this.renderizarHerois(res.dados).then(() => {
+          this.registrarBindsEventos(this);
+        })
+      }.bind(this));
   }
 
   renderizarHerois(heroisServidor) {

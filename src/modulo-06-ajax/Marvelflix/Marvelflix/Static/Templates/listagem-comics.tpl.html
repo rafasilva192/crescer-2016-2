@@ -1,0 +1,9 @@
+﻿<h3>{{ selecionado.id }}</h3>
+<img class="capa-comic" src="{{ selecionado.comic_thumbnail }}">
+<ul>
+  {{#each selecionado.comics}}
+  <li>
+    <span class="nome-item">{{ title }}</span>
+  </li>
+  {{/each}}
+</ul>

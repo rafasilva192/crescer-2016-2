@@ -21,6 +21,7 @@ namespace Marvelflix
                "~/Scripts/handlebars.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
+                "~/Scripts/app/herois.js",
                 "~/Scripts/app/telaPrincipal.js",
                 "~/Scripts/app/telaLogin.js",
                 "~/Scripts/app/marvelflix.js",
