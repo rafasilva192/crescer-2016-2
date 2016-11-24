@@ -4,6 +4,7 @@ class TelaLogin {
     this.$elem = $(seletor);
     this.registrarBindsEventos();
     this.renderizarEstadoInicial();
+      
   }
 
   registrarBindsEventos() {

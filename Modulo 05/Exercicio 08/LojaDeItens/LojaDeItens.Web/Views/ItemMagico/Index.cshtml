@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Loja de Itens Mágicos</h1>
+    <p class="lead">Esta é a loja do Elfo Loko!</p>
+</div>
+
+<div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 text-left">
+        <button class="btn btn-primary" id="btn-voltar-pagina"><<</button>
+        <button class="btn btn-primary" id="btn-avancar-pagina">>></button>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 text-right">
+        @Html.ActionLink("Criar Item", "Editar", "ItemMagico", null, new { @class = "btn btn-primary" })
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12 col-md-12" id="container-lista">
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12 col-md-12" id="container-lista-raros">
+
+    </div>
+</div>
+
+@section js {
+    <script>
+        itemMagicoIndex.iniciar();
+    </script>
+}
+

@@ -1,0 +1,37 @@
+﻿@model LojaDeItens.Web.Models.ItemMagico.ItemMagicoListagemViewModel
+@using LojaDeItens.Web.Models.ItemMagico
+
+@{
+    string ultimaPaginaAttr = Model.UltimaPagina ? "true" : "";
+}
+
+<table class="table table-striped" data-ultima-pagina="@ultimaPaginaAttr" id="@Model.GridId">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Id</th>
+            <th>Nome</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (ItemMagicoParaListaViewModel item in Model.Itens)
+            {
+                <tr>
+                    <td>
+                        @if (item.PodeEditar)
+                        {
+                            @*<a href="/ItemMagico/Editar?id=1">Editar</a>*@
+                            @Html.ActionLink("Editar", "Editar", "ItemMagico", new { id = item.Id }, null)
+                        }
+
+                        <button onclick="itemMagicoIndex.excluir(@item.Id)">Excluir</button>
+                    </td>
+                    <td>@item.Id</td>
+                    <td>@item.Nome</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+

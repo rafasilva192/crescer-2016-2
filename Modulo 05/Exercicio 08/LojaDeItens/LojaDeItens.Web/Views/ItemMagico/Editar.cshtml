@@ -1,0 +1,43 @@
+﻿@model LojaDeItens.Web.Models.ItemMagico.ItemParaEdicaoViewModel
+@{
+    string titulo = Model == null ? "Criar Novo Item" : "Editar";
+    ViewBag.Title = titulo;
+}
+
+<h2>@titulo</h2>
+
+<div class="container">
+    @using (Ajax.BeginForm("Salvar", "ItemMagico", new AjaxOptions
+    {
+        HttpMethod = "Post",
+        OnSuccess = "itemMagicoEditar.sucessoNoCadastro"
+    }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary()
+
+        @Html.HiddenFor(m => m.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Nome)
+            @Html.TextBoxFor(m => m.Nome, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Preco)
+            @Html.TextBoxFor(m => m.Preco, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Estoque)
+            @Html.TextBoxFor(m => m.Estoque, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Descricao)
+            @Html.TextBoxFor(m => m.Descricao, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Raro)
+            @Html.CheckBoxFor(m => m.Raro, new { @class = "form-control" })
+        </div>
+        <button type="submit">Salvar</button>
+    }
+</div>
