@@ -10,3 +10,13 @@
 6. String
 7. StringBuilder e StringBuffer
 8. Date
+
+## Aula 2
+
+1. File
+2. Reader
+3. Writer
+4. JDBC
+5. Criando um conexão
+6. Querys
+7. Operações
