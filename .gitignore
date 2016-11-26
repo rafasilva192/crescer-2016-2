@@ -51,3 +51,4 @@ bld/
 # MSTest test Results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
+/Modulo Java/Aula_2/Aula_2/target/

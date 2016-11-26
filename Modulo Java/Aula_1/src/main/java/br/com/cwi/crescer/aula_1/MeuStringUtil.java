@@ -64,11 +64,7 @@ public class MeuStringUtil {
     }
     
     public static boolean ValidarString(String validar){
-        if(validar.isEmpty() || validar.trim().isEmpty()){
-            return false;
-        }
-        else return true;
-    
+        return validar.trim().length() >= 2;
 }
 
     private static void IdentificarPalindromo(String frase) {
