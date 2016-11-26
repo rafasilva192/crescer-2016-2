@@ -63,11 +63,11 @@ public class MeuStringUtil {
         System.out.println(numeroVogal);
     }
     
-    public static void ValidarString(String validar){
-        if(validar.isEmpty()){
-            System.out.println("String não é valida pois está vazia");
+    public static boolean ValidarString(String validar){
+        if(validar.isEmpty() || validar.trim().isEmpty()){
+            return false;
         }
-        else System.out.println("String é valida");
+        else return true;
     
 }
 
