@@ -18,7 +18,7 @@ public class Run {
         String entrada;
         boolean sair = false;
         while (true) {
-            System.out.println("1 - MeuFileUtils\n2 - MeuReaderUtils\n3 - MeuWriterUtils\n4 - Sair");
+            System.out.println("1 - MeuFileUtils\n2 - MeuReaderUtils\n3 - MeuWriterUtils\n4 - MeuSqlUtils\n5 - Sair");
             entrada = input.nextLine();
             switch (entrada) {
                 case "1":
@@ -31,6 +31,9 @@ public class Run {
                     new MeuWriterUtils().WriterUtils(input);
                     break;
                 case "4":
+                    new MeuSqlUtils().SqlUtils(input);
+                    break;
+                case "5":
                     sair = true;
                     break;
                 default:

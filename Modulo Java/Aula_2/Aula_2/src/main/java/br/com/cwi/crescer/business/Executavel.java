@@ -109,7 +109,7 @@ public class Executavel {
     public List<String> LerArquivo(File file) {
         List<String> listaConteudo = new ArrayList<>();
         String extension = getExtension(file.getAbsolutePath());
-        if (file.exists() && extension.equals("txt")) {
+        if (file.exists() && (extension.equals("txt") || extension.equals("sql"))) {
             try (BufferedReader br = new BufferedReader(new FileReader(file));) {
                 String linhaAtual = br.readLine();
                 while (linhaAtual != null) {
@@ -143,12 +143,13 @@ public class Executavel {
         return "Arquivo escrito com sucesso!";
     }
 
-    private static String getExtension(String path) {
+    public static String getExtension(String path) {
         int i = path.lastIndexOf('.');
         if (i >= 0) {
             return path = path.substring(i + 1);
         }
         return "";
     }
+
 
 }
