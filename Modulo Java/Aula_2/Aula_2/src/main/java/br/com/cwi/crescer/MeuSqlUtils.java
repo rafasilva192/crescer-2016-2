@@ -6,7 +6,12 @@
 package br.com.cwi.crescer;
 
 import br.com.cwi.crescer.business.Executavel;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
@@ -14,6 +19,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -28,7 +35,7 @@ public class MeuSqlUtils {
         List<String> listaSql;
         boolean executando = true;
         while (executando) {
-            System.out.println("1 - Executar ações Sql\n2 - Ler informações do banco\n3 - Importar CSV\nsair - volta para o menu");
+            System.out.println("1 - Executar ações Sql\n2 - Ler informações do banco\n3 - Importar CSV\n4 - Exportar para CSV\nsair - volta para o menu");
             String entrada = input.nextLine();
             switch (entrada) {
                 case "1":
@@ -43,14 +50,19 @@ public class MeuSqlUtils {
                     lerBanco(entrada);
                     break;
                 case "3":
-                    System.out.println("Digite o nome do arquivo csv");
-                    File fileCSV = new File(input.nextLine().trim());
-                    if (fileCSV.exists()) {
-                        System.out.println("Digite o nome da Table");
-                        entrada = input.nextLine().trim();
-                        lerCSV(fileCSV, entrada);
+                    System.out.println("Digite o nome do loader do seu arquivo CSV");
+                    File fileLoader = new File(input.nextLine().trim());
+                    if (fileLoader.exists()) {
+                        lerCSV(fileLoader);
                     } else {
                         System.out.println("Arquivo não existe");
+                    }
+                case "4":
+                    System.out.println("Digite o nome do arquivo para exportar a tabela");
+                    File fileExport = new File(input.nextLine().trim());
+                    if (fileExport.exists()) {
+                        System.out.println("Digite o nome da tabela");
+                        exportarCSV(fileExport, input.nextLine().trim());
                     }
                     break;
                 case "sair":
@@ -98,20 +110,29 @@ public class MeuSqlUtils {
         }
     }
 
-    private void lerCSV(File file, String Table) {
-        String extension = new Executavel().getExtension(file.getAbsolutePath());
-        if (extension.equals("csv")) {
-            try (
-                    final Connection connection = ConnectionUtils.getConnection();
-                    final Statement statement = connection.createStatement();) {
-                String loadQuery = "LOAD DATA INFILE '" + file.getAbsolutePath()
-                        + "' INTO TABLE " + Table + " APPEND FIELDS TERMINATED BY ','";
-                System.out.println(loadQuery);
+    private void exportarCSV(File file, String table) {
+        String query;
+        try (
+                final Connection connection = ConnectionUtils.getConnection();
+                final Statement statement = connection.createStatement();) {
+            query = "SELECT * OUTFILE  '" + file.getAbsolutePath()
+                    + "' FIELDS TERMINATED BY ',' FROM " + table;
+            statement.executeQuery(query);
+        } catch (final SQLException e) {
+            System.err.format("SQLException: %s", e);
 
-                statement.execute(loadQuery);
-            } catch (final SQLException e) {
-                System.err.format("SQLException: %s", e);
-            }
+        }
+
+    }
+
+    private void lerCSV(File file) {
+        try (
+                final Connection connection = ConnectionUtils.getConnection();
+                final Statement statement = connection.createStatement();) {
+            String loadQuery = "$ sqlldr system/12345678 control = " + file.getAbsolutePath();
+            statement.execute(loadQuery);
+        } catch (final SQLException e) {
+            System.err.format("SQLException: %s", e);
         }
     }
 }
