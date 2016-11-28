@@ -51,3 +51,8 @@ bld/
 # MSTest test Results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
+<<<<<<< HEAD
+/Modulo Java/Aula_2/Aula_2/target/
+=======
+/src/modulo-09-java/aula2/target/
+>>>>>>> master

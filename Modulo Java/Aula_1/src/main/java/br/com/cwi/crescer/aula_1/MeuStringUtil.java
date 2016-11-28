@@ -63,12 +63,8 @@ public class MeuStringUtil {
         System.out.println(numeroVogal);
     }
     
-    public static void ValidarString(String validar){
-        if(validar.isEmpty()){
-            System.out.println("String não é valida pois está vazia");
-        }
-        else System.out.println("String é valida");
-    
+    public static boolean ValidarString(String validar){
+        return validar.trim().length() >= 2;
 }
 
     private static void IdentificarPalindromo(String frase) {
