@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition 
+
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+
+    template="/templates/template.xhtml"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:define name="form">
+
+        <div class="form-group"> 
+            <h:outputLabel for="nome" value="Genero"></h:outputLabel>
+            <h:inputText id="nome" value="#{generoView.genero.dsGenero}" styleClass="form-control"/>
+        </div>
+
+        <h:commandButton type="submit" value="Enviar" styleClass="btn btn-success" action="#{generoView.adicionar}">    
+            <f:ajax execute="@form" render="@form" />
+        </h:commandButton>
+
+        <h:dataTable id="pessoas" value="#{generoView.generos}" var="genero" styleClass="table table-hover">
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="ID"/>
+                </f:facet>
+                <h:outputText value="#{genero.idGenero}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Genero"/>
+                </f:facet>
+                <h:outputText value="#{genero.dsGenero}"/>
+            </h:column>
+
+        </h:dataTable>
+
+        <h:messages id="messages">
+
+        </h:messages>
+
+
+    </ui:define>
+
+</ui:composition>
