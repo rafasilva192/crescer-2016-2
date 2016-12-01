@@ -6,6 +6,8 @@
 package br.com.cwi.crescer.Entity;
 
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Basic;
@@ -99,8 +101,10 @@ public class Filme implements Serializable {
         this.genero = genero;
     }
 
-    public Date getDtLancamento() {
-        return dtLancamento;
+    public String getDtLancamento() {
+        if(dtLancamento == null) return "Não possui data";
+        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        return formatter.format(dtLancamento);
     }
 
     public void setDtLancamento(Date dtLancamento) {

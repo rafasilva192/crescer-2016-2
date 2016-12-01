@@ -8,6 +8,7 @@ package br.com.cwi.crescer.Views;
 import br.com.cwi.crescer.Entity.Ator;
 import br.com.cwi.crescer.Entity.Bean.ClassificacaoDao;
 import br.com.cwi.crescer.Entity.Classificacao;
+import java.io.Serializable;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
@@ -20,7 +21,7 @@ import javax.faces.bean.ViewScoped;
  */
 @ManagedBean
 @ViewScoped
-public class ClassificacaoView {
+public class ClassificacaoView implements Serializable{
     
     @EJB
     private ClassificacaoDao classificacaoDao;

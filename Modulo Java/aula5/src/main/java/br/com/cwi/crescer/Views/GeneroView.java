@@ -8,6 +8,7 @@ package br.com.cwi.crescer.Views;
 import br.com.cwi.crescer.Entity.Bean.GeneroDao;
 import br.com.cwi.crescer.Entity.Filme;
 import br.com.cwi.crescer.Entity.Genero;
+import java.io.Serializable;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
@@ -20,7 +21,7 @@ import javax.faces.bean.ViewScoped;
  */
 @ManagedBean
 @ViewScoped
-public class GeneroView {
+public class GeneroView implements Serializable{
     
     @EJB
     private GeneroDao generoDao;

@@ -12,10 +12,10 @@
 
         <div class="form-group"> 
             <h:outputLabel for="nome" value="Nova Classificação"></h:outputLabel>
-            <h:inputText id="nome" value="#{classificacaoView.classificacao.dsClass}" styleClass="form-control"/>
+            <h:inputText id="classi" value="#{classificacaoView.classificacao.dsClass}" styleClass="form-control"/>
 
             <h:outputLabel for="elenco" value="Idade"></h:outputLabel>
-            <h:inputText id="nome" value="#{classificacaoView.classificacao.dsIdade}" styleClass="form-control"/>
+            <h:inputText id="idade" value="#{classificacaoView.classificacao.dsIdade}" styleClass="form-control"/>
         </div>
 
         <h:commandButton type="submit" value="Enviar" styleClass="btn btn-success" action="#{classificacaoView.adicionar}">    

@@ -8,6 +8,7 @@ package br.com.cwi.crescer.Views;
 
 import br.com.cwi.crescer.Entity.Bean.IdiomaDao;
 import br.com.cwi.crescer.Entity.Idioma;
+import java.io.Serializable;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
@@ -20,7 +21,7 @@ import javax.faces.bean.ViewScoped;
  */
 @ManagedBean
 @ViewScoped
-public class IdiomaView {
+public class IdiomaView implements Serializable{
     
     @EJB
     private IdiomaDao idiomaDao;

@@ -7,6 +7,7 @@ package br.com.cwi.crescer.Views;
 
 import br.com.cwi.crescer.Entity.Bean.ElencoDao;
 import br.com.cwi.crescer.Entity.Elenco;
+import java.io.Serializable;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
@@ -19,7 +20,7 @@ import javax.faces.bean.ViewScoped;
  */
 @ManagedBean
 @ViewScoped
-public class ElencoView {
+public class ElencoView implements Serializable{
     
     @EJB
     private ElencoDao elencoDao;

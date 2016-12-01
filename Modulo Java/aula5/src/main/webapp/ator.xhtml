@@ -13,9 +13,22 @@
         <div class="form-group"> 
             <h:outputLabel for="nome" value="Novo Ator"></h:outputLabel>
             <h:inputText id="nome" value="#{atorView.ator.nmAtor}" styleClass="form-control"/>
-            
-            <h:outputLabel for="elenco" value="Elenco"></h:outputLabel>
-            <h:inputText id="nome" value="#{atorView.ator.elenco}" styleClass="form-control"/>
+
+
+            <h:outputLabel for="elencos" value="Elenco"></h:outputLabel>
+            <h:selectOneListbox id="elencos" 
+                                value="#{atorView.idElenco}"  
+                                styleClass="form-control" >
+                <f:selectItems id="elencolist" 
+                               var="elenco"  
+                               value="#{atorView.elencos}" 
+                               itemValue="#{elenco.idElenco}" 
+                               itemLabel="#{elenco.nmElenco}"/>
+            </h:selectOneListbox>
+            <!--<h:inputText id="elenco" value="#{atorView.ator.elenco.idElenco}" styleClass="form-control"/>-->
+            <!--            
+                        <h:outputLabel for="elencoNome" value="Elenco Nome"></h:outputLabel>
+                        <h:inputText id="elencoNome" value="#{atorView.ator.elenco}" styleClass="form-control"/>-->
         </div>
 
         <h:commandButton type="submit" value="Enviar" styleClass="btn btn-success" action="#{atorView.adicionar}">    
@@ -39,7 +52,7 @@
                 <f:facet name="header">
                     <h:outputText value="Elenco"/>
                 </f:facet>
-                <h:outputText value="#{atores.elenco}"/>
+                <h:outputText value="#{atores.elenco.nmElenco}"/>
             </h:column>
 
         </h:dataTable>

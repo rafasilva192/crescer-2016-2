@@ -2,23 +2,33 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
-    
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
     <h:head>
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
         <title>Cinevacuo</title>
     </h:head>
-    
+
     <h:body>
         <div class="container">
             <div class="col-md-12">
-
                 <h:form>
+                    <ui:insert name="head">
+                        <p:breadCrumb>
+                            <p:menuitem value="Home" url="/" />
+                            <p:menuitem value="Atores" url="/faces/ator.xhtml" />
+                            <p:menuitem value="Elencos" url="/faces/elenco.xhtml" />
+                            <p:menuitem value="Classificações" url="/faces/classificacao.xhtml" />
+                            <p:menuitem value="Generos" url="/faces/genero.xhtml" />
+                            <p:menuitem value="Idiomas" url="/faces/idioma.xhtml" />
+                        </p:breadCrumb>
+                    </ui:insert>
 
                     <ui:insert name="form">
                         Aqui vai o conteudo do form
