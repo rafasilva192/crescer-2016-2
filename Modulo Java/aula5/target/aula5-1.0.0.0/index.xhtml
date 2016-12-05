@@ -20,11 +20,11 @@
             <h:inputText id="diretor" value="#{filmeView.filme.nmDiretor}" styleClass="form-control"/>
         </div>
 
-         <div class="form-group"> 
+        <div class="form-group"> 
             <h:outputLabel for="data" value="Data Lançamento"></h:outputLabel>
             <h:inputText id="data" value="#{filmeView.dataLancamento}" styleClass="form-control"/>
         </div>
-        
+
         <h:outputLabel for="idiomas" value="Idioma"></h:outputLabel>
         <h:selectOneListbox id="idiomas" 
                             value="#{filmeView.idIdioma}"  
@@ -72,6 +72,10 @@
         <h:commandButton type="submit" value="Enviar" styleClass="btn btn-success" action="#{filmeView.adicionar}">    
             <f:ajax execute="@form" render="@form" />
         </h:commandButton>
+        
+        <div class="form-group">
+            <h:commandButton styleClass="btn btn-success" value="Logout" action="#{cadastroView.logout}"/>
+        </div>
 
         <h:dataTable id="pessoas" value="#{filmeView.filmes}" var="filme" styleClass="table table-hover">
             <h:column>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition 
+
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+
+    template="/templates/template.xhtml"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:define name="form">
+
+        <div class="form-group"> 
+            <h:outputLabel for="nome" value="Email"></h:outputLabel>
+            <h:inputText id="nome" value="#{cadastroView.usuario.emUsuario}" styleClass="form-control" required="true" validator="emailValidator"/>
+        </div>
+
+        <div class="form-group"> 
+            <h:outputLabel for="nome" value="Senha"></h:outputLabel>
+            <h:inputSecret id="nome" value="#{cadastroView.usuario.snUsuario}" styleClass="form-control" required="true"/>
+        </div>
+        
+        <h:commandButton type="submit" value="Enviar" styleClass="btn btn-success" action="#{cadastroView.login}">    
+            <f:ajax execute="@form" render="@form" />
+        </h:commandButton>
+
+        <h:dataTable id="pessoas" value="#{cadastroView.usuarios}" var="usuario" styleClass="table table-hover">
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="ID"/>
+                </f:facet>
+                <h:outputText value="#{usuario.idUsuario}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Idioma"/>
+                </f:facet>
+                <h:outputText value="#{usuario.emUsuario}"/>
+            </h:column>
+
+        </h:dataTable>
+
+        <h:messages id="messages">
+
+        </h:messages>
+
+
+    </ui:define>
+
+</ui:composition>
