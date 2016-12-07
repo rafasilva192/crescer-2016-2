@@ -6,12 +6,15 @@
 package br.com.cwi.crescer.aula8.entity;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Basic;
+import static javax.persistence.CascadeType.ALL;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.SEQUENCE;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -38,9 +41,22 @@ public class Elenco implements Serializable {
     @Column(name = "NM_ELENCO")
     private String nmElenco;
 
+    @ManyToMany(cascade = ALL)
+    private List<Ator> atores;
+    
     public Elenco(){
         
     }
+
+    public List<Ator> getAtores() {
+        return atores;
+    }
+
+    public void setAtores(List<Ator> atores) {
+        this.atores = atores;
+    }
+    
+    
     
     public Long getIdElenco() {
         return idElenco;

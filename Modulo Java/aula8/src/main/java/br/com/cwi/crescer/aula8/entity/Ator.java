@@ -37,12 +37,6 @@ public class Ator implements Serializable {
     @Basic(optional = false)
     @Column(name = "NM_ATOR")
     private String nmAtor;
-
-    @ManyToOne(cascade = ALL)
-    @Basic(optional = true)
-    @JoinColumn(name = "ID_ELENCO")
-    private Elenco elenco;
-
     
     public Ator(){
         
@@ -63,16 +57,4 @@ public class Ator implements Serializable {
     public void setNmAtor(String nmAtor) {
         this.nmAtor = nmAtor;
     }
-
-    public Elenco getElenco() {
-        return elenco;
-    }
-
-    public void setElenco(Elenco elenco) {
-        this.elenco = elenco;
-    }
-
-    
-    
-    
 }

@@ -24,6 +24,14 @@
                     <input class="form-control" type="text" th:field="*{nmElenco}" autofocus="true" />
                     <span th:if="${#fields.hasErrors('nmElenco')}" th:errors="*{nome}" class="help-block"></span>
                 </div>
+                
+                
+                <div class="form-group">
+                    <label for="atores" th:text="#{elenco.ator}"></label>
+                    <select name="atores" class="form-control" th:field="*{atores}" multiple="multiple">
+                        <option th:each="ator : ${atores}" th:value="${ator.idAtor}" th:field="*{atores}" th:text="${ator.nmAtor}"></option>
+                    </select>
+                </div>
 
                 <div class="form-group">
                     <input class="btn btn-success" type="submit" th:value="#{form.submit}" />
@@ -35,16 +43,12 @@
                         <tr>
                             <th th:text="#{pessoa.id}" />
                             <th th:text="Elenco" />
-                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr th:each="p : ${elencos}">
                             <td th:text="${p.idElenco}">ID</td>
                             <td th:text="${p.nmElenco}">NOME</td>
-                            <td>
-                                <a th:href="@{${'/elenco'}(id=${p.idElenco})}" class="btn btn-default btn-xs">Editar</a>
-                            </td>
                         </tr>
                     </tbody>
                 </table>

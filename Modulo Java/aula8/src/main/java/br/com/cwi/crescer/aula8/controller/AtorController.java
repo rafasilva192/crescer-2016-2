@@ -32,8 +32,6 @@ public class AtorController {
     
     @Autowired
     AtorService service;
-    @Autowired
-    ElencoService elencoservice;
     
     private long idElenco;
     @RequestMapping(method = RequestMethod.GET)
@@ -46,25 +44,23 @@ public class AtorController {
             ator = service.findOne(id);
             pageable = null;
         }
+        
         if(pageable == null){
             pageable = new PageRequest(0, 10);
         }
         
         model.addAttribute("ator", ator);
         model.addAttribute("atores", service.findAll(pageable));
-        model.addAttribute("elencos", elencoservice.findAll());
-        model.addAttribute("idElenco", idElenco);
         return "ator";
     }
     
     @RequestMapping(method = RequestMethod.POST)
     public String save(@Valid Ator ator, BindingResult bindingResult) {
         if (!bindingResult.hasErrors()) {
-            ator.setElenco(elencoservice.findOne(idElenco));
             service.save(ator);
             return "redirect:ator";
         }
-        return "redirect:ator";
+        return "ator";
     }
     
     @RequestMapping(value = "/listAll", method = RequestMethod.GET)

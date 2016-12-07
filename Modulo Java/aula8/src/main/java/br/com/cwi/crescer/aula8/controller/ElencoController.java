@@ -5,7 +5,9 @@
  */
 package br.com.cwi.crescer.aula8.controller;
 
+import br.com.cwi.crescer.aula8.entity.Ator;
 import br.com.cwi.crescer.aula8.entity.Elenco;
+import br.com.cwi.crescer.aula8.service.AtorService;
 import br.com.cwi.crescer.aula8.service.ElencoService;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,13 +31,15 @@ public class ElencoController {
     
     @Autowired
     ElencoService service;
+    @Autowired
+    AtorService atorservice;
     
     @RequestMapping(method = RequestMethod.GET)
     public String list(Model model, @RequestParam(required = false) Long id, Pageable p){
         Pageable pageable = new PageRequest(p.getPageNumber(), 5, p.getSort());
         
         Elenco elenco = new Elenco();
-        
+       
         if(id != null){
             elenco = service.findOne(id);
             pageable = null;
@@ -46,6 +50,7 @@ public class ElencoController {
         
         model.addAttribute("elenco", elenco);
         model.addAttribute("elencos", service.findAll(pageable));
+        model.addAttribute("atores", atorservice.findAll());
         return "elenco";
     }
     

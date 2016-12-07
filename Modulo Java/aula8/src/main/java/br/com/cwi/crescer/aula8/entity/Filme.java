@@ -22,6 +22,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  *
@@ -38,31 +40,39 @@ public class Filme implements Serializable {
     @Column(name = "ID_FILME")
     private Long idFilme;
     
+    @NotNull
     @Basic(optional = false)
     @Column(name = "NM_FILME")
     private String nmFilme;
     
+    @NotNull
     @Basic(optional = false)
     @Column(name = "NM_DIRETOR")
     private String nmDiretor;
     
+    @NotNull
     @ManyToOne(cascade = ALL)
     @JoinColumn(name = "ID_GENERO")
     private Genero genero;
     
+    @NotNull
     @Basic(optional = false)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Temporal(value = TemporalType.DATE)
     @Column(name = "DT_LANCAMENTO")
-    @Temporal(TemporalType.DATE)
     private Date dtLancamento;
     
+    @NotNull
     @ManyToOne(cascade = ALL)
     @JoinColumn(name = "ID_ELENCO")
     private Elenco elenco;
     
+    @NotNull
     @ManyToOne(cascade = ALL)
     @JoinColumn(name = "ID_CLASSIFICACAO")
     private Classificacao classificacao;
     
+    @NotNull
     @ManyToOne(cascade = ALL)
     @JoinColumn(name = "ID_IDIOMA")
     private Idioma idioma;

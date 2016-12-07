@@ -28,33 +28,41 @@
                 <div class="form-group">
                     <label for="diretor" th:text="#{filme.diretor}"></label>
                     <input class="form-control" type="text" th:field="*{nmDiretor}" />
-                    <span th:if="${#fields.hasErrors('nmDiretor')}" th:errors="*{nmDiretor}"></span>
+                    <span th:if="${#fields.hasErrors('nmDiretor')}" th:errors="*{nmDiretor}" class="help-block"></span>
                 </div>
                 
                 <div class="form-group">
                     <label for="lancamento" th:text="#{filme.data}"></label>
                     <input class="form-control" type="date" th:field="*{dtLancamento}" />
-                    <span th:if="${#fields.hasErrors('dtLancamento')}" th:errors="*{dtLancamento}"></span>
+                    <span th:if="${#fields.hasErrors('dtLancamento')}" th:errors="*{dtLancamento}" class="help-block"></span>
                 </div>
                 
                 <div class="form-group">
                     <label for="genero" th:text="#{genero.nome}"></label>
-                    <select name="genero" class="form-control" >
-                        <option th:each="p : ${generos}" value="${p}" th:field="${genero}" th:text="${p.dsGenero}"></option>
+                    <select name="genero" class="form-control" th:field="*{genero}">
+                        <option th:each="p : ${generos}" th:value="${p.idGenero}" th:field="*{genero}" th:text="${p.dsGenero}"></option>
                     </select>
                 </div>
                 
                 <div class="form-group">
                     <label for="class" th:text="#{classificacao.nome}"></label>
-                    <select name="class" class="form-control" >
-                        <option th:each="p : ${classificacoes}" value="${p}" th:field="${classificacao}" th:text="${p.dsClass}"></option>
+                    <select name="class" class="form-control" th:field="*{classificacao}">
+                        <option th:each="p : ${classificacoes}" th:value="${p.idClass}" th:field="*{classificacao}" th:text="${p.dsClass}"></option>
                     </select>
                 </div>
                 
                 <div class="form-group">
                     <label for="idioma" th:text="#{idioma.nome}"></label>
-                    <select name="idioma" class="form-control" >
-                        <option th:each="p : ${idiomas}" value="${p}" th:field="${idioma}" th:text="${p.nmIdioma}"></option>
+                    <select name="idioma" class="form-control" th:field="*{idioma}">
+                        <option th:each="p : ${idiomas}" th:value="${p.idIdioma}" th:field="*{idioma}" th:text="${p.nmIdioma}"></option>
+                    </select>
+                </div>
+                
+                
+                <div class="form-group">
+                    <label for="elenco" th:text="#{elenco.nome}"></label>
+                    <select name="elenco" class="form-control" th:field="*{elenco}">
+                        <option th:each="p : ${elencos}" th:value="${p.idElenco}" th:field="*{elenco}" th:text="${p.nmElenco}"></option>
                     </select>
                 </div>
                 
@@ -83,10 +91,10 @@
                             <td th:text="${p.nmFilme}">NOME</td>
                             <td th:text="${p.nmDiretor}">DIRETOR</td>
                             <td th:text="${p.dtLancamento}">LANCAMENTO</td>
-                            <td th:text="${p.genero}">GENERO</td>
-                            <td th:text="${p.classificacao}">CLASSIFICACAO</td>
-                            <td th:text="${p.elenco}">ELENCO</td>
-                            <td th:text="${p.idioma}">IDIOMA</td>
+                            <td th:text="${p.genero != null ? p.genero.dsGenero:''}">GENERO</td>
+                            <td th:text="${p.classificacao != null ? p.classificacao.dsClass:''}">CLASSIFICACAO</td>
+                            <td th:text="${p.elenco != null ? p.elenco.nmElenco:''}">ELENCO</td>
+                            <td th:text="${p.idioma!= null ? p.idioma.nmIdioma:''}">IDIOMA</td>
                         </tr>
                     </tbody>
                 </table>
