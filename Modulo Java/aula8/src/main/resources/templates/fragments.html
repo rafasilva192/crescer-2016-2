@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="head(title)">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://bootswatch.com/yeti/bootstrap.min.css" />
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <title th:text="${title}"></title>
+    <style>
+        body {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" th:fragment="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="#">
+                    
+                    <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Spring
+                        
+                </a>
+            </div>
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+                    <li class="active">
+                        <a th:href="@{/pessoa}"> <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Pessoa</a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span sec:authentication="name"></span> <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="logout">Sair</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div th:fragment="footer">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </div>
+
+    <div th:fragment="paginator(list, page)">
+        <ul th:if="${not #lists.isEmpty(list) and list.totalPages > 1 }" class="pagination">
+            <li th:class="${list.first} ? 'disabled' : ''">
+                <a th:if="${not list.first}" th:href="@{${page}(page=${0},size=${list.size})}">
+                    <span class="glyphicon glyphicon-backward"></span>
+                </a>
+                <a th:if="${list.first}" href="javascript:void(0);">
+                    <span class="glyphicon glyphicon-backward"></span>
+                </a>
+            </li>
+            <li th:each="i : ${#numbers.sequence(0, list.totalPages -1)}" th:class="${list.number eq i} ? 'active' : ''">
+                <a th:if="${not(list.number eq i)}" th:href="@{${page}(page=${i},size=${list.size})}" th:text="${i+1}"></a>
+                <a th:if="${list.number eq i}" href="javascript:void(0);" th:text="${i+1}"></a>
+            </li>
+            <li th:class="${list.last} ? 'disabled' : ''">
+                <a th:if="${not list.last}" th:href="@{${page}(page=${list.totalPages -1},size=${list.size})}">
+                    <span class="glyphicon glyphicon-forward"></span>
+                </a>
+                <a th:if="${list.last}" href="javascript:void(0);">
+                    <span class="glyphicon glyphicon-forward"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

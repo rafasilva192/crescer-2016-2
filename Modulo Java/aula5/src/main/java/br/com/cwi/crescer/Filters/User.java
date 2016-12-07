@@ -1,6 +1,7 @@
 package br.com.cwi.crescer.Filters;
 
-import br.com.cwi.crescer.aula5.utils.UserDetails;
+import br.com.cwi.crescer.Utils.UserDetails;
+
 
 /**
  * @author Carlos H. Nonnemacher

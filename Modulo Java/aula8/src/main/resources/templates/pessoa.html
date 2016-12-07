@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <head th:replace="fragments :: head('Cadastro de Pessoas')">
+        <!-- pega do templates/fragments.html o frament:head -->
+        <title>teste</title>
+    </head>
+
+    <body>
+
+        <div th:replace="fragments :: navbar">
+            <!-- pega do templates/fragments.html o frament:navbar -->
+        </div>
+
+        <div class="container">
+
+            <h1 th:text="#{pessoa.form}" class="page-header"></h1>
+
+            <form action="#" th:action="@{/pessoa}" th:object="${pessoa}" method="POST">
+
+                <input type="hidden" th:field="*{id}"/> 
+
+                <div class="form-group" th:classappend="${#fields.hasErrors('nome')} ? has-error">
+                    <label for="nome" th:text="#{pessoa.nome}"></label>
+                    <input class="form-control" type="text" th:field="*{nome}" autofocus="true" />
+                    <span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}" class="help-block"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="nascimento" th:text="#{pessoa.nascimento}"></label>
+                    <input class="form-control" type="date" th:field="*{nascimento}" />
+                    <span th:if="${#fields.hasErrors('nascimento')}" th:errors="*{nascimento}"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="idade" th:text="#{pessoa.idade}"></label>
+                    <input class="form-control" type="number" th:field="*{idade}" />
+                    <span th:if="${#fields.hasErrors('idade')}" th:errors="*{idade}"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="vlPessoa" th:text="#{pessoa.vlPessoa}"></label>
+                    <input class="form-control" type="number" th:field="*{vlPessoa}" step="any" />
+                    <span th:if="${#fields.hasErrors('vlPessoa')}" th:errors="*{vlPessoa}"></span>
+                </div>
+
+                <div class="form-group">
+                    <input class="btn btn-success" type="submit" th:value="#{form.submit}" />
+                    <input class="btn btn-primary" type="reset" th:value="#{form.reset}" />
+                </div>
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th th:text="#{pessoa.id}" />
+                            <th th:text="#{pessoa.nome}" />
+                            <th th:text="#{pessoa.nascimento}" />
+                            <th th:text="#{pessoa.idade}" />
+                            <th th:text="#{pessoa.vlPessoa}" />
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="p : ${pessoas}">
+                            <td th:text="${p.id}">ID</td>
+                            <td th:text="${p.nome}">NOME</td>
+                            <td th:text="${#dates.format(p.nascimento, 'dd/MM/yyyy')}"></td>
+                            <td th:text="${p.idade}">NOME</td>
+                            <td th:text="${p.vlPessoa}">NOME</td>
+                            <td>
+                                <a th:href="@{${'/pessoa'}(id=${p.id})}" class="btn btn-default btn-xs">Editar</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+
+            <div th:replace="fragments :: paginator(${pessoas}, '/pessoa')">
+
+            </div>
+
+            <!--
+                            <ul th:if="${not #lists.isEmpty(pessoas)}" class="pagination">
+                
+                                <li th:class="${pessoas.first} ? 'disabled' : ''">
+                                    <a th:if="${not pessoas.first}" th:href="@{${'/pessoa'}(page=${0},size=${pessoas.size})}">
+                                        <span class="glyphicon glyphicon-backward"></span>
+                                    </a>
+                                    <a th:if="${pessoas.first}" href="javascript:void(0);">
+                                        <span class="glyphicon glyphicon-backward"></span>
+                                    </a>
+                                </li>
+                
+                                <li th:each="i : ${#numbers.sequence(0, pessoas.totalPages -1)}"  th:class="${pessoas.number eq i} ? 'active' : ''">
+                                    <a th:if="${not(pessoas.number eq i)}" th:href="@{${'/pessoa'}(page=${i},size=${pessoas.size})}" th:text="${i}"></a>
+                                    <a th:if="${pessoas.number eq i}" href="javascript:void(0);" th:text="${i}"></a>
+                                </li>
+                
+                                <li th:class="${pessoas.last} ? 'disabled' : ''">
+                                    <a th:if="${not pessoas.last}" th:href="@{${'/pessoa'}(page=${pessoas.totalPages -1},size=${pessoas.size})}">
+                                        <span class="glyphicon glyphicon-forward"></span>
+                                    </a>
+                                    <a th:if="${pessoas.last}" href="javascript:void(0);">
+                                        <span class="glyphicon glyphicon-forward"></span>
+                                    </a>
+                                </li>
+                
+                            </ul>-->
+
+        </div>
+
+        <div th:replace="fragments :: footer">
+            <!-- pega do templates/fragments.html o frament:footer -->
+        </div>
+
+
+    </body>
+
+</html>

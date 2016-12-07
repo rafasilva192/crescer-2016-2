@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <head th:replace="fragments :: head('Cadastro de Genero')">
+        <!-- pega do templates/fragments.html o frament:head -->
+    </head>
+
+    <body>
+
+        <div th:replace="fragments :: navbar">
+            <!-- pega do templates/fragments.html o frament:navbar -->
+        </div>
+
+        <div class="container">
+
+            <h1 th:text="#{genero.form}" class="page-header"></h1>
+
+            <form action="#" th:action="@{/genero}" th:object="${genero}" method="POST">
+
+                <input type="hidden" th:field="*{idGenero}"/> 
+
+                <div class="form-group" th:classappend="${#fields.hasErrors('dsGenero')} ? has-error">
+                    <label for="nome" th:text="#{genero.nome}"></label>
+                    <input class="form-control" type="text" th:field="*{dsGenero}" autofocus="true" />
+                    <span th:if="${#fields.hasErrors('dsGenero')}" th:errors="*{dsGenero}" class="help-block"></span>
+                </div>
+
+                <div class="form-group">
+                    <input class="btn btn-success" type="submit" th:value="#{form.submit}" />
+                    <input class="btn btn-primary" type="reset" th:value="#{form.reset}" />
+                </div>
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th th:text="#{pessoa.id}" />
+                            <th th:text="Genero" />
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="p : ${generos}">
+                            <td th:text="${p.idGenero}">ID</td>
+                            <td th:text="${p.dsGenero}">NOME</td>
+                            <td>
+                                <a th:href="@{${'/genero'}(id=${p.idGenero})}" class="btn btn-default btn-xs">Editar</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+
+            <div th:replace="fragments :: paginator(${generos}, '/genero')">
+
+            </div>
+
+            <!--
+                            <ul th:if="${not #lists.isEmpty(pessoas)}" class="pagination">
+                
+                                <li th:class="${pessoas.first} ? 'disabled' : ''">
+                                    <a th:if="${not pessoas.first}" th:href="@{${'/pessoa'}(page=${0},size=${pessoas.size})}">
+                                        <span class="glyphicon glyphicon-backward"></span>
+                                    </a>
+                                    <a th:if="${pessoas.first}" href="javascript:void(0);">
+                                        <span class="glyphicon glyphicon-backward"></span>
+                                    </a>
+                                </li>
+                
+                                <li th:each="i : ${#numbers.sequence(0, pessoas.totalPages -1)}"  th:class="${pessoas.number eq i} ? 'active' : ''">
+                                    <a th:if="${not(pessoas.number eq i)}" th:href="@{${'/pessoa'}(page=${i},size=${pessoas.size})}" th:text="${i}"></a>
+                                    <a th:if="${pessoas.number eq i}" href="javascript:void(0);" th:text="${i}"></a>
+                                </li>
+                
+                                <li th:class="${pessoas.last} ? 'disabled' : ''">
+                                    <a th:if="${not pessoas.last}" th:href="@{${'/pessoa'}(page=${pessoas.totalPages -1},size=${pessoas.size})}">
+                                        <span class="glyphicon glyphicon-forward"></span>
+                                    </a>
+                                    <a th:if="${pessoas.last}" href="javascript:void(0);">
+                                        <span class="glyphicon glyphicon-forward"></span>
+                                    </a>
+                                </li>
+                
+                            </ul>-->
+
+        </div>
+
+        <div th:replace="fragments :: footer">
+            <!-- pega do templates/fragments.html o frament:footer -->
+        </div>
+
+
+    </body>
+
+</html>
